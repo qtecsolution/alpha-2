@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
 <body>
    <section class="login grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-16 ">
@@ -15,50 +15,52 @@
         </figure>
     </div>
     <div class="right flex flex-col justify-between w-full">
-       <div class="flex justify-center md:justify-end">
-        <img src="assets/images/login/logo.png" alt="">
-       </div>
-
-       <form action="" class=" pl-8 pr-8 text-center md:text-left">
-
-        <div class="form-header flex-col gap-4">
-            <h3 class=" text-2xl md:text-4xl text-black">Welcome back!</h3>
-            <p class=" text-sm md:text-base lg:text-lg">Sign in now to view your portal.</p>
-        </div>
-
-        <div class="login-boxes  mx-auto flex flex-col gap-4  mt-6 md:mt-9">
-            <div class="w-full  mx-auto md:mx-0">
-                <input type="text" class="border-2 border-border h-12 w-full outline-none focus:border-secondary transition duration-300  rounded-md px-2">
+        <div  class=" max-w-lg w-full mx-auto flex flex-col justify-between h-full">
+            <div class="flex justify-center md:justify-end">
+                <img src="assets/images/login/logo.png" alt="">
             </div>
-            <div class="relative w-full   mx-auto md:mx-0" >
-                <input type="text" class="border-2 border-border h-12 w-full outline-none focus:border-secondary transition duration-300  rounded-md px-2">
-                <button type="button" id="btnToggle" class="toggle absolute right-4 top-4">
-                    <span>
-                        <svg width="26" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0189 0C21.1652 0 26.5637 3.1 31.6594 9.05C32.1135 9.6 32.1135 10.4 31.6594 10.95C26.5637 16.9 21.1652 20 16.0189 20C10.8727 20 5.47418 16.9 0.3784 11C-0.126133 10.45 -0.126133 9.6 0.3784 9.05C5.47418 3.1 10.8727 0 16.0189 0ZM2.19473 10C6.73552 15.15 11.6295 18 16.0189 18C20.4084 18 25.3023 15.15 29.8431 10C25.3023 4.85 20.4084 2 16.0189 2C11.6295 2 6.73552 4.85 2.19473 10Z" fill="#DADADA"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96484 10C9.96484 6.7 12.6893 4 16.0192 4C19.3492 4 22.0736 6.7 22.0736 10C22.0736 13.3 19.3492 16 16.0192 16C12.6893 16 9.96484 13.3 9.96484 10ZM11.983 10C11.983 12.2 13.7993 14 16.0192 14C18.2392 14 20.0555 12.2 20.0555 10C20.0555 7.8 18.2392 6 16.0192 6C13.7993 6 11.983 7.8 11.983 10Z" fill="#DADADA"/>
-                        </svg>
-                            
-                    </span>
-                </button>
+
+            <form action="" class=" pl-8 pr-8 text-center md:text-left">
+
+                <div class="form-header flex-col gap-4">
+                    <h3 class=" text-2xl md:text-4xl text-black">Welcome back!</h3>
+                    <p class=" text-sm md:text-base lg:text-lg">Sign in now to view your portal.</p>
+                </div>
+
+                <div class="login-boxes  mx-auto flex flex-col gap-4  mt-6 md:mt-9">
+                    <div class="w-full  mx-auto md:mx-0">
+                        <input type="text" class="border-2 border-border h-12 w-full outline-none focus:border-secondary transition duration-300  rounded-md px-2">
+                    </div>
+                    <div class="relative w-full   mx-auto md:mx-0" >
+                        <input type="password" class="border-2 border-border h-12 w-full outline-none focus:border-secondary transition duration-300  rounded-md px-2">
+                        <button type="button" id="btnToggle" class="toggle absolute right-4 top-4">
+                            <span>
+                                <svg width="26" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0189 0C21.1652 0 26.5637 3.1 31.6594 9.05C32.1135 9.6 32.1135 10.4 31.6594 10.95C26.5637 16.9 21.1652 20 16.0189 20C10.8727 20 5.47418 16.9 0.3784 11C-0.126133 10.45 -0.126133 9.6 0.3784 9.05C5.47418 3.1 10.8727 0 16.0189 0ZM2.19473 10C6.73552 15.15 11.6295 18 16.0189 18C20.4084 18 25.3023 15.15 29.8431 10C25.3023 4.85 20.4084 2 16.0189 2C11.6295 2 6.73552 4.85 2.19473 10Z" fill="#DADADA"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96484 10C9.96484 6.7 12.6893 4 16.0192 4C19.3492 4 22.0736 6.7 22.0736 10C22.0736 13.3 19.3492 16 16.0192 16C12.6893 16 9.96484 13.3 9.96484 10ZM11.983 10C11.983 12.2 13.7993 14 16.0192 14C18.2392 14 20.0555 12.2 20.0555 10C20.0555 7.8 18.2392 6 16.0192 6C13.7993 6 11.983 7.8 11.983 10Z" fill="#DADADA"/>
+                                </svg>
+                                    
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                
+
+            <div class="flex justify-between w-full mt-10 mx-auto md:mx-0">
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember" class=" text-sm">Remember me</label>
+                </div>
+                <a href="#" class="text-sm hover:underline">Forget Password?</a>
+            </div> 
+
+            <button class="bg-secondary mt-5 w-full rounded-md text-base py-2 hover:bg-red-300 transition duration-300">Login</button>
+            </form> 
+
+            <div class="py-4 text-right pr-8" >
+                <a href="#" class=" text-primaryDeep hover:underline">Terms & Conditions</a>
             </div>
         </div>
-        
-
-      <div class="flex justify-between w-full mt-10 mx-auto md:mx-0">
-        <div class="flex items-center gap-2">
-            <input type="checkbox" name="remember" id="remember">
-            <label for="remember" class=" text-sm">Remember me</label>
-        </div>
-        <a href="#" class="text-sm">Forget Password?</a>
-      </div> 
-
-      <button class="bg-secondary mt-5 w-full rounded-md text-base py-2 hover:bg-red-300 transition duration-300">Login</button>
-       </form> 
-
-       <div class="py-4 text-right pr-8" >
-        <a href="#" class=" text-primaryDeep">Terms & Conditions</a>
-       </div>
     </div>
    </section>
 </body>
