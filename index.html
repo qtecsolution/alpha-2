@@ -17,19 +17,19 @@
 }
 @media (min-width: 768px) {
   .dms-container {
-    width: 750px;
+    max-width: 750px;
   }
 }
 @media (min-width: 992px) {
   .dms-container {
-    width: 970px;
+    max-width: 970px;
     padding-right: 25px;
     padding-left: 25px;
   }
 }
 @media (min-width: 1200px) {
   .dms-container {
-    width: 1170px;
+    max-width: 1170px;
   }
 }
      </style>
@@ -153,9 +153,9 @@
             <div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab1"
                 :style="selected == 1 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
                 <ul class=" flex flex-col  text-left ">
-                    <li><a href="#" class="py-2 pl-6 duration-300 text-base w-full inline-block hover:bg-primary">Staff</a></li>
-                    <li><a href="#" class="py-2 pl-6 duration-300 text-base w-full inline-block hover:bg-primary">Drivers</a></li>
-                    <li><a href="#" class="py-2 pl-6 duration-300 text-base w-full inline-block hover:bg-primary">Distribution Centre</a></li>
+                    <li><a href="#" class="py-2 pl-6 duration-300 text-sm w-full inline-block hover:bg-primary">Staff</a></li>
+                    <li><a href="#" class="py-2 pl-6 duration-300 text-sm w-full inline-block hover:bg-primary">Drivers</a></li>
+                    <li><a href="#" class="py-2 pl-6 duration-300 text-sm w-full inline-block hover:bg-primary">Distribution Centre</a></li>
                     
                 </ul>
             </div>
@@ -167,7 +167,7 @@
     <!-- desktop sidebar end -->
 
     <!-- mobile appbar -->
-    <div class="fixed bottom-0 left-0 bg-gray-100 p-3 w-full min-[992px]:hidden border-t z-50">
+    <div class="fixed bottom-0 left-0 bg-gray-100 px-3 py-0 w-full min-[992px]:hidden border-t z-50">
         <ul class=" flex items-center gap-2  ">
           <li class="w-1/5">
             <a href="index.html" class="flex flex-col items-center gap-2">
@@ -218,8 +218,8 @@
               <span class="truncate  sm:text-xs text-[10px]">Template list</span>
             </a>
           </li>
-          <li class="w-1/5">
-            <a href="#" class="flex flex-col items-center gap-2" >
+          <li class="w-1/5 bg-red-200 relative py-2" x-data="{ open: false }" x-cloak>
+            <a href="#" class="flex flex-col items-center gap-2" @click="open = ! open">
                 <span>
                     <span class="icon">
                         <svg width="20" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -232,6 +232,10 @@
                     Users
                 </span>
             </a>
+
+            <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-full lg:w-52 origin-top-right absolute right-0 rounded bottom-full z-50 py-0.5 text-left bg-white  shadow-md">
+                lorem
+            </div>
           </li>
          
   
@@ -245,7 +249,7 @@
     <main class=" flex-1 py-2 pt-6">
         <div class="dms-container ">
             <!-- header part -->
-            <header class="flex justify-end items-center  gap-6">
+            <header class="flex justify-end items-center  gap-3 sm:gap-4 md:gap-5 lg:gap-16">
                 <!-- notification -->
                 <div class="relative cursor-pointer pb-3 " x-data="{ open: false }" x-cloak>
                 <span @click="open = ! open">
@@ -254,7 +258,7 @@
                     </svg>
                 </span>
                 <span class="absolute w-2 h-2 bg-blue-600 rounded-full -right-2 -top-2"></span> 
-                <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-52 origin-top-right absolute  md:right-0 rounded top-full z-50 py-0.5 text-left bg-white  shadow-md">
+                <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-44 lg:w-52 origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white  shadow-md">
                     <div class="p-3 font-normal border-b border-slate-200 ">
                         <div class="relative w-full flex flex-row justify-between items-center">
                         <div class="text-sm font-bold">Notifications</div>
@@ -288,7 +292,7 @@
 
                 <!-- profile dropdown  -->
                 <div class="relative pb-3" x-data="{ open: false }" x-cloak>
-                    <div class="flex items-center px-8 gap-5 cursor-pointer" @click="open = ! open">
+                    <div class="flex items-center pr-2 gap-4 cursor-pointer" @click="open = ! open">
                         <span class=" text-xs md:text-sm">John Cane</span>
                         <span>
                             <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg" 
@@ -307,12 +311,12 @@
                         x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
                         x-transition:leave="transition-all duration-200 ease-in"
                         x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95"
-                        class="w-52 origin-top-right absolute right-0  rounded top-full z-50 py-0.5 text-left bg-white 
+                        class="w-32 md:w-44 origin-top-right absolute right-0  rounded top-full z-50 py-0.5 text-left bg-white 
                        border ">
 
                     <ul>
                         <li>
-                            <a href="#" class="flex items-center py-4 px-4 gap-2 hover:bg-gray-50 transition duration-300">
+                            <a href="#" class="flex items-center py-2 sm:py-3 px-4 gap-2 hover:bg-gray-50 transition duration-300">
                                 <span>
                                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66669 2.95833C7.66669 2.17704 6.91919 1.54167 
@@ -329,7 +333,7 @@
                                 </span>
                                 <span class=" text-xs">View Profile</span>
                             </a>
-                            <a href="#" class="flex items-center py-4 px-4 gap-2 hover:bg-gray-50 transition duration-300">
+                            <a href="#" class="flex items-center py-2 sm:py-3 px-4 gap-2 hover:bg-gray-50 transition duration-300">
                                 <span>
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33335 0.75C3.33335 1.1625 3.03335 1.5 2.66669 
@@ -371,7 +375,8 @@
         <div class=" bg-border border" style="background:linear-gradient(180deg, rgba(227, 223, 223, 0.25) 3.85%, rgba(218, 218, 218, 0.22526) 3.86%, rgba(218, 218, 218, 0) 100%);">
            <div class="dms-container">
 
-            <!-- total cards -->
+            <!--======= COUNT CARD START======== -->
+
             <div class="cards grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-10 -mt-14">
                 <!-- single card -->
                <div class="border border-border rounded p-4 flex items-center gap-6 bg-white max-w-none" >
@@ -389,7 +394,35 @@
                     <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
                     <h2 class="  text-2xl md:3xl ">141</h2>
                     <div class=" flex justify-end mt-8">
-                        <span>
+                        <span class=" cursor-pointer">
+                            <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
+                                <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11 12L13 14L15 12" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13 6V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                                
+                        </span>
+                    </div>
+                </div>
+               </div>
+                <!-- single card -->
+               <div class="border border-border rounded p-4 flex items-center gap-6 bg-white max-w-none" >
+                <div>
+                    <span>
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="56" height="56" rx="28" fill="#CEE4DA"/>
+                            <path d="M9.72884 27.1553V39.7168L27.9918 43.148V15.7722" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M46.1557 27.4878V39.4975L27.9918 43.148" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.7213 35.7747L16.1525 36.1398M33.5708 25.7542L49.1878 27.9055C49.4302 27.9391 49.6771 27.9073 49.903 27.8134C50.129 27.7195 50.3257 27.5668 50.4728 27.3713C50.6198 27.1758 50.712 26.9445 50.7396 26.7014C50.7672 26.4583 50.7293 26.2122 50.6298 25.9887L46.1557 15.918L27.9907 12.852L9.73 16.065L5.37833 25.417C5.27738 25.6335 5.23471 25.8727 5.25456 26.1108C5.27441 26.3488 5.35609 26.5776 5.49151 26.7744C5.62693 26.9713 5.8114 27.1293 6.02666 27.233C6.24192 27.3366 6.48052 27.3822 6.71883 27.3653L22.2798 26.2838C22.5898 26.2624 22.8881 26.1572 23.1428 25.9795C23.3976 25.8017 23.5994 25.5581 23.7265 25.2747L27.9907 15.7733L32.2525 24.7882C32.3744 25.046 32.5587 25.2694 32.7887 25.438C33.0187 25.6067 33.2871 25.7154 33.5697 25.7542H33.5708Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </span>
+                </div>
+                <div class=" flex flex-col gap-2">
+                    <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
+                    <h2 class="  text-2xl md:3xl ">141</h2>
+                    <div class=" flex justify-end mt-8">
+                        <span class=" cursor-pointer">
                             <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
                                 <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -417,35 +450,7 @@
                     <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
                     <h2 class="  text-2xl md:3xl ">141</h2>
                     <div class=" flex justify-end mt-8">
-                        <span>
-                            <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
-                                <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M11 12L13 14L15 12" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13 6V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                             </svg>
-                                
-                        </span>
-                    </div>
-                </div>
-               </div>
-                <!-- single card -->
-               <div class="border border-border rounded p-4 flex items-center gap-6 bg-white max-w-none" >
-                <div>
-                    <span>
-                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="56" height="56" rx="28" fill="#CEE4DA"/>
-                            <path d="M9.72884 27.1553V39.7168L27.9918 43.148V15.7722" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M46.1557 27.4878V39.4975L27.9918 43.148" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12.7213 35.7747L16.1525 36.1398M33.5708 25.7542L49.1878 27.9055C49.4302 27.9391 49.6771 27.9073 49.903 27.8134C50.129 27.7195 50.3257 27.5668 50.4728 27.3713C50.6198 27.1758 50.712 26.9445 50.7396 26.7014C50.7672 26.4583 50.7293 26.2122 50.6298 25.9887L46.1557 15.918L27.9907 12.852L9.73 16.065L5.37833 25.417C5.27738 25.6335 5.23471 25.8727 5.25456 26.1108C5.27441 26.3488 5.35609 26.5776 5.49151 26.7744C5.62693 26.9713 5.8114 27.1293 6.02666 27.233C6.24192 27.3366 6.48052 27.3822 6.71883 27.3653L22.2798 26.2838C22.5898 26.2624 22.8881 26.1572 23.1428 25.9795C23.3976 25.8017 23.5994 25.5581 23.7265 25.2747L27.9907 15.7733L32.2525 24.7882C32.3744 25.046 32.5587 25.2694 32.7887 25.438C33.0187 25.6067 33.2871 25.7154 33.5697 25.7542H33.5708Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
-                    </span>
-                </div>
-                <div class=" flex flex-col gap-2">
-                    <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
-                    <h2 class="  text-2xl md:3xl ">141</h2>
-                    <div class=" flex justify-end mt-8">
-                        <span>
+                        <span class=" cursor-pointer">
                             <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
                                 <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -458,7 +463,9 @@
                 </div>
                </div>
             </div>
-            <!-- total cards end -->
+
+            <!--======= COUNT CARD END ======== -->
+
 
 
             <div class="graph py-6">
@@ -467,13 +474,14 @@
                 </figure>
             </div>
 
-            <div class="graph py-6">
+            <!--======= ACTIVE DELIVERIES AND DELIVERIES START======== -->
+            <div class="graph py-6 mb-24">
                 <div class="column-wrapper grid grid-cols-1 lg:grid-cols-2 gap-9">
 
                    
                     <div class="border border-border bg-white " x-data="accordion">
                         <div class="graph-header flex justify-between items-center p-5 border-b border-b-border">
-                            <h2 class="text-base text-black font-normal">Active deliveries</h2>
+                            <h2 class="text-sm  md:text-base text-black font-normal">Active deliveries</h2>
                             <button class=" rounded-xl bg-red-300 px-2 py-2 text-black text-xs"
                                 @click="selected != 1 ? selected = 1 : selected =null">expand icon</button>
                         </div>
@@ -489,7 +497,7 @@
                     </div>
                     <div class="border border-border bg-white " x-data="accordion">
                         <div class="graph-header flex justify-between items-center p-5 border-b border-b-border">
-                            <h2 class="text-base text-black font-normal">Deliveries</h2>
+                            <h2 class="text-sm md:text-base text-black font-normal">Deliveries</h2>
                             <button class=" rounded-xl bg-red-300 px-2 py-2 text-black text-xs"
                                 @click="selected != 1 ? selected = 1 : selected =null">See run list</button>
                         </div>
@@ -508,6 +516,7 @@
                     
                 </div>
             </div>
+            <!--======= ACTIVE DELIVERIES AND DELIVERIES END======== -->
 
 
 

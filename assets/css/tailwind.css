@@ -579,6 +579,10 @@ html {
   top: 1rem;
 }
 
+.bottom-full{
+  bottom: 100%;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -614,6 +618,10 @@ html {
 
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.mb-24{
+  margin-bottom: 6rem;
 }
 
 .block{
@@ -734,6 +742,22 @@ html {
 
 .w-1\/2{
   width: 50%;
+}
+
+.w-32{
+  width: 8rem;
+}
+
+.w-44{
+  width: 11rem;
+}
+
+.w-4{
+  width: 1rem;
+}
+
+.w-3{
+  width: 0.75rem;
 }
 
 .max-w-full{
@@ -861,6 +885,14 @@ html {
   gap: 1rem;
 }
 
+.gap-1{
+  gap: 0.25rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
+}
+
 .self-center{
   align-self: center;
 }
@@ -980,6 +1012,11 @@ html {
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
+.bg-red-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\.\/\.\.\/assets\/images\/home\/sidebarbg\.png\'\)\]{
   background-image: url('../../assets/images/home/sidebarbg.png');
 }
@@ -1072,6 +1109,16 @@ html {
   padding-bottom: 0.25rem;
 }
 
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pl-7{
   padding-left: 1.75rem;
 }
@@ -1102,6 +1149,22 @@ html {
 
 .pr-8{
   padding-right: 2rem;
+}
+
+.pr-6{
+  padding-right: 1.5rem;
+}
+
+.pr-4{
+  padding-right: 1rem;
+}
+
+.pr-3{
+  padding-right: 0.75rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
 }
 
 .text-left{
@@ -1274,6 +1337,15 @@ html {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:gap-4{
+    gap: 1rem;
+  }
+
+  .sm\:py-3{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .sm\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
@@ -1302,6 +1374,10 @@ html {
     height: 100vh;
   }
 
+  .md\:w-44{
+    width: 11rem;
+  }
+
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1312,6 +1388,10 @@ html {
 
   .md\:gap-16{
     gap: 4rem;
+  }
+
+  .md\:gap-5{
+    gap: 1.25rem;
   }
 
   .md\:text-left{
@@ -1353,12 +1433,28 @@ html {
     display: none;
   }
 
+  .lg\:w-52{
+    width: 13rem;
+  }
+
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:gap-10{
     gap: 2.5rem;
+  }
+
+  .lg\:gap-6{
+    gap: 1.5rem;
+  }
+
+  .lg\:gap-8{
+    gap: 2rem;
+  }
+
+  .lg\:gap-16{
+    gap: 4rem;
   }
 
   .lg\:pt-8{
