@@ -42,7 +42,7 @@
   <section class="flex h-screen relative overflow-x-hidden shrink-0">
     <!-- desktop sidebar  -->
     <aside class="bg-[url('../../assets/images/home/sidebarbg.png')] h-screen w-72  bg-bottom bg-contain sticky top-0 left-0
-      transition-all duration-300 ease-in-out hidden min-[992px]:block" id="sidebar">
+      transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28 " id="sidebar">
        <div class="sidebar-header relative flex justify-center h-20"> 
         <figure class=" w-28 " id="sidebarlogo">
             <img src="assets/images/login/logo.png" alt="Logo" class=" w-full h-full" >
@@ -62,7 +62,7 @@
         <li class=" mr-6">
             <a href="#" class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 " >
                 <span class="iconn">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.5 19.6875H24.375V24.375H22.5V19.6875ZM18.75 15H20.625V24.375H18.75V15ZM10.3125 24.375C9.06975 24.3735 7.87834 23.8792 6.99958 23.0004C6.12083 22.1217 5.62649 20.9302 5.625 19.6875H7.5C7.5 20.2438 7.66495 20.7875 7.97399 21.25C8.28303 21.7126 8.72229 22.073 9.2362 22.2859C9.75012 22.4988 10.3156 22.5545 10.8612 22.446C11.4068 22.3374 11.9079 22.0696 12.3012 21.6762C12.6946 21.2829 12.9624 20.7818 13.071 20.2362C13.1795 19.6906 13.1238 19.1251 12.9109 18.6112C12.698 18.0973 12.3376 17.658 11.875 17.349C11.4125 17.0399 10.8688 16.875 10.3125 16.875V15C11.5557 15 12.748 15.4939 13.6271 16.3729C14.5061 17.252 15 18.4443 15 19.6875C15 20.9307 14.5061 22.123 13.6271 23.0021C12.748 23.8811 11.5557 24.375 10.3125 24.375Z" fill="black"/>
                         <path d="M26.25 1.875H3.75C3.25287 1.8755 2.77625 2.0732 2.42472 2.42472C2.0732 2.77625 1.8755 3.25287 1.875 3.75V26.25C1.8755 26.7471 2.0732 27.2238 2.42472 27.5753C2.77625 27.9268 3.25287 28.1245 3.75 28.125H26.25C26.7471 28.1243 27.2235 27.9265 27.575 27.575C27.9265 27.2235 28.1243 26.7471 28.125 26.25V3.75C28.1245 3.25287 27.9268 2.77625 27.5753 2.42472C27.2238 2.0732 26.7471 1.8755 26.25 1.875ZM26.25 10.3125H13.125V3.75H26.25V10.3125ZM11.25 3.75V10.3125H3.75V3.75H11.25ZM3.75 26.25V12.1875H26.25L26.2519 26.25H3.75Z" fill="black"/>
                     </svg>
@@ -73,7 +73,7 @@
         <li class=" mr-6">
             <a href="#" class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 " >
                 <span class="iconn">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.8784 7.4761C14.1367 7.4761 13.4117 7.69603 12.795 8.10809C12.1783 8.52014 11.6976 9.10581 11.4138 9.79103C11.13 10.4763 11.0557 11.2303 11.2004 11.9577C11.3451 12.6851 11.7023 13.3533 12.2267 13.8777C12.7512 14.4022 13.4193 14.7593 14.1468 14.904C14.8742 15.0487 15.6282 14.9745 16.3134 14.6906C16.9986 14.4068 17.5843 13.9262 17.9964 13.3095C18.4084 12.6928 18.6284 11.9678 18.6284 11.2261C18.6272 10.2319 18.2318 9.27871 17.5288 8.5757C16.8257 7.87268 15.8726 7.47723 14.8784 7.4761V7.4761ZM14.8784 13.1011C14.5075 13.1011 14.145 12.9911 13.8367 12.7851C13.5283 12.5791 13.288 12.2862 13.1461 11.9436C13.0042 11.601 12.967 11.224 13.0394 10.8603C13.1117 10.4966 13.2903 10.1625 13.5525 9.90027C13.8148 9.63805 14.1488 9.45947 14.5126 9.38712C14.8763 9.31478 15.2533 9.35191 15.5959 9.49382C15.9385 9.63574 16.2313 9.87606 16.4374 10.1844C16.6434 10.4927 16.7534 10.8553 16.7534 11.2261C16.7528 11.7232 16.5551 12.1998 16.2035 12.5513C15.852 12.9028 15.3755 13.1005 14.8784 13.1011V13.1011Z" fill="black"/>
                         <path d="M22.0843 4.01455C20.3027 2.23332 17.9243 1.1752 15.4084 1.04441C12.8924 0.913611 10.4172 1.71941 8.46043 3.30628C6.50365 4.89316 5.20405 7.14861 4.81243 9.63734C4.42082 12.1261 4.96497 14.6716 6.33984 16.7828L13.4242 27.6585C13.5819 27.9005 13.7975 28.0994 14.0514 28.237C14.3053 28.3746 14.5896 28.4467 14.8784 28.4467C15.1672 28.4467 15.4515 28.3746 15.7054 28.237C15.9593 28.0994 16.1749 27.9005 16.3325 27.6585L23.4172 16.7828C24.6929 14.8244 25.2567 12.487 25.014 10.1624C24.7714 7.83779 23.737 5.66724 22.0843 4.01455V4.01455ZM21.8462 15.7593L14.8784 26.4556L7.91063 15.7593C5.77781 12.4852 6.23525 8.10351 8.9983 5.34035C9.77048 4.56815 10.6872 3.9556 11.6961 3.53769C12.705 3.11978 13.7864 2.90468 14.8784 2.90468C15.9705 2.90468 17.0518 3.11978 18.0607 3.53769C19.0696 3.9556 19.9864 4.56815 20.7585 5.34035C23.5216 8.10351 23.979 12.4852 21.8462 15.7593Z" fill="black"/>
                     </svg>
@@ -85,7 +85,7 @@
         <li class=" mr-6">
             <a href="#" class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 " >
                 <span class="iconn">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.8125 10.0781C18.5078 10.0781 19.1875 9.87194 19.7657 9.48564C20.3438 9.09934 20.7944 8.55027 21.0605 7.90787C21.3266 7.26548 21.3962 6.5586 21.2606 5.87664C21.1249 5.19467 20.7901 4.56825 20.2984 4.07658C19.8068 3.58491 19.1803 3.25008 18.4984 3.11443C17.8164 2.97878 17.1095 3.0484 16.4671 3.31449C15.8247 3.58058 15.2757 4.03118 14.8894 4.60933C14.5031 5.18747 14.2969 5.86718 14.2969 6.5625C14.3 7.49395 14.6714 8.38637 15.33 9.04501C15.9886 9.70365 16.881 10.075 17.8125 10.0781V10.0781ZM17.8125 4.45313C18.2297 4.45313 18.6375 4.57684 18.9844 4.80862C19.3313 5.0404 19.6017 5.36984 19.7613 5.75528C19.921 6.14072 19.9627 6.56484 19.8813 6.97402C19.8 7.3832 19.5991 7.75905 19.3041 8.05405C19.0091 8.34906 18.6332 8.54996 18.224 8.63135C17.8148 8.71274 17.3907 8.67096 17.0053 8.51131C16.6198 8.35166 16.2904 8.08129 16.0586 7.73441C15.8268 7.38752 15.7031 6.9797 15.7031 6.5625C15.7062 6.00401 15.9294 5.46927 16.3243 5.07435C16.7193 4.67943 17.254 4.4562 17.8125 4.45313V4.45313ZM25.6875 16.2422L25.6406 16.2773C25.5703 16.3125 24.7852 16.6992 23.3906 16.6992C21.7734 16.6992 19.3359 16.1719 16.2422 13.9453C15.731 15.5337 15.0181 17.05 14.1211 18.457C15.2227 18.7852 16.6875 19.3594 18 20.3555C20.2148 22.0313 21.3281 24.3398 21.3281 27.1875C21.3281 27.374 21.254 27.5528 21.1222 27.6847C20.9903 27.8165 20.8115 27.8906 20.625 27.8906C20.4385 27.8906 20.2597 27.8165 20.1278 27.6847C19.996 27.5528 19.9219 27.374 19.9219 27.1875C19.9219 22.0313 15.5625 20.25 13.2539 19.6758C11.3438 22.125 8.56641 24.1875 4.76953 24.1875C4.41797 24.1875 4.05469 24.1758 3.67969 24.1406C3.49321 24.122 3.32177 24.03 3.2031 23.885C3.08442 23.7399 3.02823 23.5537 3.04687 23.3672C3.06552 23.1807 3.15749 23.0093 3.30253 22.8906C3.44758 22.7719 3.63383 22.7157 3.82031 22.7344C7.05469 23.0625 9.83203 21.7617 12.1055 18.8672L12.3867 18.4922C12.3867 18.4805 12.3984 18.4805 12.3984 18.4688C13.5832 16.8255 14.4753 14.9899 15.0352 13.043C10.2539 9.60938 7.17187 12.3047 7.03125 12.4219C6.90422 12.5412 6.7368 12.6082 6.5625 12.6094C6.37602 12.6094 6.19718 12.5353 6.06532 12.4034C5.93345 12.2716 5.85937 12.0927 5.85937 11.9063V11.8711C5.86043 11.8272 5.86833 11.7837 5.88281 11.7422L5.91797 11.625H5.92969C5.94471 11.5875 5.9644 11.5521 5.98828 11.5195H6C6.02086 11.4832 6.04875 11.4513 6.08203 11.4258C6.93051 10.7386 7.93781 10.2752 9.01172 10.0781C10.6172 9.76172 13.1719 9.89063 16.2305 12.2227L16.2891 12.2695L16.3711 12.3281C21.7852 16.5703 24.9609 15.082 24.9961 15.0703H25.043C25.2042 15.003 25.3847 14.9981 25.5494 15.0565C25.714 15.115 25.851 15.2327 25.9336 15.3867C26.0102 15.5369 26.0323 15.709 25.9959 15.8736C25.9596 16.0383 25.8671 16.1851 25.7344 16.2891H25.6875V16.2422Z" fill="black"/>
                     </svg>
                         
@@ -96,7 +96,7 @@
         <li class=" mr-6">
             <a href="#" class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 " >
                 <span class="iconn">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.375 25C4.20833 25 4.0625 24.9375 3.9375 24.8125C3.8125 24.6875 3.75 24.5417 3.75 24.375C3.75 24.2083 3.8125 24.0625 3.9375 23.9375C4.0625 23.8125 4.20833 23.75 4.375 23.75H6.25V23.125H5.625C5.45833 23.125 5.3125 23.0625 5.1875 22.9375C5.0625 22.8125 5 22.6667 5 22.5C5 22.3333 5.0625 22.1875 5.1875 22.0625C5.3125 21.9375 5.45833 21.875 5.625 21.875H6.25V21.25H4.375C4.20833 21.25 4.0625 21.1875 3.9375 21.0625C3.8125 20.9375 3.75 20.7917 3.75 20.625C3.75 20.4583 3.8125 20.3125 3.9375 20.1875C4.0625 20.0625 4.20833 20 4.375 20H6.875C7.04167 20 7.1875 20.0625 7.3125 20.1875C7.4375 20.3125 7.5 20.4583 7.5 20.625V24.375C7.5 24.5417 7.4375 24.6875 7.3125 24.8125C7.1875 24.9375 7.04167 25 6.875 25H4.375ZM5.625 10C5.45833 10 5.3125 9.9375 5.1875 9.8125C5.0625 9.6875 5 9.54167 5 9.375V6.25H4.375C4.20833 6.25 4.0625 6.1875 3.9375 6.0625C3.8125 5.9375 3.75 5.79167 3.75 5.625C3.75 5.45833 3.8125 5.3125 3.9375 5.1875C4.0625 5.0625 4.20833 5 4.375 5H5.625C5.79167 5 5.9375 5.0625 6.0625 5.1875C6.1875 5.3125 6.25 5.45833 6.25 5.625V9.375C6.25 9.54167 6.1875 9.6875 6.0625 9.8125C5.9375 9.9375 5.79167 10 5.625 10ZM4.375 17.5C4.20833 17.5 4.0625 17.4375 3.9375 17.3125C3.8125 17.1875 3.75 17.0417 3.75 16.875V16.5937C3.75 16.5104 3.80208 16.375 3.90625 16.1875L6 13.75H4.375C4.20833 13.75 4.0625 13.6875 3.9375 13.5625C3.8125 13.4375 3.75 13.2917 3.75 13.125C3.75 12.9583 3.8125 12.8125 3.9375 12.6875C4.0625 12.5625 4.20833 12.5 4.375 12.5H6.875C7.04167 12.5 7.1875 12.5625 7.3125 12.6875C7.4375 12.8125 7.5 12.9583 7.5 13.125V13.4063C7.5 13.4896 7.44792 13.625 7.34375 13.8125L5.25 16.25H6.875C7.04167 16.25 7.1875 16.3125 7.3125 16.4375C7.4375 16.5625 7.5 16.7083 7.5 16.875C7.5 17.0417 7.4375 17.1875 7.3125 17.3125C7.1875 17.4375 7.04167 17.5 6.875 17.5H4.375ZM11.25 23.75C10.8958 23.75 10.5992 23.63 10.36 23.39C10.12 23.1508 10 22.8542 10 22.5C10 22.1458 10.12 21.8492 10.36 21.61C10.5992 21.37 10.8958 21.25 11.25 21.25H25C25.3542 21.25 25.6508 21.37 25.89 21.61C26.13 21.8492 26.25 22.1458 26.25 22.5C26.25 22.8542 26.13 23.1508 25.89 23.39C25.6508 23.63 25.3542 23.75 25 23.75H11.25ZM11.25 16.25C10.8958 16.25 10.5992 16.13 10.36 15.89C10.12 15.6508 10 15.3542 10 15C10 14.6458 10.12 14.3487 10.36 14.1087C10.5992 13.8696 10.8958 13.75 11.25 13.75H25C25.3542 13.75 25.6508 13.8696 25.89 14.1087C26.13 14.3487 26.25 14.6458 26.25 15C26.25 15.3542 26.13 15.6508 25.89 15.89C25.6508 16.13 25.3542 16.25 25 16.25H11.25ZM11.25 8.75C10.8958 8.75 10.5992 8.63042 10.36 8.39125C10.12 8.15125 10 7.85417 10 7.5C10 7.14583 10.12 6.84875 10.36 6.60875C10.5992 6.36958 10.8958 6.25 11.25 6.25H25C25.3542 6.25 25.6508 6.36958 25.89 6.60875C26.13 6.84875 26.25 7.14583 26.25 7.5C26.25 7.85417 26.13 8.15125 25.89 8.39125C25.6508 8.63042 25.3542 8.75 25 8.75H11.25Z" fill="black"/>
                     </svg>
                 </span>
@@ -166,7 +166,7 @@
 
     <!-- desktop sidebar end -->
 
-    <!-- mobile sidebar -->
+    <!-- mobile appbar -->
     <div class="fixed bottom-0 left-0 bg-gray-100 p-3 w-full min-[992px]:hidden border-t z-50">
         <ul class=" flex items-center gap-2  ">
           <li class="w-1/5">
@@ -240,133 +240,134 @@
         
         </ul>
     </div>
-    <!-- mobile sidebar end -->
+    <!-- mobile appbar end -->
 
-    <main class=" flex-1 p-2 pt-6">
-       <div class="dms-container ">
+    <main class=" flex-1 py-2 pt-6">
+        <div class="dms-container ">
             <!-- header part -->
-        <header class="flex justify-end items-center  gap-6">
-            <!-- notification -->
-            <div class="relative cursor-pointer pb-3 " x-data="{ open: false }" x-cloak>
-            <span @click="open = ! open">
-                <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 15C0.447715 15 0 15.4477 0 16C0 16.5523 0.447715 17 1 17V15ZM4 8H3H4ZM18 8H19H18ZM12.73 20L13.595 20.5018C13.7744 20.1924 13.775 19.8108 13.5965 19.5009C13.418 19.191 13.0876 19 12.73 19V20ZM9.27 20V19C8.91237 19 8.58196 19.191 8.40346 19.5009C8.22497 19.8108 8.22555 20.1924 8.405 20.5018L9.27 20ZM21 15H1V17H21V15ZM1 17C3.20914 17 5 15.2091 5 13H3C3 14.1046 2.10457 15 1 15V17ZM5 13V8H3V13H5ZM5 8C5 4.68629 7.68629 2 11 2V0C6.58172 0 3 3.58172 3 8H5ZM11 2C14.3137 2 17 4.68629 17 8H19C19 3.58172 15.4183 0 11 0V2ZM17 8V13H19V8H17ZM17 13C17 15.2091 18.7909 17 21 17V15C19.8954 15 19 14.1046 19 13H17ZM11.865 19.4982C11.6861 19.8066 11.3565 19.9965 11 19.9965V21.9965C12.0696 21.9965 13.0583 21.427 13.595 20.5018L11.865 19.4982ZM11 19.9965C10.6435 19.9965 10.3139 19.8066 10.135 19.4982L8.405 20.5018C8.9417 21.427 9.9304 21.9965 11 21.9965V19.9965ZM9.27 21H12.73V19H9.27V21Z" fill="#333333"/>
-                </svg>
-            </span>
-            <span class="absolute w-2 h-2 bg-blue-600 rounded-full -right-2 -top-2"></span> 
-            <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-52 origin-top-right absolute  md:right-0 rounded top-full z-50 py-0.5 text-left bg-white dark:bg-slate-800 border dark:border-slate-700 shadow-md">
-                <div class="p-3 font-normal border-b border-slate-200 dark:border-slate-700">
-                    <div class="relative w-full flex flex-row justify-between items-center">
-                      <div class="text-sm font-bold">Notifications</div>
-                      <a href="#" class="inline-block" title="Clear all">
-                        <i class="text-xl bx bx-trash-alt"></i>
-                      </a>
+            <header class="flex justify-end items-center  gap-6">
+                <!-- notification -->
+                <div class="relative cursor-pointer pb-3 " x-data="{ open: false }" x-cloak>
+                <span @click="open = ! open">
+                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 15C0.447715 15 0 15.4477 0 16C0 16.5523 0.447715 17 1 17V15ZM4 8H3H4ZM18 8H19H18ZM12.73 20L13.595 20.5018C13.7744 20.1924 13.775 19.8108 13.5965 19.5009C13.418 19.191 13.0876 19 12.73 19V20ZM9.27 20V19C8.91237 19 8.58196 19.191 8.40346 19.5009C8.22497 19.8108 8.22555 20.1924 8.405 20.5018L9.27 20ZM21 15H1V17H21V15ZM1 17C3.20914 17 5 15.2091 5 13H3C3 14.1046 2.10457 15 1 15V17ZM5 13V8H3V13H5ZM5 8C5 4.68629 7.68629 2 11 2V0C6.58172 0 3 3.58172 3 8H5ZM11 2C14.3137 2 17 4.68629 17 8H19C19 3.58172 15.4183 0 11 0V2ZM17 8V13H19V8H17ZM17 13C17 15.2091 18.7909 17 21 17V15C19.8954 15 19 14.1046 19 13H17ZM11.865 19.4982C11.6861 19.8066 11.3565 19.9965 11 19.9965V21.9965C12.0696 21.9965 13.0583 21.427 13.595 20.5018L11.865 19.4982ZM11 19.9965C10.6435 19.9965 10.3139 19.8066 10.135 19.4982L8.405 20.5018C8.9417 21.427 9.9304 21.9965 11 21.9965V19.9965ZM9.27 21H12.73V19H9.27V21Z" fill="#333333"/>
+                    </svg>
+                </span>
+                <span class="absolute w-2 h-2 bg-blue-600 rounded-full -right-2 -top-2"></span> 
+                <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-52 origin-top-right absolute  md:right-0 rounded top-full z-50 py-0.5 text-left bg-white  shadow-md">
+                    <div class="p-3 font-normal border-b border-slate-200 ">
+                        <div class="relative w-full flex flex-row justify-between items-center">
+                        <div class="text-sm font-bold">Notifications</div>
+                        <a href="#" class="inline-block" title="Clear all">
+                            <i class="text-xl bx bx-trash-alt"></i>
+                        </a>
+                        </div>
                     </div>
-                  </div>
-                  <div class="max-h-60 overflow-y-auto scrollbars show">
-                    <a class="relative" href="#">
-                      <div class="flex flex-wrap flex-row items-center border-b border-slate-200 dark:border-slate-700 dark:bg-slate-900 dark:bg-opacity-40 dark:hover:bg-opacity-20 py-2 hover:bg-slate-100 bg-slate-50">
-                        <div class="flex-shrink max-w-full px-2 w-1/4 text-center">
-                          <div class="flex justify-center mx-auto w-8 h-8 rounded-full bg-cyan-500 text-white">
-                            <i class="self-center bx bx-calendar"></i>
-                          </div>
+                    <div class="max-h-60 overflow-y-auto scrollbars show">
+                        <a class="relative" href="#">
+                        <div class="flex flex-wrap flex-row items-center border-b border-slate-200   py-2 hover:bg-slate-100 bg-slate-50">
+                            <div class="flex-shrink max-w-full px-2 w-1/4 text-center">
+                            <div class="flex justify-center mx-auto w-8 h-8 rounded-full bg-cyan-500 text-white">
+                                <i class="self-center bx bx-calendar"></i>
+                            </div>
+                            </div>
+                            <div class="flex-shrink max-w-full px-2 w-3/4">
+                            <div class="text-sm font-bold">Event will coming</div>
+                            <div class="text-slate-500 text-sm mt-1">Meeting with Mr.John Navas at:10.00Am</div>
+                            <div class="text-slate-500 text-sm mt-1">1h ago</div>
+                            </div>
                         </div>
-                        <div class="flex-shrink max-w-full px-2 w-3/4">
-                          <div class="text-sm font-bold">Event will coming</div>
-                          <div class="text-slate-500 text-sm mt-1">Meeting with Mr.John Navas at:10.00Am</div>
-                          <div class="text-slate-500 text-sm mt-1">1h ago</div>
-                        </div>
-                      </div>
-                    </a>
-                    
-                  </div>
-                  <div class="p-3 text-sm text-center font-normal">
-                    <a href="#" class="hover:underline">Show all Notifications</a>
-                  </div>
-            </div>
-            </div>
-
-            <!-- profile dropdown  -->
-            <div class="relative pb-3" x-data="{ open: false }" x-cloak>
-                <div class="flex items-center px-8 gap-5 cursor-pointer" @click="open = ! open">
-                    <span class=" text-xs md:text-sm">John Cane</span>
-                    <span>
-                        <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg" 
-                            x-bind:class="open == true? 'transform rotate-180':''" class="transition-all duration-300">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99991 6.9995C6.77191 6.9995 6.54491 6.9225 
-                            6.35991 6.7675L0.359909 1.7675C-0.0640909 1.4145 -0.122091 0.783495 0.231909 0.359495C0.584909 
-                            -0.0645046 1.21491 -0.121505 1.63991 0.231495L7.01091 4.7075L12.3729 0.392495C12.8029 0.0464955 
-                            13.4329 0.114495 13.7789 0.544495C14.1249 0.974495 14.0569 1.6035 13.6269 1.9505L7.62691 6.7785C7.44391 
-                            6.9255 7.22191 6.9995 6.99991 6.9995Z" fill="#343C44"/>
-                        </svg>
-                            
-                    </span>
-                </div>
-            
-                <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out"
-                    x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
-                    x-transition:leave="transition-all duration-200 ease-in"
-                    x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95"
-                    class="w-52 origin-top-right absolute right-0  rounded top-full z-50 py-0.5 text-left bg-white 
-                    dark:bg-slate-800 border dark:border-slate-700">
-
-                   <ul>
-                    <li>
-                        <a href="#" class="flex items-center py-4 px-4 gap-2 hover:bg-gray-50 transition duration-300">
-                            <span>
-                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66669 2.95833C7.66669 2.17704 6.91919 1.54167 
-                                    6.00002 1.54167C5.08085 1.54167 4.33335 2.17704 4.33335 2.95833C4.33335 3.73962 5.08085 4.375 
-                                    6.00002 4.375C6.91919 4.375 7.66669 3.73962 7.66669 2.95833ZM9.33335 2.95833C9.33335 4.52092 
-                                    7.83835 5.79167 6.00002 5.79167C4.16169 5.79167 2.66669 4.52092 2.66669 2.95833C2.66669 1.39575 
-                                    4.16169 0.125 6.00002 0.125C7.83835 0.125 9.33335 1.39575 9.33335 2.95833ZM0.166687 12.1667C0.166687 
-                                    9.4325 2.78419 7.20833 6.00002 7.20833C9.21585 7.20833 11.8334 9.4325 11.8334 12.1667C11.8334 12.5577 
-                                    11.4609 12.875 11 12.875C10.5392 12.875 10.1667 12.5577 10.1667 12.1667C10.1667 10.2138 8.29752 8.625 
-                                    6.00002 8.625C3.70252 8.625 1.83335 10.2138 1.83335 12.1667C1.83335 12.5577 1.46085 12.875 1.00002 
-                                    12.875C0.539187 12.875 0.166687 12.5577 0.166687 12.1667Z" fill="#343C44"/>
-                                </svg>
-                                    
-                            </span>
-                            <span class=" text-xs">View Profile</span>
                         </a>
-                        <a href="#" class="flex items-center py-4 px-4 gap-2 hover:bg-gray-50 transition duration-300">
-                            <span>
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33335 0.75C3.33335 1.1625 3.03335 1.5 2.66669 
-                                    1.5H2.00002V10.5H2.66669C3.03335 10.5 3.33335 10.8375 3.33335 11.25C3.33335 11.6625 3.03335 12 2.66669 
-                                    12H1.33335C0.966687 12 0.666687 11.6625 0.666687 11.25V0.75C0.666687 0.3375 0.966687 0 1.33335 
-                                    0H2.66669C3.03335 0 3.33335 0.3375 3.33335 0.75ZM10.0026 2.5686L11.8786 5.5686C12.0453 5.8341 
-                                    12.04 6.19035 11.8666 6.44985L9.86662 9.44985C9.73596 9.64635 9.53529 9.74985 9.33262 9.74985C9.19395 
-                                    9.74985 9.05329 9.7011 8.93329 9.59985C8.63862 9.3516 8.57929 8.88135 8.79995 8.5506L10.0006 
-                                    6.74985H9.99995H4.66662C4.29862 6.74985 3.99995 6.4146 3.99995 5.99985C3.99995 5.5851 4.29862 
-                                    5.24985 4.66662 5.24985H9.99995C10.011 5.24985 10.0212 5.25327 10.0315 5.25671C10.0399 5.25952 
-                                    10.0483 5.26234 10.0573 5.26335L8.91195 3.4311C8.69995 3.09285 8.77262 2.62485 9.07395 
-                                    2.38635C9.37462 2.1471 9.79062 2.2296 10.0026 2.5686Z" fill="#343C44"/>
-                                </svg>
-                                    
-                                    
-                            </span>
-                            <span class=" text-xs">Sign Out</span>
-                        </a>
-                    </li>
-                   </ul>
+                        
+                    </div>
+                    <div class="p-3 text-sm text-center font-normal">
+                        <a href="#" class="hover:underline">Show all Notifications</a>
+                    </div>
                 </div>
-            </div>
-        </header>
-        <!-- welcome -->
+                </div>
 
-        <div class="flex justify-between items-end px-2  pt-4 lg:pt-8  pb-20">
-            <div>
-                <p class=" text-xs md:textsm lg:text-base ">This is your dashboard</p>
-                <h1 class=" text-xl lg:text-2xl">Hello John</h1>
-            </div>
-            <div class="">
-                <input type="date" name="" id="" class=" outline-none  p-1 border border-border rounded text-sm lg:text-base">
+                <!-- profile dropdown  -->
+                <div class="relative pb-3" x-data="{ open: false }" x-cloak>
+                    <div class="flex items-center px-8 gap-5 cursor-pointer" @click="open = ! open">
+                        <span class=" text-xs md:text-sm">John Cane</span>
+                        <span>
+                            <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg" 
+                                x-bind:class="open == true? 'transform rotate-180':''" class="transition-all duration-300">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99991 6.9995C6.77191 6.9995 6.54491 6.9225 
+                                6.35991 6.7675L0.359909 1.7675C-0.0640909 1.4145 -0.122091 0.783495 0.231909 0.359495C0.584909 
+                                -0.0645046 1.21491 -0.121505 1.63991 0.231495L7.01091 4.7075L12.3729 0.392495C12.8029 0.0464955 
+                                13.4329 0.114495 13.7789 0.544495C14.1249 0.974495 14.0569 1.6035 13.6269 1.9505L7.62691 6.7785C7.44391 
+                                6.9255 7.22191 6.9995 6.99991 6.9995Z" fill="#343C44"/>
+                            </svg>
+                                
+                        </span>
+                    </div>
+                
+                    <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out"
+                        x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
+                        x-transition:leave="transition-all duration-200 ease-in"
+                        x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95"
+                        class="w-52 origin-top-right absolute right-0  rounded top-full z-50 py-0.5 text-left bg-white 
+                       border ">
+
+                    <ul>
+                        <li>
+                            <a href="#" class="flex items-center py-4 px-4 gap-2 hover:bg-gray-50 transition duration-300">
+                                <span>
+                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66669 2.95833C7.66669 2.17704 6.91919 1.54167 
+                                        6.00002 1.54167C5.08085 1.54167 4.33335 2.17704 4.33335 2.95833C4.33335 3.73962 5.08085 4.375 
+                                        6.00002 4.375C6.91919 4.375 7.66669 3.73962 7.66669 2.95833ZM9.33335 2.95833C9.33335 4.52092 
+                                        7.83835 5.79167 6.00002 5.79167C4.16169 5.79167 2.66669 4.52092 2.66669 2.95833C2.66669 1.39575 
+                                        4.16169 0.125 6.00002 0.125C7.83835 0.125 9.33335 1.39575 9.33335 2.95833ZM0.166687 12.1667C0.166687 
+                                        9.4325 2.78419 7.20833 6.00002 7.20833C9.21585 7.20833 11.8334 9.4325 11.8334 12.1667C11.8334 12.5577 
+                                        11.4609 12.875 11 12.875C10.5392 12.875 10.1667 12.5577 10.1667 12.1667C10.1667 10.2138 8.29752 8.625 
+                                        6.00002 8.625C3.70252 8.625 1.83335 10.2138 1.83335 12.1667C1.83335 12.5577 1.46085 12.875 1.00002 
+                                        12.875C0.539187 12.875 0.166687 12.5577 0.166687 12.1667Z" fill="#343C44"/>
+                                    </svg>
+                                        
+                                </span>
+                                <span class=" text-xs">View Profile</span>
+                            </a>
+                            <a href="#" class="flex items-center py-4 px-4 gap-2 hover:bg-gray-50 transition duration-300">
+                                <span>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33335 0.75C3.33335 1.1625 3.03335 1.5 2.66669 
+                                        1.5H2.00002V10.5H2.66669C3.03335 10.5 3.33335 10.8375 3.33335 11.25C3.33335 11.6625 3.03335 12 2.66669 
+                                        12H1.33335C0.966687 12 0.666687 11.6625 0.666687 11.25V0.75C0.666687 0.3375 0.966687 0 1.33335 
+                                        0H2.66669C3.03335 0 3.33335 0.3375 3.33335 0.75ZM10.0026 2.5686L11.8786 5.5686C12.0453 5.8341 
+                                        12.04 6.19035 11.8666 6.44985L9.86662 9.44985C9.73596 9.64635 9.53529 9.74985 9.33262 9.74985C9.19395 
+                                        9.74985 9.05329 9.7011 8.93329 9.59985C8.63862 9.3516 8.57929 8.88135 8.79995 8.5506L10.0006 
+                                        6.74985H9.99995H4.66662C4.29862 6.74985 3.99995 6.4146 3.99995 5.99985C3.99995 5.5851 4.29862 
+                                        5.24985 4.66662 5.24985H9.99995C10.011 5.24985 10.0212 5.25327 10.0315 5.25671C10.0399 5.25952 
+                                        10.0483 5.26234 10.0573 5.26335L8.91195 3.4311C8.69995 3.09285 8.77262 2.62485 9.07395 
+                                        2.38635C9.37462 2.1471 9.79062 2.2296 10.0026 2.5686Z" fill="#343C44"/>
+                                    </svg>
+                                        
+                                        
+                                </span>
+                                <span class=" text-xs">Sign Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- welcome -->
+
+            <div class="flex justify-between items-end px-2  pt-4 lg:pt-8  pb-20">
+                <div>
+                    <p class=" text-xs md:textsm lg:text-base ">This is your dashboard</p>
+                    <h1 class=" text-xl lg:text-2xl">Hello John</h1>
+                </div>
+                <div class="">
+                    <input type="date" name="" id="" class=" outline-none  p-1 border border-border rounded text-sm lg:text-base">
+                </div>
             </div>
         </div>
-    </div>
 
-        <!-- dashbord contents -->
+         <!-- dashbord contents -->
         <div class=" bg-border border" style="background:linear-gradient(180deg, rgba(227, 223, 223, 0.25) 3.85%, rgba(218, 218, 218, 0.22526) 3.86%, rgba(218, 218, 218, 0) 100%);">
            <div class="dms-container">
 
@@ -459,11 +460,56 @@
             </div>
             <!-- total cards end -->
 
+
             <div class="graph py-6">
                 <figure class="w-full h-auto">
                     <img src="assets/images/home/graph1.png" alt="graph" class="w-full h-full object-cover">
                 </figure>
             </div>
+
+            <div class="graph py-6">
+                <div class="column-wrapper grid grid-cols-1 lg:grid-cols-2 gap-9">
+
+                   
+                    <div class="border border-border bg-white " x-data="accordion">
+                        <div class="graph-header flex justify-between items-center p-5 border-b border-b-border">
+                            <h2 class="text-base text-black font-normal">Active deliveries</h2>
+                            <button class=" rounded-xl bg-red-300 px-2 py-2 text-black text-xs"
+                                @click="selected != 1 ? selected = 1 : selected =null">expand icon</button>
+                        </div>
+                    
+                    
+                        <div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab1"
+                            :style="selected == 1 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                            <figure class="w-full h-auto">
+                                <img src="assets/images/home/map.png" alt="map" class="w-full h-full object-cover">
+                            </figure>
+                        </div>
+                    
+                    </div>
+                    <div class="border border-border bg-white " x-data="accordion">
+                        <div class="graph-header flex justify-between items-center p-5 border-b border-b-border">
+                            <h2 class="text-base text-black font-normal">Deliveries</h2>
+                            <button class=" rounded-xl bg-red-300 px-2 py-2 text-black text-xs"
+                                @click="selected != 1 ? selected = 1 : selected =null">See run list</button>
+                        </div>
+                    
+                    
+                        <div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab1"
+                            :style="selected == 1 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                            <figure class="w-full h-full p-2">
+                                <img src="assets/images/home/chart.png" alt="map" class=" max-w-full h-full object-contain">
+                            </figure>
+                        </div>
+                    
+                    </div>
+
+                   
+                    
+                </div>
+            </div>
+
+
 
         
 
