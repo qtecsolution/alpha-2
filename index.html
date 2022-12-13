@@ -12,8 +12,7 @@
         .dms-container {
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  
 }
 @media (min-width: 768px) {
   .dms-container {
@@ -32,6 +31,16 @@
     max-width: 1170px;
   }
 }
+@media (min-width: 1300px) {
+  .dms-container {
+    max-width: 1270px;
+  }
+}
+@media (min-width: 1400px) {
+  .dms-container {
+    max-width: 1370px;
+  }
+}
      </style>
          <!-- Alpinejs -->
     <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
@@ -39,7 +48,7 @@
 <body>
     
 
-  <section class="flex h-screen relative overflow-x-hidden shrink-0">
+  <section class="flex min-h-screen relative shrink-0">
     <!-- desktop sidebar  -->
     <aside class="bg-[url('../../assets/images/home/sidebarbg.png')] h-screen w-72  bg-bottom bg-contain sticky top-0 left-0
       transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28 " id="sidebar">
@@ -249,140 +258,153 @@
     </div>
     <!-- mobile appbar end -->
 
-    <main class=" flex-1 py-2 pt-6">
-        <div class="dms-container ">
-            <!-- header part -->
-            <header class="flex justify-between min-[992px]:justify-end items-center ">
-                <!-- logo -->
-                <div class="  min-[992px]:hidden">
-                    <figure class="w-24 " id="sidebarlogo" style="display: block;">
-                        <img src="assets/images/login/logo.png" alt="Logo" class=" w-full h-full">
-                    </figure>
-                </div>
-                <div class="flex items-center  gap-3 sm:gap-4 md:gap-5 lg:gap-16 ">
-                    <!-- notification -->
-                    <div class="relative cursor-pointer pb-3 " x-data="{ open: false }" x-cloak>
-                        <span @click="open = ! open">
-                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M1 15C0.447715 15 0 15.4477 0 16C0 16.5523 0.447715 17 1 17V15ZM4 8H3H4ZM18 8H19H18ZM12.73 20L13.595 20.5018C13.7744 20.1924 13.775 19.8108 13.5965 19.5009C13.418 19.191 13.0876 19 12.73 19V20ZM9.27 20V19C8.91237 19 8.58196 19.191 8.40346 19.5009C8.22497 19.8108 8.22555 20.1924 8.405 20.5018L9.27 20ZM21 15H1V17H21V15ZM1 17C3.20914 17 5 15.2091 5 13H3C3 14.1046 2.10457 15 1 15V17ZM5 13V8H3V13H5ZM5 8C5 4.68629 7.68629 2 11 2V0C6.58172 0 3 3.58172 3 8H5ZM11 2C14.3137 2 17 4.68629 17 8H19C19 3.58172 15.4183 0 11 0V2ZM17 8V13H19V8H17ZM17 13C17 15.2091 18.7909 17 21 17V15C19.8954 15 19 14.1046 19 13H17ZM11.865 19.4982C11.6861 19.8066 11.3565 19.9965 11 19.9965V21.9965C12.0696 21.9965 13.0583 21.427 13.595 20.5018L11.865 19.4982ZM11 19.9965C10.6435 19.9965 10.3139 19.8066 10.135 19.4982L8.405 20.5018C8.9417 21.427 9.9304 21.9965 11 21.9965V19.9965ZM9.27 21H12.73V19H9.27V21Z"
-                                    fill="#333333" />
-                            </svg>
-                        </span>
-                        <span class="absolute w-2 h-2 bg-blue-600 rounded-full -right-2 -top-2"></span>
-                        <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out"
-                            x-transition:enter-start="transform opacity-0 scale-95"
-                            x-transition:enter-end="transform opacity-100 scale-100"
-                            x-transition:leave="transition-all duration-200 ease-in"
-                            x-transition:leave-start="transform opacity-100 scale-100"
-                            x-transition:leave-end="transform opacity-0 scale-95"
-                            class="w-44 lg:w-52 origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white  shadow-md">
-                            <div class="p-3 font-normal border-b border-slate-200 ">
-                                <div class="relative w-full flex flex-row justify-between items-center">
-                                    <div class="text-sm font-bold">Notifications</div>
-                                    <a href="#" class="inline-block" title="Clear all">
-                                        <i class="text-xl bx bx-trash-alt"></i>
-                                    </a>
+    <main class=" flex-1 py-2 pt-0  ">
+        <header class="sticky top-0 left-0 right-0 bg-white z-50 py-2 pt-6">
+            <div class="dms-container">
+        
+        
+                <div class="flex justify-between min-[992px]:justify-end items-center ">
+                    <!-- logo -->
+                    <div class="  min-[992px]:hidden">
+                        <figure class="w-24 " id="sidebarlogo" style="display: block;">
+                            <img src="assets/images/login/logo.png" alt="Logo" class=" w-full h-full">
+                        </figure>
+                    </div>
+                    <div class="flex items-center  gap-3 sm:gap-4 md:gap-5 lg:gap-16 ">
+                        <!-- notification -->
+                        <div class="relative cursor-pointer pb-3 " x-data="{ open: false }" x-cloak>
+                            <span @click="open = ! open">
+                                <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 15C0.447715 15 0 15.4477 0 16C0 16.5523 0.447715 17 1 17V15ZM4 8H3H4ZM18 8H19H18ZM12.73 20L13.595 20.5018C13.7744 20.1924 13.775 19.8108 13.5965 19.5009C13.418 19.191 13.0876 19 12.73 19V20ZM9.27 20V19C8.91237 19 8.58196 19.191 8.40346 19.5009C8.22497 19.8108 8.22555 20.1924 8.405 20.5018L9.27 20ZM21 15H1V17H21V15ZM1 17C3.20914 17 5 15.2091 5 13H3C3 14.1046 2.10457 15 1 15V17ZM5 13V8H3V13H5ZM5 8C5 4.68629 7.68629 2 11 2V0C6.58172 0 3 3.58172 3 8H5ZM11 2C14.3137 2 17 4.68629 17 8H19C19 3.58172 15.4183 0 11 0V2ZM17 8V13H19V8H17ZM17 13C17 15.2091 18.7909 17 21 17V15C19.8954 15 19 14.1046 19 13H17ZM11.865 19.4982C11.6861 19.8066 11.3565 19.9965 11 19.9965V21.9965C12.0696 21.9965 13.0583 21.427 13.595 20.5018L11.865 19.4982ZM11 19.9965C10.6435 19.9965 10.3139 19.8066 10.135 19.4982L8.405 20.5018C8.9417 21.427 9.9304 21.9965 11 21.9965V19.9965ZM9.27 21H12.73V19H9.27V21Z"
+                                        fill="#333333" />
+                                </svg>
+                            </span>
+                            <span class="absolute w-2 h-2 bg-blue-600 rounded-full -right-2 -top-2"></span>
+                            <div x-show="open" @click.away="open = false"
+                                x-transition:enter="transition-all duration-200 ease-out"
+                                x-transition:enter-start="transform opacity-0 scale-95"
+                                x-transition:enter-end="transform opacity-100 scale-100"
+                                x-transition:leave="transition-all duration-200 ease-in"
+                                x-transition:leave-start="transform opacity-100 scale-100"
+                                x-transition:leave-end="transform opacity-0 scale-95"
+                                class="w-44 lg:w-52 origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white  shadow-md">
+                                <div class="p-3 font-normal border-b border-slate-200 ">
+                                    <div class="relative w-full flex flex-row justify-between items-center">
+                                        <div class="text-sm font-bold">Notifications</div>
+                                        <a href="#" class="inline-block" title="Clear all">
+                                            <i class="text-xl bx bx-trash-alt"></i>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="max-h-60 overflow-y-auto scrollbars show">
-                                <a class="relative" href="#">
-                                    <div
-                                        class="flex flex-wrap flex-row items-center border-b border-slate-200   py-2 hover:bg-slate-100 bg-slate-50">
-                                        <div class="flex-shrink max-w-full px-2 w-1/4 text-center">
-                                            <div class="flex justify-center mx-auto w-8 h-8 rounded-full bg-cyan-500 text-white">
-                                                <i class="self-center bx bx-calendar"></i>
+                                <div class="max-h-60 overflow-y-auto scrollbars show">
+                                    <a class="relative" href="#">
+                                        <div
+                                            class="flex flex-wrap flex-row items-center border-b border-slate-200   py-2 hover:bg-slate-100 bg-slate-50">
+                                            <div class="flex-shrink max-w-full px-2 w-1/4 text-center">
+                                                <div
+                                                    class="flex justify-center mx-auto w-8 h-8 rounded-full bg-cyan-500 text-white">
+                                                    <i class="self-center bx bx-calendar"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink max-w-full px-2 w-3/4">
+                                                <div class="text-sm font-bold">Event will coming</div>
+                                                <div class="text-slate-500 text-sm mt-1">Meeting with Mr.John Navas at:10.00Am
+                                                </div>
+                                                <div class="text-slate-500 text-sm mt-1">1h ago</div>
                                             </div>
                                         </div>
-                                        <div class="flex-shrink max-w-full px-2 w-3/4">
-                                            <div class="text-sm font-bold">Event will coming</div>
-                                            <div class="text-slate-500 text-sm mt-1">Meeting with Mr.John Navas at:10.00Am</div>
-                                            <div class="text-slate-500 text-sm mt-1">1h ago</div>
-                                        </div>
-                                    </div>
-                                </a>
-                
-                            </div>
-                            <div class="p-3 text-sm text-center font-normal">
-                                <a href="#" class="hover:underline">Show all Notifications</a>
+                                    </a>
+        
+                                </div>
+                                <div class="p-3 text-sm text-center font-normal">
+                                    <a href="#" class="hover:underline">Show all Notifications</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                
-                    <!-- profile dropdown  -->
-                    <div class="relative pb-3" x-data="{ open: false }" x-cloak>
-                        <div class="flex items-center pr-2 gap-4 cursor-pointer" @click="open = ! open">
-                            <span class=" text-xs md:text-sm">John Cane</span>
-                            <span>
-                                <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    x-bind:class="open == true? 'transform rotate-180':''" class="transition-all duration-300">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99991 6.9995C6.77191 6.9995 6.54491 6.9225 
-                                                    6.35991 6.7675L0.359909 1.7675C-0.0640909 1.4145 -0.122091 0.783495 0.231909 0.359495C0.584909 
-                                                    -0.0645046 1.21491 -0.121505 1.63991 0.231495L7.01091 4.7075L12.3729 0.392495C12.8029 0.0464955 
-                                                    13.4329 0.114495 13.7789 0.544495C14.1249 0.974495 14.0569 1.6035 13.6269 1.9505L7.62691 6.7785C7.44391 
-                                                    6.9255 7.22191 6.9995 6.99991 6.9995Z" fill="#343C44" />
-                                </svg>
-                
-                            </span>
-                        </div>
-                
-                        <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out"
-                            x-transition:enter-start="transform opacity-0 scale-95"
-                            x-transition:enter-end="transform opacity-100 scale-100"
-                            x-transition:leave="transition-all duration-200 ease-in"
-                            x-transition:leave-start="transform opacity-100 scale-100"
-                            x-transition:leave-end="transform opacity-0 scale-95" class="w-32 md:w-44 origin-top-right absolute right-0  rounded top-full z-50 py-0.5 text-left bg-white 
-                                           border ">
-                
-                            <ul>
-                                <li>
-                                    <a href="#"
-                                        class="flex items-center py-2 sm:py-3 px-4 gap-2 hover:bg-gray-50 transition duration-300">
-                                        <span>
-                                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66669 2.95833C7.66669 2.17704 6.91919 1.54167 
-                                                            6.00002 1.54167C5.08085 1.54167 4.33335 2.17704 4.33335 2.95833C4.33335 3.73962 5.08085 4.375 
-                                                            6.00002 4.375C6.91919 4.375 7.66669 3.73962 7.66669 2.95833ZM9.33335 2.95833C9.33335 4.52092 
-                                                            7.83835 5.79167 6.00002 5.79167C4.16169 5.79167 2.66669 4.52092 2.66669 2.95833C2.66669 1.39575 
-                                                            4.16169 0.125 6.00002 0.125C7.83835 0.125 9.33335 1.39575 9.33335 2.95833ZM0.166687 12.1667C0.166687 
-                                                            9.4325 2.78419 7.20833 6.00002 7.20833C9.21585 7.20833 11.8334 9.4325 11.8334 12.1667C11.8334 12.5577 
-                                                            11.4609 12.875 11 12.875C10.5392 12.875 10.1667 12.5577 10.1667 12.1667C10.1667 10.2138 8.29752 8.625 
-                                                            6.00002 8.625C3.70252 8.625 1.83335 10.2138 1.83335 12.1667C1.83335 12.5577 1.46085 12.875 1.00002 
-                                                            12.875C0.539187 12.875 0.166687 12.5577 0.166687 12.1667Z"
-                                                    fill="#343C44" />
-                                            </svg>
-                
-                                        </span>
-                                        <span class=" text-xs">View Profile</span>
-                                    </a>
-                                    <a href="#"
-                                        class="flex items-center py-2 sm:py-3 px-4 gap-2 hover:bg-gray-50 transition duration-300">
-                                        <span>
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33335 0.75C3.33335 1.1625 3.03335 1.5 2.66669 
-                                                            1.5H2.00002V10.5H2.66669C3.03335 10.5 3.33335 10.8375 3.33335 11.25C3.33335 11.6625 3.03335 12 2.66669 
-                                                            12H1.33335C0.966687 12 0.666687 11.6625 0.666687 11.25V0.75C0.666687 0.3375 0.966687 0 1.33335 
-                                                            0H2.66669C3.03335 0 3.33335 0.3375 3.33335 0.75ZM10.0026 2.5686L11.8786 5.5686C12.0453 5.8341 
-                                                            12.04 6.19035 11.8666 6.44985L9.86662 9.44985C9.73596 9.64635 9.53529 9.74985 9.33262 9.74985C9.19395 
-                                                            9.74985 9.05329 9.7011 8.93329 9.59985C8.63862 9.3516 8.57929 8.88135 8.79995 8.5506L10.0006 
-                                                            6.74985H9.99995H4.66662C4.29862 6.74985 3.99995 6.4146 3.99995 5.99985C3.99995 5.5851 4.29862 
-                                                            5.24985 4.66662 5.24985H9.99995C10.011 5.24985 10.0212 5.25327 10.0315 5.25671C10.0399 5.25952 
-                                                            10.0483 5.26234 10.0573 5.26335L8.91195 3.4311C8.69995 3.09285 8.77262 2.62485 9.07395 
-                                                            2.38635C9.37462 2.1471 9.79062 2.2296 10.0026 2.5686Z" fill="#343C44" />
-                                            </svg>
-                
-                
-                                        </span>
-                                        <span class=" text-xs">Sign Out</span>
-                                    </a>
-                                </li>
-                            </ul>
+        
+                        <!-- profile dropdown  -->
+                        <div class="relative pb-3" x-data="{ open: false }" x-cloak>
+                            <div class="flex items-center pr-2 gap-4 cursor-pointer" @click="open = ! open">
+                                <span class=" text-xs md:text-sm">John Cane</span>
+                                <span>
+                                    <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        x-bind:class="open == true? 'transform rotate-180':''"
+                                        class="transition-all duration-300">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99991 6.9995C6.77191 6.9995 6.54491 6.9225 
+                                                        6.35991 6.7675L0.359909 1.7675C-0.0640909 1.4145 -0.122091 0.783495 0.231909 0.359495C0.584909 
+                                                        -0.0645046 1.21491 -0.121505 1.63991 0.231495L7.01091 4.7075L12.3729 0.392495C12.8029 0.0464955 
+                                                        13.4329 0.114495 13.7789 0.544495C14.1249 0.974495 14.0569 1.6035 13.6269 1.9505L7.62691 6.7785C7.44391 
+                                                        6.9255 7.22191 6.9995 6.99991 6.9995Z" fill="#343C44" />
+                                    </svg>
+        
+                                </span>
+                            </div>
+        
+                            <div x-show="open" @click.away="open = false"
+                                x-transition:enter="transition-all duration-200 ease-out"
+                                x-transition:enter-start="transform opacity-0 scale-95"
+                                x-transition:enter-end="transform opacity-100 scale-100"
+                                x-transition:leave="transition-all duration-200 ease-in"
+                                x-transition:leave-start="transform opacity-100 scale-100"
+                                x-transition:leave-end="transform opacity-0 scale-95" class="w-32 md:w-44 origin-top-right absolute right-0  rounded top-full z-50 py-0.5 text-left bg-white 
+                                               border ">
+        
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center py-2 sm:py-3 px-4 gap-2 hover:bg-gray-50 transition duration-300">
+                                            <span>
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66669 2.95833C7.66669 2.17704 6.91919 1.54167 
+                                                                6.00002 1.54167C5.08085 1.54167 4.33335 2.17704 4.33335 2.95833C4.33335 3.73962 5.08085 4.375 
+                                                                6.00002 4.375C6.91919 4.375 7.66669 3.73962 7.66669 2.95833ZM9.33335 2.95833C9.33335 4.52092 
+                                                                7.83835 5.79167 6.00002 5.79167C4.16169 5.79167 2.66669 4.52092 2.66669 2.95833C2.66669 1.39575 
+                                                                4.16169 0.125 6.00002 0.125C7.83835 0.125 9.33335 1.39575 9.33335 2.95833ZM0.166687 12.1667C0.166687 
+                                                                9.4325 2.78419 7.20833 6.00002 7.20833C9.21585 7.20833 11.8334 9.4325 11.8334 12.1667C11.8334 12.5577 
+                                                                11.4609 12.875 11 12.875C10.5392 12.875 10.1667 12.5577 10.1667 12.1667C10.1667 10.2138 8.29752 8.625 
+                                                                6.00002 8.625C3.70252 8.625 1.83335 10.2138 1.83335 12.1667C1.83335 12.5577 1.46085 12.875 1.00002 
+                                                                12.875C0.539187 12.875 0.166687 12.5577 0.166687 12.1667Z"
+                                                        fill="#343C44" />
+                                                </svg>
+        
+                                            </span>
+                                            <span class=" text-xs">View Profile</span>
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center py-2 sm:py-3 px-4 gap-2 hover:bg-gray-50 transition duration-300">
+                                            <span>
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33335 0.75C3.33335 1.1625 3.03335 1.5 2.66669 
+                                                                1.5H2.00002V10.5H2.66669C3.03335 10.5 3.33335 10.8375 3.33335 11.25C3.33335 11.6625 3.03335 12 2.66669 
+                                                                12H1.33335C0.966687 12 0.666687 11.6625 0.666687 11.25V0.75C0.666687 0.3375 0.966687 0 1.33335 
+                                                                0H2.66669C3.03335 0 3.33335 0.3375 3.33335 0.75ZM10.0026 2.5686L11.8786 5.5686C12.0453 5.8341 
+                                                                12.04 6.19035 11.8666 6.44985L9.86662 9.44985C9.73596 9.64635 9.53529 9.74985 9.33262 9.74985C9.19395 
+                                                                9.74985 9.05329 9.7011 8.93329 9.59985C8.63862 9.3516 8.57929 8.88135 8.79995 8.5506L10.0006 
+                                                                6.74985H9.99995H4.66662C4.29862 6.74985 3.99995 6.4146 3.99995 5.99985C3.99995 5.5851 4.29862 
+                                                                5.24985 4.66662 5.24985H9.99995C10.011 5.24985 10.0212 5.25327 10.0315 5.25671C10.0399 5.25952 
+                                                                10.0483 5.26234 10.0573 5.26335L8.91195 3.4311C8.69995 3.09285 8.77262 2.62485 9.07395 
+                                                                2.38635C9.37462 2.1471 9.79062 2.2296 10.0026 2.5686Z"
+                                                        fill="#343C44" />
+                                                </svg>
+        
+        
+                                            </span>
+                                            <span class=" text-xs">Sign Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </header>
+            </div>
+        </header>
+        <div class="dms-container ">
+            <!-- header part -->
+            
 
             <!-- welcome -->
 
