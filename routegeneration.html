@@ -18,7 +18,7 @@
   <section class="flex min-h-screen relative shrink-0">
 
     <!-- ================ DESKTOP SIDEBAR  ====================== -->
-    <aside class="bg-[url('../../assets/images/home/sidebarbg.png')] h-screen w-72  bg-bottom bg-contain sticky top-0 left-0
+    <aside class="sidebar bg-[url('../../assets/images/home/sidebarbg.png')] min-h-screen  bg-bottom bg-contain sticky top-0 left-0
           transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28 " id="sidebar">
 
         <!-- SIDEBAR LOGO AND HUMBERGER ICON  -->
@@ -26,7 +26,7 @@
             <figure class=" w-28 " id="sidebarlogo">
                 <img src="assets/images/login/logo.png" alt="Logo" class=" w-full h-full">
             </figure>
-            <div class=" absolute right-4 top-10 cursor-pointer p-2" id="hamburger">
+            <div class="absolute right-4 top-10 cursor-pointer p-2" id="hamburger" onclick="toggleSidebar()">
                 <span>
                     <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="1" y1="1" x2="21" y2="1" stroke="black" stroke-width="2" stroke-linecap="round" />
@@ -38,10 +38,10 @@
         </div>
 
         <!-- SIDEBAR MENU -->
-        <ul class="sidebar-menu ">
-            <li class=" mr-6 ">
+        <ul class="sidebar-menu  flex flex-col gap-1">
+            <li class="">
                 <a href="index.html"
-                    class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 ">
+                    class="flex items-center  gap-8 pl-7   h-16 rounded-r-2xl hover:bg-primary transition duration-300 ">
                     <span class="iconn">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -55,10 +55,10 @@
                     <span class="text transition duration-300">Dashboard</span>
                 </a>
             </li>
-            <li class=" mr-6">
-            <li class=" mr-6">
+            <li class=" ">
+            <li class="">
                 <a href="routegeneration.html"
-                    class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 active">
+                    class="flex items-center  gap-8 pl-8  h-16 rounded-r-2xl hover:bg-primary transition duration-300 active">
                     <span class="iconn">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -70,12 +70,12 @@
                         </svg>
     
                     </span>
-                    <span class="text transition duration-300">Route Generation</span>
+                    <span class="text transition duration-300 bg-red-200 w-32 text-ellipsis">Route Generation</span>
                 </a>
             </li>
-            <li class=" mr-6">
+            <li class="">
                 <a href="#"
-                    class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 ">
+                    class="flex items-center  gap-8 pl-7   h-16 rounded-r-2xl hover:bg-primary transition duration-300 ">
                     <span class="iconn">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -112,9 +112,9 @@
                     <span class="text transition duration-300">Runs</span>
                 </a>
             </li>
-            <li class=" mr-6">
+            <li class="">
                 <a href="#"
-                    class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 ">
+                    class="flex items-center  gap-8 pl-7   h-16 rounded-r-2xl hover:bg-primary transition duration-300 ">
                     <span class="iconn">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -150,7 +150,7 @@
                     <span class="text transition duration-300">Template list</span>
                 </a>
             </li>
-            <li class=" mr-6" x-data="accordion" @click="selected != 1 ? selected = 1 : selected =null">
+            <li class="" x-data="accordion" @click="selected != 1 ? selected = 1 : selected =null">
                 <a href="javascript:void(0)"
                     class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 ">
                     <span class="iconn">
@@ -532,18 +532,11 @@
                   </div>
 
 
-                  <!-- dropwodn -->
-                  <!-- <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" 
-                  x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 
-                  scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform 
-                  opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-32  lg:w-52 origin-top-right 
-                  absolute right-1  bottom-full z-50 text-left bg-white shadow-sm border border-b-secondary rounded">
-
-                  </div> -->
+                 
                   <div x-show="open"x-transition:enter="transition-all duration-200 ease-out" 
                   x-transition:enter-start="transform opacity-0 scale-95"  x-transition:leave-end="transform opacity-0 scale-95"  @click.away=" open = false" 
                   
-                  class="absolute bg-white border  border-t  top-full left-0 right-0  py-28 origin-top-right ">
+                  class="absolute bg-white border  border-t  top-full left-0 right-0  py-28 origin-top ">
                     <div class="flex items-center justify-center">
                        
                         <div class="flex flex-col  items-center gap-2">
@@ -551,7 +544,7 @@
                                 <img src="assets/images/route/upload.svg" class=" w-full h-full object-cover" alt="upload image">
                             </figure> 
                             <p class=" text-xs sm:text-sm">Drag and drop to upload your file.</p>
-                            <input type="file" hidden id="uploadList">
+                            <input type="file" id="uploadList" hidden>
                             <label for="uploadList" class=" cursor-pointer bg-buttonBg  rounded-lg py-2 px-12 hover:bg-opacity-75 transition text-xs sm:text-sm">Upload</label>
                         </div>
                     </div>
@@ -579,5 +572,9 @@
 
   <!-- sidebar js -->
   <script src="assets/js/sidebar.js"></script>
+
+  <script>
+    const toggleSidebar = () => document.body.classList.toggle("open")
+  </script>
 </body>
 </html>
