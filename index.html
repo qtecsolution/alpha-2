@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
      <link rel="stylesheet" href="assets/css/tailwind.css">
-
+     <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">
      <style>
         [x-cloak] { display: none !important; }
         .dms-container {
@@ -114,7 +114,7 @@
             </a>
         </li>
         <li class=" mr-6" x-data="accordion"   @click="selected != 1 ? selected = 1 : selected =null">
-            <a href="#" class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 " >
+            <a href="javascript:void(0)" class="flex items-center  gap-8 pl-7  py-3 rounded-r-2xl hover:bg-primary transition duration-300 " >
                 <span class="iconn">
                     <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.2031 13.504C15.4609 12.6684 16.4163 11.4501 16.9279 10.0293C17.4395 8.60855 17.4801 
@@ -229,7 +229,7 @@
             </a>
           </li>
           <li class="w-1/5  relative py-2" x-data="{ open: false }" x-cloak>
-            <a href="#" class="flex flex-col items-center gap-2" @click="open = ! open">
+            <a href="javascript:void(0)" class="flex flex-col items-center gap-2" @click="open = ! open">
                 <span>
                     <span class="icon">
                         <svg width="20" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -554,6 +554,9 @@
                             :style="selected == 1 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
                             <figure class="w-full h-full p-2">
                                 <img src="assets/images/home/chart.png" alt="map" class=" max-w-full h-full object-contain">
+                                 <div class="h-32 w-full">
+                                  
+                                 </div>
                             </figure>
                         </div>
                     
