@@ -187,7 +187,7 @@
                 </svg>
                     
               </span>
-              <span class="  text-[10px] sm:text-xs">Dashboard</span>
+              <span class="text-[11px] sm:text-xs">Dashboard</span>
             </a>
           </li>
         
@@ -201,7 +201,7 @@
                     
                     
               </span>
-              <p class="truncate  sm:text-xs text-[10px] w-10 sm:w-full">Route GenerationRoute </p>
+              <p class="truncate  sm:text-xs text-[11px] w-10 sm:w-full">Route GenerationRoute </p>
             </a>
           </li>
           <li class="w-1/5 py-2">
@@ -213,7 +213,7 @@
                     
                     
               </span>
-              <span class=" sm:text-xs text-[10px]">Runs</span>
+              <span class=" sm:text-xs text-[11px]">Runs</span>
             </a>
           </li>
           <li class="w-1/5 py-2">
@@ -225,7 +225,7 @@
                     
                     
               </span>
-              <span class="truncate  sm:text-xs text-[10px]">Template list</span>
+              <span class="truncate  sm:text-xs text-[11px]">Template list</span>
             </a>
           </li>
           <li class="w-1/5  relative py-2" x-data="{ open: false }" x-cloak>
@@ -238,15 +238,15 @@
                       </span>
                 </span>
                 
-                <span class=" text-[10px]  sm:text-xs ">
+                <span class=" text-[11px]  sm:text-xs ">
                     Users
                 </span>
             </a>
 
-            <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-28  lg:w-52 origin-top-right absolute right-1  bottom-full z-50 text-left bg-white shadow-sm border border-b-red-300 rounded">
+            <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-32  lg:w-52 origin-top-right absolute right-1  bottom-full z-50 text-left bg-white shadow-sm border border-b-red-300 rounded">
                 <div class="flex flex-col">
-                    <a href="#" class=" py-2 px-4 text-[10px]">Staff</a>
-                    <a href="#" class=" py-2 px-4 text-[10px]">Drivers</a>
+                    <a href="#" class=" py-2 px-4 text-[11px]">Staff</a>
+                    <a href="#" class=" py-2 px-4 text-[11px]">Drivers</a>
                 </div>
             </div>
           </li>
@@ -273,7 +273,7 @@
                     </div>
                     <div class="flex items-center  gap-3 sm:gap-4 md:gap-5 lg:gap-16 ">
                         <!-- notification -->
-                        <div class="relative cursor-pointer pb-3 " x-data="{ open: false }" x-cloak>
+                        <div class="relative cursor-pointer pb-3 " x-data="{ open: true }" x-cloak>
                             <span @click="open = ! open">
                                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -290,12 +290,10 @@
                                 x-transition:leave-start="transform opacity-100 scale-100"
                                 x-transition:leave-end="transform opacity-0 scale-95"
                                 class="w-44 lg:w-52 origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white  shadow-md">
-                                <div class="p-3 font-normal border-b border-slate-200 ">
+                                <div class="p-2 font-normal border-b border-slate-200 ">
                                     <div class="relative w-full flex flex-row justify-between items-center">
-                                        <div class="text-sm font-bold">Notifications</div>
-                                        <a href="#" class="inline-block" title="Clear all">
-                                            <i class="text-xl bx bx-trash-alt"></i>
-                                        </a>
+                                        <div class="text-xs md:text-sm font-bold">Notifications</div>
+                                        
                                     </div>
                                 </div>
                                 <div class="max-h-60 overflow-y-auto scrollbars show">
@@ -304,21 +302,21 @@
                                             class="flex flex-wrap flex-row items-center border-b border-slate-200   py-2 hover:bg-slate-100 bg-slate-50">
                                             <div class="flex-shrink max-w-full px-2 w-1/4 text-center">
                                                 <div
-                                                    class="flex justify-center mx-auto w-8 h-8 rounded-full bg-cyan-500 text-white">
+                                                    class="flex justify-center mx-auto w-6 h-6 rounded-full bg-cyan-500 text-white">
                                                     <i class="self-center bx bx-calendar"></i>
                                                 </div>
                                             </div>
                                             <div class="flex-shrink max-w-full px-2 w-3/4">
-                                                <div class="text-sm font-bold">Event will coming</div>
-                                                <div class="text-slate-500 text-sm mt-1">Meeting with Mr.John Navas at:10.00Am
+                                                <div class=" text-xs md:text-sm font-bold">Event will coming</div>
+                                                <div class="text-slate-500 text-xs md:text-sm mt-1">Meeting with Mr.John Navas at:10.00Am
                                                 </div>
-                                                <div class="text-slate-500 text-sm mt-1">1h ago</div>
+                                                <div class="text-slate-500 text-xs md:text-sm mt-1">1h ago</div>
                                             </div>
                                         </div>
                                     </a>
         
                                 </div>
-                                <div class="p-3 text-sm text-center font-normal">
+                                <div class="p-2 sm:p-3 text-xs md:text-sm text-center font-normal">
                                     <a href="#" class="hover:underline">Show all Notifications</a>
                                 </div>
                             </div>
