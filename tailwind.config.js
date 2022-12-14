@@ -8,6 +8,7 @@ module.exports = {
        primary:'#E7F2EE',
        primaryLight:'#FAFEFE',
        primaryDeep:'#7DB89E',
+       buttonBg:'#CEE4DA',
        secondary:'#F6CCC3',
        border:'#DADADA',
        dark:'#333333',

@@ -325,7 +325,7 @@
 
 
     <!-- ================ MAIN CONTENT ====================== -->
-    <main class=" flex-1 py-2 pt-0 ">
+    <main class=" flex-1 py-2 pt-0 mb-96 ">
         <!-- STICKY HEADER -->
         <header class="sticky top-0 left-0 right-0 bg-white z-50 py-2 pt-6">
             <div class="dms-container">
@@ -481,30 +481,81 @@
             </div>
         </div>
 
-         <!-- DASHBORD CONTENT -->
-        <div class="border" style="background:linear-gradient(180deg, rgba(227, 223, 223, 0.25) 3.85%, rgba(218, 218, 218, 0.22526) 3.86%, rgba(218, 218, 218, 0) 100%);">
-           <div class="dms-container">
+        <!-- calender -->
+        <div class="dms-container">
+            <div class="grid grid-cols-1 min-[992px]:grid-cols-2 mb-8 gap-8">
+                <!-- 1.Date  -->
+                <div class="relative w-full cursor-pointer">
+                    
+                    <div class="left absolute left-4 top-1/2 flex items-center justify-between gap-2 lg:gap-4 -translate-y-1/2 pointer-events-none">
+                        <span class="icon">
+                            <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99985 7.04732C6.77186 7.04576 6.54539 
+                                6.9672 6.36146 6.81094L0.395879 1.76992C-0.0256912 1.41402 -0.0793638 0.78264 0.277535 
+                                0.361077C0.633433 -0.060493 1.26381 -0.113173 1.68638 0.242733L7.02657 4.75545L12.418 0.477312C12.8504 
+                                0.134269 13.4799 0.206586 13.8229 0.638948C14.166 1.07131 14.0937 1.69983 13.6613 2.04387L7.62835 
+                                6.83062C7.44435 6.97637 7.22185 7.04884 6.99985 7.04732Z" fill="#343C44"/>
+                            </svg>
+                                
+                        </span>
+                        <span class="text-xs font-medium text-[#4E564A] sm:text-sm">1.Choose a calender date</span>
+                    </div>
+                    <input datepicker type="text"
+                        class="bg-white border border-border  text-black text-xs sm:text-sm 
+                        block w-full pl-10 p-2.5  focus:border-transparent focus:ring-border py-5  text-right pr-12 tracking-tight"
+                        placeholder="Select date">
 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ab sunt laboriosam laborum quia repellat dolorum voluptatum repellendus? Architecto, sapiente?
-            
-            
-            <div class="relative w-1/2">
-               
-                <button></button>
-                <input datepicker type="text"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 
-                    focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
-                    dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right pr-12"
-                    placeholder="Select date">
+                    <div class="flex absolute top-1/2 -translate-y-1/2 right-4 items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.75004 2.33329H5.25004V1.08329C5.25004 0.972786 5.29394 0.866805 5.37208 0.788665C5.45022 0.710525 5.5562 0.666626 5.66671 0.666626C5.77721 0.666626 5.8832 0.710525 5.96134 0.788665C6.03948 0.866805 6.08337 0.972786 6.08337 1.08329V2.33329H11.9167V1.08329C11.9167 0.972786 11.9606 0.866805 12.0387 0.788665C12.1169 0.710525 12.2229 0.666626 12.3334 0.666626C12.4439 0.666626 12.5499 0.710525 12.628 0.788665C12.7061 0.866805 12.75 0.972786 12.75 1.08329V2.33329H15.25C15.8024 2.33395 16.3319 2.55366 16.7224 2.94422C17.113 3.33477 17.3327 3.86429 17.3334 4.41663V15.25C17.3327 15.8023 17.113 16.3318 16.7224 16.7224C16.3319 17.1129 15.8024 17.3326 15.25 17.3333H2.75004C2.19764 17.3329 1.66799 17.1132 1.27739 16.7226C0.886784 16.332 0.667149 15.8024 0.666708 15.25V4.41663C0.667149 3.86423 0.886784 3.33458 1.27739 2.94397C1.66799 2.55337 2.19764 2.33373 2.75004 2.33329ZM1.50004 15.25C1.50004 15.5815 1.63174 15.8994 1.86616 16.1338C2.10058 16.3683 2.41852 16.5 2.75004 16.5H15.25C15.5816 16.5 15.8995 16.3683 16.1339 16.1338C16.3683 15.8994 16.5 15.5815 16.5 15.25V8.16663H1.50004V15.25ZM1.50004 7.33329H16.5V4.41663C16.5 3.72663 15.9417 3.16663 15.25 3.16663H12.75V4.41663C12.75 4.52713 12.7061 4.63311 12.628 4.71125C12.5499 4.78939 12.4439 4.83329 12.3334 4.83329C12.2229 4.83329 12.1169 4.78939 12.0387 4.71125C11.9606 4.63311 11.9167 4.52713 11.9167 4.41663V3.16663H6.08337V4.41663C6.08337 4.52713 6.03948 4.63311 5.96134 4.71125C5.8832 4.78939 5.77721 4.83329 5.66671 4.83329C5.5562 4.83329 5.45022 4.78939 5.37208 4.71125C5.29394 4.63311 5.25004 4.52713 5.25004 4.41663V3.16663H2.75004C2.41852 3.16663 2.10058 3.29832 1.86616 3.53274C1.63174 3.76716 1.50004 4.08511 1.50004 4.41663V7.33329Z"
+                                fill="black" />
+                        </svg>
+                    
+                    </div>
+                </div>
 
-                    <div class="flex absolute top-1/2 right-4 items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.75004 2.33329H5.25004V1.08329C5.25004 0.972786 5.29394 0.866805 5.37208 0.788665C5.45022 0.710525 5.5562 0.666626 5.66671 0.666626C5.77721 0.666626 5.8832 0.710525 5.96134 0.788665C6.03948 0.866805 6.08337 0.972786 6.08337 1.08329V2.33329H11.9167V1.08329C11.9167 0.972786 11.9606 0.866805 12.0387 0.788665C12.1169 0.710525 12.2229 0.666626 12.3334 0.666626C12.4439 0.666626 12.5499 0.710525 12.628 0.788665C12.7061 0.866805 12.75 0.972786 12.75 1.08329V2.33329H15.25C15.8024 2.33395 16.3319 2.55366 16.7224 2.94422C17.113 3.33477 17.3327 3.86429 17.3334 4.41663V15.25C17.3327 15.8023 17.113 16.3318 16.7224 16.7224C16.3319 17.1129 15.8024 17.3326 15.25 17.3333H2.75004C2.19764 17.3329 1.66799 17.1132 1.27739 16.7226C0.886784 16.332 0.667149 15.8024 0.666708 15.25V4.41663C0.667149 3.86423 0.886784 3.33458 1.27739 2.94397C1.66799 2.55337 2.19764 2.33373 2.75004 2.33329ZM1.50004 15.25C1.50004 15.5815 1.63174 15.8994 1.86616 16.1338C2.10058 16.3683 2.41852 16.5 2.75004 16.5H15.25C15.5816 16.5 15.8995 16.3683 16.1339 16.1338C16.3683 15.8994 16.5 15.5815 16.5 15.25V8.16663H1.50004V15.25ZM1.50004 7.33329H16.5V4.41663C16.5 3.72663 15.9417 3.16663 15.25 3.16663H12.75V4.41663C12.75 4.52713 12.7061 4.63311 12.628 4.71125C12.5499 4.78939 12.4439 4.83329 12.3334 4.83329C12.2229 4.83329 12.1169 4.78939 12.0387 4.71125C11.9606 4.63311 11.9167 4.52713 11.9167 4.41663V3.16663H6.08337V4.41663C6.08337 4.52713 6.03948 4.63311 5.96134 4.71125C5.8832 4.78939 5.77721 4.83329 5.66671 4.83329C5.5562 4.83329 5.45022 4.78939 5.37208 4.71125C5.29394 4.63311 5.25004 4.52713 5.25004 4.41663V3.16663H2.75004C2.41852 3.16663 2.10058 3.29832 1.86616 3.53274C1.63174 3.76716 1.50004 4.08511 1.50004 4.41663V7.33329Z" fill="black"/>
+                <!-- 2. Upload an order list  -->
+                <div class="bg-white border border-border  text-black flex items-center pl-5 relative ">
+                  <div class="flex items-center  gap-2 lg:gap-4 w-full h-full  py-5 cursor-pointer">
+                    <span class="icon">
+                        <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99985 7.04732C6.77186 7.04576 6.54539 
+                            6.9672 6.36146 6.81094L0.395879 1.76992C-0.0256912 1.41402 -0.0793638 0.78264 0.277535 
+                            0.361077C0.633433 -0.060493 1.26381 -0.113173 1.68638 0.242733L7.02657 4.75545L12.418 0.477312C12.8504 
+                            0.134269 13.4799 0.206586 13.8229 0.638948C14.166 1.07131 14.0937 1.69983 13.6613 2.04387L7.62835 
+                            6.83062C7.44435 6.97637 7.22185 7.04884 6.99985 7.04732Z" fill="#343C44"/>
                         </svg>
                             
-                    </div>
-            </div>
+                    </span>
+                    <span class="text-xs font-medium text-[#4E564A] sm:text-sm">1.Choose a calender date</span>
+                  </div>
 
+
+                  <!-- dropwodn -->
+
+                  <div class="absolute bg-white border  border-t  top-full left-0 right-0  py-28  ">
+                    <div class="flex items-center justify-center">
+                       
+                        <div class="flex flex-col  items-center gap-2">
+                            <figure class="w-[120px] h-[120px] overflow-hidden rounded-full mb-3">
+                                <img src="assets/images/route/upload.svg" class=" w-full h-full object-cover" alt="upload image">
+                            </figure> 
+                            <p class=" text-xs sm:text-sm">Drag and drop to upload your file.</p>
+                            <button class=" bg-buttonBg  rounded-lg py-2 px-12 hover:bg-opacity-75 transition text-xs sm:text-sm">Upload</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+        
+
+         <!-- DASHBORD CONTENT -->
+        <div class="" style="background:linear-gradient(180deg, rgba(227, 223, 223, 0.25) 3.85%, rgba(218, 218, 218, 0.22526) 3.86%, rgba(218, 218, 218, 0) 100%);">
+           <div class="dms-container">
+            Ltus modi voluptatibus!
             
            </div>
            
