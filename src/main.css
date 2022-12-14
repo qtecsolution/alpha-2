@@ -4,21 +4,45 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-      font-family:roboto;
-    }
-  } 
-
- 
-  .sidebar-menu li a.active{
-    @apply bg-primary;
+  html {
+    font-family: roboto;
   }
+}
 
-  .mobile-menu li a.active{
-    @apply text-primaryDeep; 
-  }
 
-   .mobile-menu li a.active span svg path{ 
-    @apply fill-primaryDeep;
+.sidebar-menu li a.active {
+  @apply bg-primary;
+}
+
+.mobile-menu li a.active {
+  @apply text-primaryDeep;
+}
+
+.mobile-menu li a.active span svg path {
+  @apply fill-primaryDeep;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.dms-container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+}
+
+
+@media (min-width: 992px) {
+  .dms-container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
- 
+}
+
+@media (min-width: 1200px) {
+  .dms-container {
+    padding-right: 3.1rem;
+    padding-left: 3.1rem;
+  }
+}
