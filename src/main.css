@@ -7,4 +7,18 @@
     html {
       font-family:roboto;
     }
+  } 
+
+ 
+  .sidebar-menu li a.active{
+    @apply bg-primary;
   }
+
+  .mobile-menu li a.active{
+    @apply text-primaryDeep; 
+  }
+
+   .mobile-menu li a.active span svg path{ 
+    @apply fill-primaryDeep;
+  }
+ 

@@ -672,8 +672,8 @@ html {
   height: 0.5rem;
 }
 
-.h-8{
-  height: 2rem;
+.h-6{
+  height: 1.5rem;
 }
 
 .h-auto{
@@ -686,10 +686,6 @@ html {
 
 .h-12{
   height: 3rem;
-}
-
-.h-6{
-  height: 1.5rem;
 }
 
 .max-h-0{
@@ -728,6 +724,10 @@ html {
   width: 2.5rem;
 }
 
+.w-32{
+  width: 8rem;
+}
+
 .w-24{
   width: 6rem;
 }
@@ -744,24 +744,16 @@ html {
   width: 25%;
 }
 
-.w-8{
-  width: 2rem;
+.w-6{
+  width: 1.5rem;
 }
 
 .w-3\/4{
   width: 75%;
 }
 
-.w-32{
-  width: 8rem;
-}
-
 .w-20{
   width: 5rem;
-}
-
-.w-6{
-  width: 1.5rem;
 }
 
 .max-w-full{
@@ -1034,10 +1026,6 @@ html {
   padding: 0.5rem;
 }
 
-.p-3{
-  padding: 0.75rem;
-}
-
 .p-1{
   padding: 0.25rem;
 }
@@ -1152,22 +1140,18 @@ html {
   line-height: 1.25rem;
 }
 
-.text-\[9px\]{
-  font-size: 9px;
-}
-
-.text-\[10px\]{
-  font-size: 10px;
-}
-
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.text-\[11px\]{
+  font-size: 11px;
 }
 
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-2xl{
@@ -1178,10 +1162,6 @@ html {
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.text-\[11px\]{
-  font-size: 11px;
 }
 
 .font-normal{
@@ -1269,6 +1249,20 @@ html {
 
 .ease-in{
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.sidebar-menu li a.active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 242 238 / var(--tw-bg-opacity));
+}
+
+.mobile-menu li a.active{
+  --tw-text-opacity: 1;
+  color: rgb(125 184 158 / var(--tw-text-opacity));
+}
+
+.mobile-menu li a.active span svg path{
+  fill: #7DB89E;
 }
 
 .hover\:bg-primary:hover{
@@ -1442,3 +1436,4 @@ html {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+ 
