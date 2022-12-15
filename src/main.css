@@ -124,9 +124,24 @@ body.open .stuf-drop {
 body.open  .main-content {
   width: calc(100% - 260px);
 }
+
+
 @media (max-width: 992px) {
   .main-content {
+    width: 100%; 
+  }
+  body.open  .main-content {
     width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  body.open  .main-content {
+    width: calc(100% - 260px);
+  }
+  .main-content {
+    width: calc(100% - 90px);
+    transition: all .3s ease-in-out;
+   
   }
 }
 
