@@ -476,7 +476,7 @@
                 <!-- buttons -->
                 <div class=" flex items-center gap-3">
                     <!-- add driver -->
-                    <div x-data="{ modelOpen: false }">
+                    <div x-data="{ modelOpen: true}">
                         
                         <button  @click="modelOpen =!modelOpen" class="bg-buttonBg2 rounded py-1.5 sm:py-2 px-3 transition duration-300 hover:bg-gray-200 inline-flex items-center justify-center">
                             <span>
@@ -505,7 +505,7 @@
                                     x-transition:leave="transition ease-in duration-200 transform"
                                     x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
                                     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                                    class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl"
+                                    class="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-3xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl "
                                 >
                                     <div class="flex items-center justify-between space-x-4">
                                         <h2 class="text-xl font-medium text-black ">Add new driver</h2>
@@ -517,11 +517,46 @@
                                         </button>
                                     </div>
                                     
-                                    <div class=" grid grid-cols-2 gap-3">
-                                        <div class="left">
+                                    <div class=" grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div class="left flex flex-col gap-4">
                                             <div class="inputbox errorfield">
                                                 <label for="" class="inputlabel">Name</label>
                                                 <input type="text" class="inputfield" placeholder="write driver name">
+                                                <div class="error">
+                                                    <p class="error-message">Email is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Name</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">Email is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Name</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">Email is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Name</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">Email is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Name</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">Email is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Name</label>
+                                                <input type="text" class="inputfield">
                                                 <div class="error">
                                                     <p class="error-message">Email is required</p>
                                                   </div>
