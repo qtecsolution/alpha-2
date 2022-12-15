@@ -54,18 +54,22 @@ body.open .sidebar {
 }
 
 .sidebar {
-	width: 110px;
+	width: 90px;
 	height: 100%; 
   transition: .5s;
 }
 .sidebar .sidebar-menu  {
+  margin-right: 10px;
+}
+body.open .sidebar .sidebar-menu  {
   margin-right: 24px;
 }
 
-.open #sidebarlogo {
+.sidebar #sidebarlogo {
   opacity: 0;
 	visibility: hidden;
-	transition: .5s;
+	transition: .3s;
+  
 }
 
 body.open #sidebarlogo {
@@ -101,4 +105,13 @@ body.open .text {
     font-size: 14px;
    
 	}
+}
+
+.stuf-drop {
+ padding-left: 0;
+ transition: all .3s;
+}
+
+body.open .stuf-drop {
+  padding-left: 20px;
 }
