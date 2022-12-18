@@ -476,7 +476,7 @@
                 <!-- buttons -->
                 <div class=" flex items-center gap-3">
                     <!-- add driver -->
-                    <div x-data="{ modelOpen: true}">
+                    <div x-data="{ modelOpen: false}">
                         
                         <button  @click="modelOpen =!modelOpen" class="bg-buttonBg2 rounded py-1.5 sm:py-2 px-3 transition duration-300 hover:bg-gray-200 inline-flex items-center justify-center">
                             <span>
@@ -505,7 +505,7 @@
                                     x-transition:leave="transition ease-in duration-200 transform"
                                     x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
                                     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                                    class="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-3xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl "
+                                    class="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-3xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white  shadow-xl "
                                 >
                                     <div class="flex items-center justify-between space-x-4 mb-4 lg:mb-8">
                                         <h2 class="text-xl font-normal text-black ">Add new driver</h2>
@@ -515,58 +515,52 @@
                                     
                                     <div class=" grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div class="left flex flex-col gap-3">
+                                            
                                             <div class="inputbox errorfield">
-                                                <label for="" class="inputlabel">Name</label>
-                                                <input type="text" class="inputfield" placeholder="write driver name">
-                                                <div class="error">
-                                                    <p class="error-message">Email is required</p>
-                                                  </div>
-                                            </div>
-                                            <div class="inputbox errorfield">
-                                                <label for="" class="inputlabel">First name</label>
-                                                <input type="text" class="inputfield">
+                                                <label for="firstName" class="inputlabel">First name</label>
+                                                <input type="text" class="inputfield" id="firstName" autocomplete="off">
                                                 <div class="error">
                                                     <p class="error-message">First name is required</p>
-                                                  </div>
+                                                </div>
                                             </div>
                                             <div class="inputbox">
-                                                <label for="" class="inputlabel">Last name</label>
-                                                <input type="text" class="inputfield">
+                                                <label for="lastName" class="inputlabel">Last name</label>
+                                                <input type="text" class="inputfield" id="lastName">
                                                 <div class="error">
                                                     <p class="error-message">Last name is required</p>
-                                                  </div>
+                                                </div>
                                             </div>
                                             <div class="inputbox">
-                                                <label for="" class="inputlabel">Email</label>
-                                                <input type="text" class="inputfield">
+                                                <label for="email" class="inputlabel">Email</label>
+                                                <input type="text" class="inputfield" id="email" autocomplete="off">
                                                 <div class="error">
                                                     <p class="error-message">Email is required</p>
-                                                  </div>
+                                                </div>
                                             </div>
                                             <div class="inputbox">
-                                                <label for="" class="inputlabel">Phone</label>
-                                                <input type="text" class="inputfield">
+                                                <label for="phone" class="inputlabel" >Phone</label>
+                                                <input type="text" class="inputfield" id="phone">
                                                 <div class="error">
                                                     <p class="error-message">Phone is required</p>
                                                   </div>
                                             </div>
                                             <div class="inputbox">
-                                                <label for="" class="inputlabel">Address</label>
-                                                <input type="text" class="inputfield">
+                                                <label for="address" class="inputlabel" >Address</label>
+                                                <input type="text" class="inputfield " id="address">
                                                 <div class="error">
                                                     <p class="error-message">Address is required</p>
                                                   </div>
                                             </div>
                                             <div class="inputbox">
-                                                <label for="" class="inputlabel">City</label>
-                                                <input type="text" class="inputfield">
+                                                <label for="city" class="inputlabel">City</label>
+                                                <input type="text" class="inputfield" id="city">
                                                 <div class="error">
                                                     <p class="error-message">City is required</p>
                                                   </div>
                                             </div>
                                             <div class="inputbox">
-                                                <label for="" class="inputlabel">Postcode</label>
-                                                <input type="text" class="inputfield">
+                                                <label for="postcode" class="inputlabel">Postcode</label>
+                                                <input type="text" class="inputfield" id="postcode">
                                                 <div class="error">
                                                     <p class="error-message">Postcode is required</p>
                                                   </div>
@@ -588,15 +582,15 @@
                                                   </div>
                                             </div>
                                             <div class="inputbox">
-                                                <label for="" class="inputlabel">Enter password</label>
-                                                <input type="text" class="inputfield">
+                                                <label for="password" class="inputlabel">Enter password</label>
+                                                <input type="text" class="inputfield" id="password">
                                                 <div class="error">
                                                     <p class="error-message">password is required</p>
                                                   </div>
                                             </div>
                                             <div class="inputbox">
-                                                <label for="" class="inputlabel">Cofirm password</label>
-                                                <input type="text" class="inputfield">
+                                                <label for="confirmpass" class="inputlabel">Cofirm password</label>
+                                                <input type="text" class="inputfield" id="confirmpass">
                                                 <div class="error">
                                                     <p class="error-message">password is required</p>
                                                   </div>
@@ -604,8 +598,8 @@
                                         </div>
                                     </div>
                                     <div class="buttons  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pt-6">
-                                        <button  @click="modelOpen = false" class=" bg-secondary px-2 py-[10px] rounded text-sm">Cancel</button>
-                                        <button class=" bg-secondary px-2 py-[10px] rounded text-sm">Add Driver</button>
+                                        <button  @click="modelOpen = false" class=" bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Cancel</button>
+                                        <button class=" text-black bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Add Driver</button>
                                     </div>
                                     
                     
@@ -657,11 +651,21 @@
                         <td class="px-6 py-3 border-r">driver_15@alpha.com</td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 border-r flex items-center justify-center">
+                        <td class="px-12 py-3 border-r flex items-center justify-center">
                             <div class="flex items-center gap-2">
                                 <button class="bg-[#10B968] text-white  rounded px-2 py-1 text-xs sm:text-sm hover:bg-green-600 transition duration-300">Active</button>
-                                <button class="px-2">
-                                    <span>
+                                <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
+
+                                    <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
+
+                                       <div class="border border-border text-center text-xs">
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit driver</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Distribution Centre</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 ">Delete driver</a>
+                                       </div>
+                                    </div>
+
+                                    <span class="bg-green-400 ">
                                         <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
                                             15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
@@ -688,18 +692,28 @@
                         </td>
                        </tr>
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300">
-                        <td class="px-6 py-3 border-r">1</td>
-                        <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Amrick d</p></td>
+                        <td class="px-6 py-3 border-r">2</td>
+                        <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Jesan Fc</p></td>
                         <td class="px-6 py-3 border-r">AmricK</td>
                         <td class="px-6 py-3 border-r">AK</td>
                         <td class="px-6 py-3 border-r">driver_15@alpha.com</td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 border-r flex items-center justify-center">
+                        <td class="px-12 py-3 border-r flex items-center justify-center">
                             <div class="flex items-center gap-2">
                                 <button class="bg-[#10B968] text-white  rounded px-2 py-1 text-xs sm:text-sm hover:bg-green-600 transition duration-300">Active</button>
-                                <button class="px-2">
-                                    <span>
+                                <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
+
+                                    <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
+
+                                       <div class="border border-border text-center text-xs">
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit driver</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Distribution Centre</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 ">Delete driver</a>
+                                       </div>
+                                    </div>
+
+                                    <span class="bg-green-400 ">
                                         <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
                                             15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
@@ -726,18 +740,28 @@
                         </td>
                        </tr>
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300">
-                        <td class="px-6 py-3 border-r">1</td>
-                        <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Amrick d</p></td>
+                        <td class="px-6 py-3 border-r">3</td>
+                        <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Mrof Driver Hossain</p></td>
                         <td class="px-6 py-3 border-r">AmricK</td>
                         <td class="px-6 py-3 border-r">AK</td>
                         <td class="px-6 py-3 border-r">driver_15@alpha.com</td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 border-r flex items-center justify-center">
+                        <td class="px-12 py-3 border-r flex items-center justify-center">
                             <div class="flex items-center gap-2">
                                 <button class="bg-[#10B968] text-white  rounded px-2 py-1 text-xs sm:text-sm hover:bg-green-600 transition duration-300">Active</button>
-                                <button class="px-2">
-                                    <span>
+                                <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
+
+                                    <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
+
+                                       <div class="border border-border text-center text-xs">
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit driver</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Distribution Centre</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 ">Delete driver</a>
+                                       </div>
+                                    </div>
+
+                                    <span class="bg-green-400 ">
                                         <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
                                             15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
@@ -764,18 +788,28 @@
                         </td>
                        </tr>
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300">
-                        <td class="px-6 py-3 border-r">1</td>
-                        <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Amrick d</p></td>
+                        <td class="px-6 py-3 border-r">4</td>
+                        <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Amrick</p></td>
                         <td class="px-6 py-3 border-r">AmricK</td>
                         <td class="px-6 py-3 border-r">AK</td>
                         <td class="px-6 py-3 border-r">driver_15@alpha.com</td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 border-r flex items-center justify-center">
+                        <td class="px-12 py-3 border-r flex items-center justify-center">
                             <div class="flex items-center gap-2">
                                 <button class="bg-[#10B968] text-white  rounded px-2 py-1 text-xs sm:text-sm hover:bg-green-600 transition duration-300">Active</button>
-                                <button class="px-2">
-                                    <span>
+                                <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
+
+                                    <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
+
+                                       <div class="border border-border text-center text-xs">
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit driver</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Distribution Centre</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 ">Delete driver</a>
+                                       </div>
+                                    </div>
+
+                                    <span class="bg-green-400 ">
                                         <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
                                             15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
@@ -802,18 +836,28 @@
                         </td>
                        </tr>
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300">
-                        <td class="px-6 py-3 border-r">1</td>
-                        <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Amrick d</p></td>
+                        <td class="px-6 py-3 border-r">5</td>
+                        <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Mrof Driver Hossain</p></td>
                         <td class="px-6 py-3 border-r">AmricK</td>
                         <td class="px-6 py-3 border-r">AK</td>
                         <td class="px-6 py-3 border-r">driver_15@alpha.com</td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 border-r flex items-center justify-center">
+                        <td class="px-12 py-3 border-r flex items-center justify-center">
                             <div class="flex items-center gap-2">
                                 <button class="bg-[#10B968] text-white  rounded px-2 py-1 text-xs sm:text-sm hover:bg-green-600 transition duration-300">Active</button>
-                                <button class="px-2">
-                                    <span>
+                                <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
+
+                                    <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
+
+                                       <div class="border border-border text-center text-xs">
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit driver</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Distribution Centre</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 ">Delete driver</a>
+                                       </div>
+                                    </div>
+
+                                    <span class="bg-green-400 ">
                                         <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
                                             15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
@@ -840,18 +884,28 @@
                         </td>
                        </tr>
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300">
-                        <td class="px-6 py-3 border-r">1</td>
+                        <td class="px-6 py-3 border-r">6</td>
                         <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Amrick d</p></td>
                         <td class="px-6 py-3 border-r">AmricK</td>
                         <td class="px-6 py-3 border-r">AK</td>
                         <td class="px-6 py-3 border-r">driver_15@alpha.com</td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 border-r flex items-center justify-center">
+                        <td class="px-12 py-3 border-r flex items-center justify-center">
                             <div class="flex items-center gap-2">
                                 <button class="bg-[#10B968] text-white  rounded px-2 py-1 text-xs sm:text-sm hover:bg-green-600 transition duration-300">Active</button>
-                                <button class="px-2">
-                                    <span>
+                                <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
+
+                                    <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
+
+                                       <div class="border border-border text-center text-xs">
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit driver</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Distribution Centre</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 ">Delete driver</a>
+                                       </div>
+                                    </div>
+
+                                    <span class="bg-green-400 ">
                                         <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
                                             15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
@@ -878,18 +932,28 @@
                         </td>
                        </tr>
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300">
-                        <td class="px-6 py-3 border-r">1</td>
+                        <td class="px-6 py-3 border-r">7</td>
                         <td class="px-6 py-3 border-r"><p class=" whitespace-nowrap">Amrick d</p></td>
                         <td class="px-6 py-3 border-r">AmricK</td>
                         <td class="px-6 py-3 border-r">AK</td>
                         <td class="px-6 py-3 border-r">driver_15@alpha.com</td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
                         <td class="px-6 py-3 border-r"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 border-r flex items-center justify-center">
+                        <td class="px-12 py-3 border-r flex items-center justify-center">
                             <div class="flex items-center gap-2">
-                                <button class="bg-[#10B968] text-white  rounded px-2 py-1 text-xs sm:text-sm hover:bg-green-600 transition duration-300">Active</button>
-                                <button class="px-2">
-                                    <span>
+                                <button class="bg-[#F24E1E]  text-white  rounded px-2 py-1 text-xs sm:text-sm hover:bg-red-600 transition duration-300">Inactive</button>
+                                <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
+
+                                    <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
+
+                                       <div class="border border-border text-center text-xs">
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit driver</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Distribution Centre</a>
+                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 ">Delete driver</a>
+                                       </div>
+                                    </div>
+
+                                    <span class="bg-green-400 ">
                                         <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
                                             15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 

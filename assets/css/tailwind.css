@@ -1148,6 +1148,10 @@ html {
   margin-top: 0px;
 }
 
+.mb-4{
+  margin-bottom: 1rem;
+}
+
 .mb-96{
   margin-bottom: 24rem;
 }
@@ -1194,10 +1198,6 @@ html {
 
 .mb-1{
   margin-bottom: 0.25rem;
-}
-
-.mb-4{
-  margin-bottom: 1rem;
 }
 
 .block{
@@ -1358,6 +1358,30 @@ html {
 
 .w-4{
   width: 1rem;
+}
+
+.w-\[\]{
+  width: ;
+}
+
+.w-\[1\]{
+  width: 1;
+}
+
+.w-\[126\]{
+  width: 126;
+}
+
+.w-\[126px\]{
+  width: 126px;
+}
+
+.w-\[160px\]{
+  width: 160px;
+}
+
+.w-\[150px\]{
+  width: 150px;
 }
 
 .max-w-full{
@@ -1585,6 +1609,18 @@ html {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-1 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
 .self-center{
   align-self: center;
 }
@@ -1623,16 +1659,16 @@ html {
   border-radius: 9999px;
 }
 
-.rounded-lg{
-  border-radius: 0.5rem;
-}
-
 .rounded-xl{
   border-radius: 0.75rem;
 }
 
 .rounded-md{
   border-radius: 0.375rem;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
 }
 
 .rounded-r-3xl{
@@ -1769,14 +1805,14 @@ html {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#10B968\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 185 104 / var(--tw-bg-opacity));
-}
-
 .bg-secondary{
   --tw-bg-opacity: 1;
   background-color: rgb(246 204 195 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#10B968\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 104 / var(--tw-bg-opacity));
 }
 
 .bg-buttonBg{
@@ -1806,6 +1842,25 @@ html {
 .bg-gray-800{
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 128 128 / var(--tw-bg-opacity));
+}
+
+.bg-green-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 196 141 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#\#F24E1E\]{
+  background-color: ##F24E1E;
+}
+
+.bg-\[\#F24E1E\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 78 30 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-40{
@@ -1911,6 +1966,11 @@ html {
   padding-bottom: 0.25rem;
 }
 
+.py-\[10px\]{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -1956,9 +2016,9 @@ html {
   padding-right: 1.25rem;
 }
 
-.py-\[10px\]{
-  padding-top: 10px;
-  padding-bottom: 10px;
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .pl-7{
@@ -2118,11 +2178,6 @@ html {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-gray-600{
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
 .text-primaryDeep{
   --tw-text-opacity: 1;
   color: rgb(125 184 158 / var(--tw-text-opacity));
@@ -2260,6 +2315,12 @@ html {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+}
+
+@media (min-width: 768px){
+  .inputbox{
+    min-height: 82px;
+  }
 }
 
 .inputbox .inputlabel{
@@ -2481,6 +2542,11 @@ body.open  .main-content {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-red-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 128 128 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-\[\#E7F2EE\]:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(231 242 238 / var(--tw-bg-opacity));
@@ -2511,17 +2577,17 @@ body.open  .main-content {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-red-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 36 36 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-opacity-30:hover{
   --tw-bg-opacity: 0.3;
 }
 
 .hover\:bg-opacity-75:hover{
   --tw-bg-opacity: 0.75;
-}
-
-.hover\:text-gray-700:hover{
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .hover\:text-gray-900:hover{
@@ -2796,12 +2862,12 @@ body.open  .main-content {
     gap: 1.25rem;
   }
 
-  .md\:gap-16{
-    gap: 4rem;
-  }
-
   .md\:gap-8{
     gap: 2rem;
+  }
+
+  .md\:gap-16{
+    gap: 4rem;
   }
 
   .md\:text-left{
@@ -2871,10 +2937,6 @@ body.open  .main-content {
     gap: 1rem;
   }
 
-  .lg\:gap-8{
-    gap: 2rem;
-  }
-
   .lg\:pt-8{
     padding-top: 2rem;
   }
@@ -2898,10 +2960,6 @@ body.open  .main-content {
 @media (min-width: 1280px){
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .xl\:gap-8{
-    gap: 2rem;
   }
 }
 

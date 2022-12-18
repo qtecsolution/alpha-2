@@ -23,7 +23,7 @@
 /* 1. validation  */
 
 .inputbox {
-  @apply flex flex-col  gap-1;
+  @apply flex flex-col  gap-1 md:min-h-[82px];
   
  }
  .inputbox .inputlabel{
