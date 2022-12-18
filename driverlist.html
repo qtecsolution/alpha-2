@@ -507,18 +507,14 @@
                                     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                                     class="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-3xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl "
                                 >
-                                    <div class="flex items-center justify-between space-x-4">
-                                        <h2 class="text-xl font-medium text-black ">Add new driver</h2>
+                                    <div class="flex items-center justify-between space-x-4 mb-4 lg:mb-8">
+                                        <h2 class="text-xl font-normal text-black ">Add new driver</h2>
                     
-                                        <button @click="modelOpen = false" class="text-gray-600 focus:outline-none hover:text-gray-700">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </button>
+                                    
                                     </div>
                                     
                                     <div class=" grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        <div class="left flex flex-col gap-4">
+                                        <div class="left flex flex-col gap-3">
                                             <div class="inputbox errorfield">
                                                 <label for="" class="inputlabel">Name</label>
                                                 <input type="text" class="inputfield" placeholder="write driver name">
@@ -526,65 +522,90 @@
                                                     <p class="error-message">Email is required</p>
                                                   </div>
                                             </div>
-                                            <div class="inputbox">
-                                                <label for="" class="inputlabel">Name</label>
-                                                <input type="text" class="inputfield">
-                                                <div class="error">
-                                                    <p class="error-message">Email is required</p>
-                                                  </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="" class="inputlabel">Name</label>
-                                                <input type="text" class="inputfield">
-                                                <div class="error">
-                                                    <p class="error-message">Email is required</p>
-                                                  </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="" class="inputlabel">Name</label>
-                                                <input type="text" class="inputfield">
-                                                <div class="error">
-                                                    <p class="error-message">Email is required</p>
-                                                  </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="" class="inputlabel">Name</label>
-                                                <input type="text" class="inputfield">
-                                                <div class="error">
-                                                    <p class="error-message">Email is required</p>
-                                                  </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="" class="inputlabel">Name</label>
-                                                <input type="text" class="inputfield">
-                                                <div class="error">
-                                                    <p class="error-message">Email is required</p>
-                                                  </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="" class="inputlabel">Name</label>
-                                                <input type="text" class="inputfield">
-                                                <div class="error">
-                                                    <p class="error-message">Email is required</p>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                        <div class="left">
                                             <div class="inputbox errorfield">
-                                                <label for="" class="inputlabel">Name</label>
-                                                <input type="text" class="inputfield" placeholder="write driver name">
+                                                <label for="" class="inputlabel">First name</label>
+                                                <input type="text" class="inputfield">
                                                 <div class="error">
-                                                    <p class="error-message">Email is required</p>
+                                                    <p class="error-message">First name is required</p>
                                                   </div>
                                             </div>
                                             <div class="inputbox">
-                                                <label for="" class="inputlabel">Name</label>
+                                                <label for="" class="inputlabel">Last name</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">Last name is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Email</label>
                                                 <input type="text" class="inputfield">
                                                 <div class="error">
                                                     <p class="error-message">Email is required</p>
                                                   </div>
                                             </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Phone</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">Phone is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Address</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">Address is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">City</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">City is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Postcode</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">Postcode is required</p>
+                                                  </div>
+                                            </div>
                                         </div>
+                                        <div class="right flex flex-col gap-3">
+                                            <div class="inputbox errorfield">
+                                                <label for="driverroutename" class="inputlabel">Driver route name</label>
+                                                <input type="text" id="driverroutename" class="inputfield" placeholder="write driver route name" autocomplete="off">
+                                                <div class="error">
+                                                    <p class="error-message">Driver route name is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="driverroutecode" class="inputlabel">Driver route code</label>
+                                                <input type="text" class="inputfield" id="driverroutecode">
+                                                <div class="error">
+                                                    <p class="error-message">Driver route code is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Enter password</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">password is required</p>
+                                                  </div>
+                                            </div>
+                                            <div class="inputbox">
+                                                <label for="" class="inputlabel">Cofirm password</label>
+                                                <input type="text" class="inputfield">
+                                                <div class="error">
+                                                    <p class="error-message">password is required</p>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buttons  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pt-6">
+                                        <button  @click="modelOpen = false" class=" bg-secondary px-2 py-[10px] rounded text-sm">Cancel</button>
+                                        <button class=" bg-secondary px-2 py-[10px] rounded text-sm">Add Driver</button>
                                     </div>
                                     
                     
