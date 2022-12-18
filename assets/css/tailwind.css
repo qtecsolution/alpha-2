@@ -1749,6 +1749,11 @@ html {
   border-color: rgb(200 30 30 / var(--tw-border-opacity));
 }
 
+.border-red-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(224 36 36 / var(--tw-border-opacity));
+}
+
 .border-b-secondary{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(246 204 195 / var(--tw-border-opacity));
