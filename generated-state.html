@@ -4,43 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template List</title>
+    <title>Generated Route </title>
     <!-- TAILWIND CSS  -->
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">  
-    <!-- NICE SELECT -->
-    <link rel="stylesheet" href="assets/css/niceselect.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- Alpinejs -->
     <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
-    <style>
-         [data-placeholder]::after {
-        content: " ";
-        box-shadow: 0 0 50px 9px rgba(254,254,254);
-        position: absolute;
-        top: 0;
-        left: -100%;
-        height: 100%; 
-        animation: load 1s infinite;
-    }
-    @keyframes load {
-        0%{ left: -100%}
-        100%{ left: 150%}
-    }
-    </style>
 </head>
 <body class="empty">
 
   <section class="flex min-h-screen relative shrink-0">
 
-    <!-- ================ DESKTOP SIDEBAR START ====================== -->
+    <!-- ================ DESKTOP SIDEBAR  ====================== -->
     <aside class="sidebar bg-[url('../../assets/images/home/sidebarbg.png')] min-h-screen  bg-bottom bg-contain sticky top-0 left-0
-           transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28" id="sidebar" >
+           transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28 " id="sidebar">
     
         <!-- SIDEBAR LOGO AND HUMBERGER ICON  -->
         <div class="sidebar-header relative flex justify-center h-20">
-            <figure class="w-28" id="sidebarlogo">
+            <figure class=" w-28 " id="sidebarlogo">
                 <a href="index.html"><img src="assets/images/login/logo.png" alt="Logo" class=" w-full h-full"></a>
             </figure>
             <div class="absolute right-6 top-10 cursor-pointer p-2" id="hamburger" onclick="toggleSidebar()">
@@ -59,7 +41,7 @@
             <li class="">
                 <a href="index.html"
                     class="flex items-center  gap-8 pl-7   h-14 rounded-r-3xl hover:bg-primary transition duration-300 ">
-                    <span class="icon">
+                    <span class="iconn">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M22.5 19.6875H24.375V24.375H22.5V19.6875ZM18.75 15H20.625V24.375H18.75V15ZM10.3125 24.375C9.06975 24.3735 7.87834 23.8792 6.99958 23.0004C6.12083 22.1217 5.62649 20.9302 5.625 19.6875H7.5C7.5 20.2438 7.66495 20.7875 7.97399 21.25C8.28303 21.7126 8.72229 22.073 9.2362 22.2859C9.75012 22.4988 10.3156 22.5545 10.8612 22.446C11.4068 22.3374 11.9079 22.0696 12.3012 21.6762C12.6946 21.2829 12.9624 20.7818 13.071 20.2362C13.1795 19.6906 13.1238 19.1251 12.9109 18.6112C12.698 18.0973 12.3376 17.658 11.875 17.349C11.4125 17.0399 10.8688 16.875 10.3125 16.875V15C11.5557 15 12.748 15.4939 13.6271 16.3729C14.5061 17.252 15 18.4443 15 19.6875C15 20.9307 14.5061 22.123 13.6271 23.0021C12.748 23.8811 11.5557 24.375 10.3125 24.375Z"
@@ -76,7 +58,7 @@
             <li>
                 <a href="routegeneration.html"
                     class="flex items-center  gap-8 pl-8  h-14 rounded-r-3xl hover:bg-primary transition duration-300 ">
-                    <span class="icon">
+                    <span class="iconn">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M14.8784 7.4761C14.1367 7.4761 13.4117 7.69603 12.795 8.10809C12.1783 8.52014 11.6976 9.10581 11.4138 9.79103C11.13 10.4763 11.0557 11.2303 11.2004 11.9577C11.3451 12.6851 11.7023 13.3533 12.2267 13.8777C12.7512 14.4022 13.4193 14.7593 14.1468 14.904C14.8742 15.0487 15.6282 14.9745 16.3134 14.6906C16.9986 14.4068 17.5843 13.9262 17.9964 13.3095C18.4084 12.6928 18.6284 11.9678 18.6284 11.2261C18.6272 10.2319 18.2318 9.27871 17.5288 8.5757C16.8257 7.87268 15.8726 7.47723 14.8784 7.4761V7.4761ZM14.8784 13.1011C14.5075 13.1011 14.145 12.9911 13.8367 12.7851C13.5283 12.5791 13.288 12.2862 13.1461 11.9436C13.0042 11.601 12.967 11.224 13.0394 10.8603C13.1117 10.4966 13.2903 10.1625 13.5525 9.90027C13.8148 9.63805 14.1488 9.45947 14.5126 9.38712C14.8763 9.31478 15.2533 9.35191 15.5959 9.49382C15.9385 9.63574 16.2313 9.87606 16.4374 10.1844C16.6434 10.4927 16.7534 10.8553 16.7534 11.2261C16.7528 11.7232 16.5551 12.1998 16.2035 12.5513C15.852 12.9028 15.3755 13.1005 14.8784 13.1011V13.1011Z"
@@ -93,7 +75,7 @@
             <li>
                 <a href="runs.html"
                     class="flex items-center  gap-8 pl-7   h-14 rounded-r-3xl hover:bg-primary transition duration-300 ">
-                    <span class="icon">
+                    <span class="iconn">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.8125 10.0781C18.5078 10.0781 19.1875 9.87194 19.7657 9.48564C20.3438 9.09934 20.7944 8.55027 
                                  21.0605 7.90787C21.3266 7.26548 21.3962 6.5586 21.2606 5.87664C21.1249 5.19467 20.7901 4.56825 20.2984 
@@ -129,8 +111,8 @@
             </li>
             <li>
                 <a href="templatelist.html"
-                    class="flex items-center  gap-8 pl-7   h-14 rounded-r-3xl hover:bg-primary transition duration-300 active">
-                    <span class="icon">
+                    class="flex items-center  gap-8 pl-7   h-14 rounded-r-3xl hover:bg-primary transition duration-300 ">
+                    <span class="iconn">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M4.375 25C4.20833 25 4.0625 24.9375 3.9375 24.8125C3.8125 24.6875 3.75 24.5417 3.75 24.375C3.75 24.2083 
@@ -167,8 +149,8 @@
             </li>
             <li x-data="accordion" @click="selected != 1 ? selected = 1 : selected =null">
                 <a href="javascript:void(0)"
-                    class="flex items-center  gap-8 pl-7  h-14 rounded-r-3xl hover:bg-primary transition duration-300">
-                    <span class="icon">
+                    class="flex items-center  gap-8 pl-7  h-14 rounded-r-3xl hover:bg-primary transition duration-300 active">
+                    <span class="iconn">
                         <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M14.2031 13.504C15.4609 12.6684 16.4163 11.4501 16.9279 10.0293C17.4395 8.60855 17.4801 
@@ -229,7 +211,7 @@
                         <li><a href="staff.html"
                                 class="py-2 pl-6 duration-300 text-sm w-full inline-block ">Staff</a></li>
                         <li><a href="driverlist.html"
-                                class="py-2 pl-6 duration-300 text-sm w-full inline-block ">Drivers</a></li>
+                                class="py-2 pl-6 duration-300 text-sm w-full inline-block font-bold">Drivers</a></li>
                         <li><a href="distribution-center.html"
                                 class="py-2 pl-6 duration-300 text-sm w-full inline-block ">Distribution
                                 Centre</a></li>
@@ -240,39 +222,7 @@
         </ul>
     
     </aside>
-     <!-- ================ DESKTOP SIDEBAR  END====================== -->
-
-     <!-- ================ DESKTOP SIDEBAR LOADER START ====================== -->
-
-     <div class="sidebar bg-white shadow-lg min-h-screen  bg-bottom bg-contain sticky top-0 left-0
-     transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28" id="sidebar-loader">
-      
-     <!-- sidebar header loader-->
-     <div class="header flex justify-center h-20 pt-2">
-         <div data-placeholder class="img w-20 h-16 bg-gray-200 rounded-md relative ">
- 
-         </div>
-         <div  class="humberger absolute right-6 top-4 cursor-pointer p-2 ">
-             <div data-placeholder class="h-8 w-8 bg-gray-200 relative">
- 
-             </div>
-         </div>
-     </div>
-     <!-- sidebar menu loader  -->
-     <ul data-placeholder class=" flex flex-col gap-3 relative px-2">
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-   
-     </ul>
- 
- 
- 
-     </div>
-
-    <!-- ================ DESKTOP SIDEBAR LOADER END  ====================== -->
+    <!-- ================ DESKTOP SIDEBAR  ====================== -->
 
     <!-- ================ MOBILE APPBAR  ====================== -->
     <div class="fixed bottom-0 left-0 bg-gray-100 px-3 py-0 w-full min-[992px]:hidden border-t z-50">
@@ -281,11 +231,7 @@
             <a href="index.html" class="flex flex-col items-center gap-2">
               <span class="icon">
                 <svg width="18" height="18" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25.25 0.875H2.75C2.25287 0.875496 1.77625 1.0732 1.42472 1.42472C1.0732 1.77625 0.875496 2.25287 0.875 
-                    2.75V25.25C0.875496 25.7471 1.0732 26.2238 1.42472 26.5753C1.77625 26.9268 2.25287 27.1245 2.75 27.125H25.25C25.7471 
-                    27.1243 26.2235 26.9265 26.575 26.575C26.9265 26.2235 27.1243 25.7471 27.125 25.25V2.75C27.1245 2.25287 26.9268 1.77625 
-                    26.5753 1.42472C26.2238 1.0732 25.7471 0.875496 25.25 0.875ZM25.25 9.3125H12.125V2.75H25.25V9.3125ZM10.25 2.75V9.3125H2.75V2.75H10.25ZM2.75 
-                    25.25V11.1875H25.25L25.2519 25.25H2.75Z" fill="black"/>
+                    <path d="M25.25 0.875H2.75C2.25287 0.875496 1.77625 1.0732 1.42472 1.42472C1.0732 1.77625 0.875496 2.25287 0.875 2.75V25.25C0.875496 25.7471 1.0732 26.2238 1.42472 26.5753C1.77625 26.9268 2.25287 27.1245 2.75 27.125H25.25C25.7471 27.1243 26.2235 26.9265 26.575 26.575C26.9265 26.2235 27.1243 25.7471 27.125 25.25V2.75C27.1245 2.25287 26.9268 1.77625 26.5753 1.42472C26.2238 1.0732 25.7471 0.875496 25.25 0.875ZM25.25 9.3125H12.125V2.75H25.25V9.3125ZM10.25 2.75V9.3125H2.75V2.75H10.25ZM2.75 25.25V11.1875H25.25L25.2519 25.25H2.75Z" fill="black"/>
                 </svg>
                     
               </span>
@@ -347,8 +293,8 @@
             <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-32  lg:w-52 origin-top-right absolute right-1  bottom-full z-50 text-left bg-white shadow-sm border border-b-secondary rounded">
                 <div class="flex flex-col">
                     <a href="staff.html" class=" py-2 px-4 text-[11px]">Staff</a>
-                    <a href="driverlist.html" class=" py-2 px-4 text-[11px]">Drivers</a>
-                    <a href="distribution-center.html" class=" py-2 px-4 text-[11px] font-bold">Dist Centre</a>
+                    <a href="driverlist.html" class=" py-2 px-4 text-[11px] font-bold">Drivers</a>
+                    <a href="distribution-center.html" class=" py-2 px-4 text-[11px] ">Dist Centre</a>
                 </div>
             </div>
           </li>
@@ -358,13 +304,15 @@
 
 
     <!-- ================ MAIN CONTENT ====================== -->
-    <main class=" main-content  py-2 pt-0  mb-20">
-        <!-- STICKY HEADER START-->
+    <main class=" main-content  py-2 pt-0  mb-20 ">
+        <!-- STICKY HEADER -->
         <header class="sticky top-0 left-0 right-0 bg-white z-50 py-2 pt-6">
             <div class="dms-container">
+        
+        
                 <div class="flex justify-between min-[992px]:justify-end items-center ">
                     <!-- logo -->
-                    <div class="min-[992px]:hidden">
+                    <div class="  min-[992px]:hidden">
                         
                         <a href="index.html">
                             <figure class="w-24 " id="sidebarlogo">
@@ -378,15 +326,7 @@
                             <span @click="open = ! open">
                                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M1 15C0.447715 15 0 15.4477 0 16C0 16.5523 0.447715 17 1 17V15ZM4 8H3H4ZM18 
-                                        8H19H18ZM12.73 20L13.595 20.5018C13.7744 20.1924 13.775 19.8108 13.5965 19.5009C13.418 19.191 13.0876 
-                                        19 12.73 19V20ZM9.27 20V19C8.91237 19 8.58196 19.191 8.40346 19.5009C8.22497 19.8108 8.22555 20.1924 
-                                        8.405 20.5018L9.27 20ZM21 15H1V17H21V15ZM1 17C3.20914 17 5 15.2091 5 13H3C3 14.1046 2.10457 15 1 15V17ZM5 
-                                        13V8H3V13H5ZM5 8C5 4.68629 7.68629 2 11 2V0C6.58172 0 3 3.58172 3 8H5ZM11 2C14.3137 2 17 4.68629 17 
-                                        8H19C19 3.58172 15.4183 0 11 0V2ZM17 8V13H19V8H17ZM17 13C17 15.2091 18.7909 17 21 17V15C19.8954 15 
-                                        19 14.1046 19 13H17ZM11.865 19.4982C11.6861 19.8066 11.3565 19.9965 11 19.9965V21.9965C12.0696 
-                                        21.9965 13.0583 21.427 13.595 20.5018L11.865 19.4982ZM11 19.9965C10.6435 19.9965 10.3139 19.8066 
-                                        10.135 19.4982L8.405 20.5018C8.9417 21.427 9.9304 21.9965 11 21.9965V19.9965ZM9.27 21H12.73V19H9.27V21Z"
+                                        d="M1 15C0.447715 15 0 15.4477 0 16C0 16.5523 0.447715 17 1 17V15ZM4 8H3H4ZM18 8H19H18ZM12.73 20L13.595 20.5018C13.7744 20.1924 13.775 19.8108 13.5965 19.5009C13.418 19.191 13.0876 19 12.73 19V20ZM9.27 20V19C8.91237 19 8.58196 19.191 8.40346 19.5009C8.22497 19.8108 8.22555 20.1924 8.405 20.5018L9.27 20ZM21 15H1V17H21V15ZM1 17C3.20914 17 5 15.2091 5 13H3C3 14.1046 2.10457 15 1 15V17ZM5 13V8H3V13H5ZM5 8C5 4.68629 7.68629 2 11 2V0C6.58172 0 3 3.58172 3 8H5ZM11 2C14.3137 2 17 4.68629 17 8H19C19 3.58172 15.4183 0 11 0V2ZM17 8V13H19V8H17ZM17 13C17 15.2091 18.7909 17 21 17V15C19.8954 15 19 14.1046 19 13H17ZM11.865 19.4982C11.6861 19.8066 11.3565 19.9965 11 19.9965V21.9965C12.0696 21.9965 13.0583 21.427 13.595 20.5018L11.865 19.4982ZM11 19.9965C10.6435 19.9965 10.3139 19.8066 10.135 19.4982L8.405 20.5018C8.9417 21.427 9.9304 21.9965 11 21.9965V19.9965ZM9.27 21H12.73V19H9.27V21Z"
                                         fill="#333333" />
                                 </svg>
                             </span>
@@ -510,342 +450,37 @@
                 </div>
             </div>
         </header>
-        <!-- STICKY HEADER END -->
-        <div class="sticky top-0 left-0 right-0 bg-white z-50 py-2 pt-6">
-            <div class="dms-container">
-                <div class="flex justify-between min-[992px]:justify-end items-center">
-                    <div class="min-[992px]:hidden bg-gray-200">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
          <!-- WELCOME -->
         <div class="dms-container ">
             <div class="flex justify-between items-end px-2  pt-4 lg:pt-8  pb-20">
                 <div>
-                    <h1 class=" text-xl lg:text-2xl">Template list</h1>
+                    <h1 class=" text-xl lg:text-2xl">Generated Route</h1>
                 </div>
-                
             </div>
         </div>
-        <!-- SEARCH DOWNLOAD -->
-        <div>
-            <div class="dms-container flex justify-between  py-3 gap-5">
-
-                <div class="relative w-full max-w-sm  ">
-                    <span>Choose a calender date</span>
-                    <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" class="border" />
-                </div>
-                <!-- buttons -->
-                <div class=" flex items-center gap-3">
-                    <!-- add driver -->
-                    <div x-data="{ modelOpen: false}">
-                        
-                        <button  @click="modelOpen =!modelOpen" class="bg-buttonBg2 rounded py-1.5 sm:py-2 px-3 transition duration-300 hover:bg-gray-200 inline-flex items-center justify-center">
-                            <span>
-                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.71608 18.0371L9.52881 1.20741M18.0373 9.5286L1.20762 9.71588" stroke="black" stroke-linecap="round"/>
-                                </svg>
-                            </span>
-                        </button>
-                    
-                        <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-                            <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
-                                <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0" 
-                                    x-transition:enter-end="opacity-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100" 
-                                    x-transition:leave-end="opacity-0"
-                                    class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40" aria-hidden="true"
-                                ></div>
-                    
-                                <div x-cloak x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
-                                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
-                                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                                    class="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-3xl p-8 pb-24 my-20 overflow-hidden text-left transition-all transform bg-white   shadow-xl "
-                                >
-                                    <div class="flex items-center justify-between space-x-4 mb-4 lg:mb-8">
-                                        <h2 class="text-xl font-normal text-black ">Add template</h2>
-                    
-                                    
-                                    </div>
-                                    
-                                    <div class=" grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        <div class="left flex flex-col gap-3">
-                                            
-                                            <div class="inputbox errorfield">
-                                                <label for="firstName" class="inputlabel">First name</label>
-                                                <input type="text" class="inputfield" id="firstName" autocomplete="off">
-                                                <div class="error">
-                                                    <p class="error-message">First name is required</p>
-                                                </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="lastName" class="inputlabel">Last name</label>
-                                                <input type="text" class="inputfield" id="lastName" autocomplete="off">
-                                                <div class="error">
-                                                    <p class="error-message">Last name is required</p>
-                                                </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="lastName" class="inputlabel">Driver</label>
-                                                <select id="seachable-select">
-                                                    <option data-display="Select">Nothing</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                </select>
-                                                
-                                            </div>
-                                            
-                                           
-                                           
-                                        </div>
-                                        <div class="right flex flex-col gap-3">
-                                            
-                                            <div class="inputbox">
-                                                <label for="postcode" class="inputlabel">Sub-postcode</label>
-                                                <input type="text" class="inputfield" id="postcode" autocomplete="off">
-                                                <div class="error">
-                                                    <p class="error-message">Postcode code is required</p>
-                                                  </div>
-                                            </div> 
-
-                                            <div class="inputbox">
-                                                <label for="lastName" class="inputlabel">Distribution center</label>
-                                                <select id="ditribution-select">
-                                                    <option data-display="Select"> Select Distribution center</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                </select>
-                                                
-                                            </div>
-
-                                            
-                                         
-                                        </div>
-                                    </div>
-                                    <div class="buttons  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pt-6">
-                                        <button  @click="modelOpen = false" class=" bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Cancel</button>
-                                        <button class=" text-black bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Add Template</button>
-                                    </div>
-                                    
-                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    
-                </div>
-
-            </div>
-        </div>
-         <!-- table -->
         
         <div class="dms-container">
-            <div class="w-full  bg-white rounded">
-                <div class="border-border w-full py-20 rounded bg-white overflow-x-auto">
-                  <table class="w-full border border-border text-sm text-center py-96">
-                    <thead class="border-b border-border">
-                        <tr>
-                            <td scope="col" class="px-2 py-4 border-r border-border">SL</td>
-                            <td scope="col" class="px-2 py-4 border-r border-border">Name</td>
-                            <td scope="col" class="px-2 py-4 border-r border-border">Latitude</td>
-                            <td scope="col" class="px-2 py-4 border-r border-border">Longitude </td>
-                            <td scope="col" class="px-2 py-4">Address</td>
-                   
-                        </tr>
-                    </thead>
-                    <tbody>
-                       <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                        <td class="px-6 py-3 border-r border-border">1</td>
-                        <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
-                     
-                       
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 min-w-[300px] ">
-                            London Tower, the Westminster Palace, the London Eye, the Tower Bridge, the Buckingham Palace, the Wembley Stadium, St.Paul's Cathedral, St.Mary's
-                          
-                        </td>
-                        <td class="px-6 py-3">
-                           <span class=" cursor-pointer">
-                            <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
-                            </svg>
-                                
-                           </span>
-                        </td>
-                       
-                       </tr>
-                       <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                        <td class="px-6 py-3 border-r border-border">1</td>
-                        <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
-                     
-                       
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 ">
-                            Brighton City
-                          
-                        </td>
-                        <td class="px-6 py-3">
-                            <span class=" cursor-pointer">
-                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
-                             </svg>
-                                 
-                            </span>
-                        </td>
-                       
-                       </tr>
-
-                       <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                        <td class="px-6 py-3 border-r border-border">2</td>
-                        <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
-                     
-                       
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 ">
-                            Birmingham City, Kings Heath, Edgbaston
-                          
-                        </td>
-                        <td class="px-6 py-3">
-                            <span class=" cursor-pointer">
-                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
-                             </svg>
-                                 
-                            </span>
-                        </td>
-                       
-                       </tr>
-                       <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                        <td class="px-6 py-3 border-r border-border">3</td>
-                        <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
-                     
-                       
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 ">
-                            Birmingham City, Kings Heath, Edgbaston
-                          
-                        </td>
-                        <td class="px-6 py-3">
-                            <span class=" cursor-pointer">
-                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
-                             </svg>
-                                 
-                            </span>
-                         </td>
-                       
-                       </tr>
-                       <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                        <td class="px-6 py-3 border-r border-border">4</td>
-                        <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
-                     
-                       
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 ">
-                            Machserter City
-                          
-                        </td>
-                        <td class="px-6 py-3">
-                            <span class=" cursor-pointer">
-                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
-                             </svg>
-                                 
-                            </span>
-                        </td>
-                       
-                       </tr>
-                       <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                        <td class="px-6 py-3 border-r border-border">5</td>
-                        <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
-                     
-                       
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
-                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
-                        <td class="px-6 py-3 ">
-                            Machserter City
-                          
-                        </td>
-                        <td class="px-6 py-3">
-                            <span class=" cursor-pointer">
-                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
-                             </svg>
-                                 
-                            </span>
-                        </td>
-                       
-                       </tr>
-                      
-                   
-                    
-                  
-                     
-                     
-                       
-                    </tbody>
-                  </table>
-                </div>
+            <div class="flex flex-col">
+                <table class="bg-gray-100">
+                    <tr>
+                        <td class="py-3 border">Job Name</td>
+                        <td>Route 122</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-border bg-green-100 py-3">Job Name</td>
+                        <td class="border border-border">Route 122</td>
+                    </tr>
+                    <tr>
+                        <td>Job Name</td>
+                        <td>Route 122</td>
+                    </tr>
+                    <tr>
+                        <td>Job Name</td>
+                        <td>Route 122</td>
+                    </tr>
+                </table>
             </div>
-        
-        </div> 
+        </div>
 
     </main>
     <!-- ================ MAIN CONTENT ====================== -->
@@ -854,70 +489,11 @@
 
   </section>
 
-<!-- sidebar js -->
-<script src="assets/js/sidebar.js"></script>
-<!-- Nice select -->
-<script src="assets/js/niceselect.js"></script>
-
-<!-- DATEPICKER  -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<script type="text/javascript" src="assets/js/datepicker.js"></script>
-
-<script>
-    // get scrin size
-     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width; 
- 
-
-    // select sidebar and loader 
-    let sidebar=document.getElementById('sidebar');
-    let sidebarLoader=document.getElementById('sidebar-loader');
-
-    if(width<992) { 
-        // hide sidebar and skeleton  for mobile device
-        sidebarLoader.style.display="none";
-        sidebar.style.display="none" 
-    }if(width>992) {
-        sidebar.style.display="none"
-        function skeletonLoading() {
-        sidebarLoader.style.display="none";
-        sidebar.style.display="flex" 
-        window.onscroll = function () { window.scrollTo(); };
-        
-    } 
-    const myTimeout = setTimeout(skeletonLoading, 3000);
-
-    }
-
-
-    // window,addEventListener("resize",function(){
-    //     if(width<992) { 
-    //     // hide sidebar and skeleton  for mobile device
-    //     sidebarLoader.style.display="none";
-    //     sidebar.style.display="none" 
-    // }if(width>992) {
-    //     sidebar.style.display="none"
-    //     function skeletonLoading() {
-    //     sidebarLoader.style.display="none";
-    //     sidebar.style.display="flex" 
-    //     window.onscroll = function () { window.scrollTo(); };
-        
-    // } 
-    // const myTimeout = setTimeout(skeletonLoading, 100);
-
-    // }
-    // })
-
-
-
-
-    
-
-    
+  <!-- sidebar js -->
+  <script src="assets/js/sidebar.js"></script>
+  <script>
   
-
-</script>
+  </script>
   
 </body>
 </html>
