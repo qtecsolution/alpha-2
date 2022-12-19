@@ -11,20 +11,36 @@
     <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">  
     <!-- NICE SELECT -->
     <link rel="stylesheet" href="assets/css/niceselect.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- Alpinejs -->
     <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
+    <style>
+         [data-placeholder]::after {
+        content: " ";
+        box-shadow: 0 0 50px 9px rgba(254,254,254);
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 100%; 
+        animation: load 1s infinite;
+    }
+    @keyframes load {
+        0%{ left: -100%}
+        100%{ left: 150%}
+    }
+    </style>
 </head>
 <body class="empty">
 
   <section class="flex min-h-screen relative shrink-0">
 
-    <!-- ================ DESKTOP SIDEBAR  ====================== -->
+    <!-- ================ DESKTOP SIDEBAR START ====================== -->
     <aside class="sidebar bg-[url('../../assets/images/home/sidebarbg.png')] min-h-screen  bg-bottom bg-contain sticky top-0 left-0
-           transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28 " id="sidebar">
+           transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28" id="sidebar" >
     
         <!-- SIDEBAR LOGO AND HUMBERGER ICON  -->
         <div class="sidebar-header relative flex justify-center h-20">
-            <figure class=" w-28 " id="sidebarlogo">
+            <figure class="w-28" id="sidebarlogo">
                 <a href="index.html"><img src="assets/images/login/logo.png" alt="Logo" class=" w-full h-full"></a>
             </figure>
             <div class="absolute right-6 top-10 cursor-pointer p-2" id="hamburger" onclick="toggleSidebar()">
@@ -43,7 +59,7 @@
             <li class="">
                 <a href="index.html"
                     class="flex items-center  gap-8 pl-7   h-14 rounded-r-3xl hover:bg-primary transition duration-300 ">
-                    <span class="iconn">
+                    <span class="icon">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M22.5 19.6875H24.375V24.375H22.5V19.6875ZM18.75 15H20.625V24.375H18.75V15ZM10.3125 24.375C9.06975 24.3735 7.87834 23.8792 6.99958 23.0004C6.12083 22.1217 5.62649 20.9302 5.625 19.6875H7.5C7.5 20.2438 7.66495 20.7875 7.97399 21.25C8.28303 21.7126 8.72229 22.073 9.2362 22.2859C9.75012 22.4988 10.3156 22.5545 10.8612 22.446C11.4068 22.3374 11.9079 22.0696 12.3012 21.6762C12.6946 21.2829 12.9624 20.7818 13.071 20.2362C13.1795 19.6906 13.1238 19.1251 12.9109 18.6112C12.698 18.0973 12.3376 17.658 11.875 17.349C11.4125 17.0399 10.8688 16.875 10.3125 16.875V15C11.5557 15 12.748 15.4939 13.6271 16.3729C14.5061 17.252 15 18.4443 15 19.6875C15 20.9307 14.5061 22.123 13.6271 23.0021C12.748 23.8811 11.5557 24.375 10.3125 24.375Z"
@@ -60,7 +76,7 @@
             <li>
                 <a href="routegeneration.html"
                     class="flex items-center  gap-8 pl-8  h-14 rounded-r-3xl hover:bg-primary transition duration-300 ">
-                    <span class="iconn">
+                    <span class="icon">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M14.8784 7.4761C14.1367 7.4761 13.4117 7.69603 12.795 8.10809C12.1783 8.52014 11.6976 9.10581 11.4138 9.79103C11.13 10.4763 11.0557 11.2303 11.2004 11.9577C11.3451 12.6851 11.7023 13.3533 12.2267 13.8777C12.7512 14.4022 13.4193 14.7593 14.1468 14.904C14.8742 15.0487 15.6282 14.9745 16.3134 14.6906C16.9986 14.4068 17.5843 13.9262 17.9964 13.3095C18.4084 12.6928 18.6284 11.9678 18.6284 11.2261C18.6272 10.2319 18.2318 9.27871 17.5288 8.5757C16.8257 7.87268 15.8726 7.47723 14.8784 7.4761V7.4761ZM14.8784 13.1011C14.5075 13.1011 14.145 12.9911 13.8367 12.7851C13.5283 12.5791 13.288 12.2862 13.1461 11.9436C13.0042 11.601 12.967 11.224 13.0394 10.8603C13.1117 10.4966 13.2903 10.1625 13.5525 9.90027C13.8148 9.63805 14.1488 9.45947 14.5126 9.38712C14.8763 9.31478 15.2533 9.35191 15.5959 9.49382C15.9385 9.63574 16.2313 9.87606 16.4374 10.1844C16.6434 10.4927 16.7534 10.8553 16.7534 11.2261C16.7528 11.7232 16.5551 12.1998 16.2035 12.5513C15.852 12.9028 15.3755 13.1005 14.8784 13.1011V13.1011Z"
@@ -77,7 +93,7 @@
             <li>
                 <a href="#"
                     class="flex items-center  gap-8 pl-7   h-14 rounded-r-3xl hover:bg-primary transition duration-300 ">
-                    <span class="iconn">
+                    <span class="icon">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.8125 10.0781C18.5078 10.0781 19.1875 9.87194 19.7657 9.48564C20.3438 9.09934 20.7944 8.55027 
                                  21.0605 7.90787C21.3266 7.26548 21.3962 6.5586 21.2606 5.87664C21.1249 5.19467 20.7901 4.56825 20.2984 
@@ -114,7 +130,7 @@
             <li>
                 <a href="#"
                     class="flex items-center  gap-8 pl-7   h-14 rounded-r-3xl hover:bg-primary transition duration-300 ">
-                    <span class="iconn">
+                    <span class="icon">
                         <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M4.375 25C4.20833 25 4.0625 24.9375 3.9375 24.8125C3.8125 24.6875 3.75 24.5417 3.75 24.375C3.75 24.2083 
@@ -152,7 +168,7 @@
             <li x-data="accordion" @click="selected != 1 ? selected = 1 : selected =null">
                 <a href="javascript:void(0)"
                     class="flex items-center  gap-8 pl-7  h-14 rounded-r-3xl hover:bg-primary transition duration-300 active">
-                    <span class="iconn">
+                    <span class="icon">
                         <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M14.2031 13.504C15.4609 12.6684 16.4163 11.4501 16.9279 10.0293C17.4395 8.60855 17.4801 
@@ -224,7 +240,39 @@
         </ul>
     
     </aside>
-    <!-- ================ DESKTOP SIDEBAR  ====================== -->
+     <!-- ================ DESKTOP SIDEBAR  END====================== -->
+
+     <!-- ================ DESKTOP SIDEBAR LOADER START ====================== -->
+
+     <div class="sidebar bg-white shadow-lg min-h-screen  bg-bottom bg-contain sticky top-0 left-0
+     transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28" id="sidebar-loader">
+      
+     <!-- sidebar header loader-->
+     <div class="header flex justify-center h-20 pt-2">
+         <div data-placeholder class="img w-20 h-16 bg-gray-200 rounded-md relative ">
+ 
+         </div>
+         <div  class="humberger absolute right-6 top-4 cursor-pointer p-2 ">
+             <div data-placeholder class="h-8 w-8 bg-gray-200 relative">
+ 
+             </div>
+         </div>
+     </div>
+     <!-- sidebar menu loader  -->
+     <ul data-placeholder class=" flex flex-col gap-3 relative px-2">
+         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
+         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
+         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
+         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
+         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
+   
+     </ul>
+ 
+ 
+ 
+     </div>
+
+    <!-- ================ DESKTOP SIDEBAR LOADER END  ====================== -->
 
     <!-- ================ MOBILE APPBAR  ====================== -->
     <div class="fixed bottom-0 left-0 bg-gray-100 px-3 py-0 w-full min-[992px]:hidden border-t z-50">
@@ -233,7 +281,11 @@
             <a href="index.html" class="flex flex-col items-center gap-2">
               <span class="icon">
                 <svg width="18" height="18" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25.25 0.875H2.75C2.25287 0.875496 1.77625 1.0732 1.42472 1.42472C1.0732 1.77625 0.875496 2.25287 0.875 2.75V25.25C0.875496 25.7471 1.0732 26.2238 1.42472 26.5753C1.77625 26.9268 2.25287 27.1245 2.75 27.125H25.25C25.7471 27.1243 26.2235 26.9265 26.575 26.575C26.9265 26.2235 27.1243 25.7471 27.125 25.25V2.75C27.1245 2.25287 26.9268 1.77625 26.5753 1.42472C26.2238 1.0732 25.7471 0.875496 25.25 0.875ZM25.25 9.3125H12.125V2.75H25.25V9.3125ZM10.25 2.75V9.3125H2.75V2.75H10.25ZM2.75 25.25V11.1875H25.25L25.2519 25.25H2.75Z" fill="black"/>
+                    <path d="M25.25 0.875H2.75C2.25287 0.875496 1.77625 1.0732 1.42472 1.42472C1.0732 1.77625 0.875496 2.25287 0.875 
+                    2.75V25.25C0.875496 25.7471 1.0732 26.2238 1.42472 26.5753C1.77625 26.9268 2.25287 27.1245 2.75 27.125H25.25C25.7471 
+                    27.1243 26.2235 26.9265 26.575 26.575C26.9265 26.2235 27.1243 25.7471 27.125 25.25V2.75C27.1245 2.25287 26.9268 1.77625 
+                    26.5753 1.42472C26.2238 1.0732 25.7471 0.875496 25.25 0.875ZM25.25 9.3125H12.125V2.75H25.25V9.3125ZM10.25 2.75V9.3125H2.75V2.75H10.25ZM2.75 
+                    25.25V11.1875H25.25L25.2519 25.25H2.75Z" fill="black"/>
                 </svg>
                     
               </span>
@@ -306,15 +358,13 @@
 
 
     <!-- ================ MAIN CONTENT ====================== -->
-    <main class=" main-content  py-2 pt-0  mb-20 ">
-        <!-- STICKY HEADER -->
+    <main class=" main-content  py-2 pt-0  mb-20">
+        <!-- STICKY HEADER START-->
         <header class="sticky top-0 left-0 right-0 bg-white z-50 py-2 pt-6">
             <div class="dms-container">
-        
-        
                 <div class="flex justify-between min-[992px]:justify-end items-center ">
                     <!-- logo -->
-                    <div class="  min-[992px]:hidden">
+                    <div class="min-[992px]:hidden">
                         
                         <a href="index.html">
                             <figure class="w-24 " id="sidebarlogo">
@@ -460,15 +510,25 @@
                 </div>
             </div>
         </header>
+        <!-- STICKY HEADER END -->
+        <div class="sticky top-0 left-0 right-0 bg-white z-50 py-2 pt-6">
+            <div class="dms-container">
+                <div class="flex justify-between min-[992px]:justify-end items-center">
+                    <div class="min-[992px]:hidden bg-gray-200">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
          <!-- WELCOME -->
         <div class="dms-container ">
             <div class="flex justify-between items-end px-2  pt-4 lg:pt-8  pb-20">
                 <div>
                     <h1 class=" text-xl lg:text-2xl">Template list</h1>
                 </div>
-                <div class=" hidden bg-primaryDeep">
-                    <input type="date" name="" id="" class=" hidden  p-1 border focus:ring-transparent  border-border rounded text-sm lg:text-base" autocomplete="off">
-                </div>
+                
             </div>
         </div>
         <!-- SEARCH DOWNLOAD -->
@@ -476,13 +536,8 @@
             <div class="dms-container flex justify-between  py-3 gap-5">
 
                 <div class="relative w-full max-w-sm  ">
-                    <input type="text" class=" w-full border p-0 border-border py-2  px-4 pr-10 rounded bg-[#F7F7F7] outline-none focus:ring-0 
-                     focus:border-secondary focus:ring-black transition text-sm " placeholder="Search...">
-                     <span class="absolute top-1/2 right-4 -translate-y-1/2 mt-0.5">
-                        <svg width="18" height="18" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.2098 10.9906C14.2991 9.58669 14.787 7.8461 14.5759 6.11706C14.3647 4.38801 13.4701 2.79801 12.071 1.66516C10.6719 0.532313 8.8715 -0.0598373 7.02997 0.0071779C5.18845 0.0741931 3.44162 0.795431 2.13896 2.0266C0.836304 3.25777 0.0738903 4.90807 0.00425079 6.64733C-0.0653888 8.3866 0.562881 10.0866 1.76337 11.4071C2.96385 12.7277 4.64802 13.5715 6.47893 13.7696C8.30984 13.9678 10.1525 13.5058 11.6382 12.476H11.637C11.6708 12.5185 11.7068 12.5588 11.7473 12.5981L16.0785 16.6888C16.2895 16.8881 16.5756 17.0002 16.8741 17.0003C17.1725 17.0004 17.4588 16.8885 17.6698 16.6893C17.8809 16.4901 17.9996 16.2198 17.9997 15.938C17.9998 15.6561 17.8814 15.3858 17.6704 15.1864L13.3392 11.0958C13.2989 11.0573 13.2557 11.0218 13.2098 10.9895V10.9906ZM13.5 6.90633C13.5 7.67375 13.34 8.43364 13.029 9.14264C12.7181 9.85164 12.2623 10.4958 11.6878 11.0385C11.1132 11.5811 10.4311 12.0116 9.68039 12.3053C8.92969 12.5989 8.12509 12.7501 7.31253 12.7501C6.49998 12.7501 5.69538 12.5989 4.94468 12.3053C4.19398 12.0116 3.51187 11.5811 2.93731 11.0385C2.36275 10.4958 1.90698 9.85164 1.59603 9.14264C1.28508 8.43364 1.12503 7.67375 1.12503 6.90633C1.12503 5.35648 1.77693 3.8701 2.93731 2.77418C4.09769 1.67826 5.67151 1.06258 7.31253 1.06258C8.95356 1.06258 10.5274 1.67826 11.6878 2.77418C12.8481 3.8701 13.5 5.35648 13.5 6.90633Z" fill="#666666"/>
-                        </svg>     
-                     </span>
+                    <span>Choose a calender date</span>
+                    <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" class="border" />
                 </div>
                 <!-- buttons -->
                 <div class=" flex items-center gap-3">
@@ -516,7 +571,7 @@
                                     x-transition:leave="transition ease-in duration-200 transform"
                                     x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
                                     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                                    class="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-3xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white  shadow-xl "
+                                    class="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-3xl p-8 pb-24 my-20 overflow-hidden text-left transition-all transform bg-white   shadow-xl "
                                 >
                                     <div class="flex items-center justify-between space-x-4 mb-4 lg:mb-8">
                                         <h2 class="text-xl font-normal text-black ">Add template</h2>
@@ -536,7 +591,7 @@
                                             </div>
                                             <div class="inputbox">
                                                 <label for="lastName" class="inputlabel">Last name</label>
-                                                <input type="text" class="inputfield" id="lastName">
+                                                <input type="text" class="inputfield" id="lastName" autocomplete="off">
                                                 <div class="error">
                                                     <p class="error-message">Last name is required</p>
                                                 </div>
@@ -547,9 +602,23 @@
                                                     <option data-display="Select">Nothing</option>
                                                     <option value="1">Some option</option>
                                                     <option value="2">Another option</option>
-                                                    <option value="3" disabled>A disabled option</option>
                                                     <option value="4">Potato</option>
-                                                  </select>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
                                                 
                                             </div>
                                             
@@ -557,33 +626,48 @@
                                            
                                         </div>
                                         <div class="right flex flex-col gap-3">
-                                            <div class="inputbox errorfield">
-                                                <label for="driverroutename" class="inputlabel">Address</label>
-                                                <input type="text" id="driverroutename" class="inputfield"  autocomplete="off">
-                                                <div class="error">
-                                                    <p class="error-message">Address is required</p>
-                                                  </div>
-                                            </div>
+                                            
                                             <div class="inputbox">
-                                                <label for="driverroutecode" class="inputlabel">City</label>
-                                                <input type="text" class="inputfield" id="driverroutecode" autocomplete="off">
-                                                <div class="error">
-                                                    <p class="error-message">City is required</p>
-                                                  </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="postcode" class="inputlabel">Postcode</label>
-                                                <input type="text" class="inputfield" id="postcode">
+                                                <label for="postcode" class="inputlabel">Sub-postcode</label>
+                                                <input type="text" class="inputfield" id="postcode" autocomplete="off">
                                                 <div class="error">
                                                     <p class="error-message">Postcode code is required</p>
                                                   </div>
+                                            </div> 
+
+                                            <div class="inputbox">
+                                                <label for="lastName" class="inputlabel">Distribution center</label>
+                                                <select id="ditribution-select">
+                                                    <option data-display="Select"> Select Distribution center</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                                
                                             </div>
+
+                                            
                                          
                                         </div>
                                     </div>
                                     <div class="buttons  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pt-6">
                                         <button  @click="modelOpen = false" class=" bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Cancel</button>
-                                        <button class=" text-black bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Add Distribution center</button>
+                                        <button class=" text-black bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Add Template</button>
                                     </div>
                                     
                     
@@ -594,16 +678,7 @@
                     </div>
 
                     
-                    <button class="bg-buttonBg2 rounded py-1.5 sm:py-2 px-3 transition duration-300 hover:bg-gray-200 inline-flex items-center justify-center">
-                        <span>
-                            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 15.5455V18.8182C1 20.0232 1.89543 21 3 21H17C18.1046 21 19 20.0232 19 18.8182V15.5455" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.3999 11.9091L9.9999 15.5455L13.5999 11.9091" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M10 1V15.5455" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                                
-                        </span>
-                    </button>
+                    
                 </div>
 
             </div>
@@ -637,39 +712,13 @@
                           
                         </td>
                         <td class="px-6 py-3">
-                            <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
-
-                                <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
-
-                                    <div class="border border-border text-center text-xs">
-                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit distribution centre</a>
-                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Delete centre</a>
-                                    </div>
-                                </div>
-
-                                <span class="bg-green-400 ">
-                                    <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
-                                        15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
-                                        15.5322 1.13821 15.3618C0.967769 15.1913 0.851694 14.9742 0.804668 14.7378C0.757643 14.5014 
-                                        0.781778 14.2563 0.874022 14.0336C0.966267 13.8109 1.12248 13.6206 1.3229 13.4866C1.52332 
-                                        13.3527 1.75895 13.2812 2 13.2812C2.32323 13.2812 2.63323 13.4097 2.86179 13.6382C3.09035 
-                                        13.8668 3.21875 14.1768 3.21875 14.5ZM2 2.71875C2.24105 2.71875 2.47668 2.64727 2.6771 
-                                        2.51335C2.87752 2.37944 3.03373 2.18909 3.12598 1.9664C3.21822 1.7437 3.24236 1.49865 
-                                        3.19533 1.26223C3.14831 1.02582 3.03223 0.808659 2.86179 0.638214C2.69134 0.467769 
-                                        2.47418 0.351694 2.23777 0.304668C2.00135 0.257643 1.7563 0.281778 1.53361 0.374022C1.31091 
-                                        0.466267 1.12056 0.622477 0.986647 0.822899C0.852729 1.02332 0.781251 1.25895 0.781251 
-                                        1.5C0.781251 1.82323 0.909654 2.13323 1.13821 2.36179C1.36677 2.59035 1.67677 2.71875 
-                                        2 2.71875ZM2 6.78125C1.75895 6.78125 1.52332 6.85273 1.3229 6.98665C1.12248 7.12056 0.966267 
-                                        7.31091 0.874022 7.53361C0.781778 7.7563 0.757643 8.00135 0.804668 8.23777C0.851694 8.47418 
-                                        0.967769 8.69134 1.13821 8.86179C1.30866 9.03223 1.52582 9.14831 1.76223 9.19533C1.99865 
-                                        9.24236 2.2437 9.21822 2.4664 9.12598C2.68909 9.03373 2.87944 8.87752 3.01335 8.6771C3.14727 
-                                        8.47668 3.21875 8.24105 3.21875 8C3.21875 7.67677 3.09035 7.36677 2.86179 7.13821C2.63323 
-                                        6.90965 2.32323 6.78125 2 6.78125Z" fill="black"/>
-                                    </svg>
-                                        
-                                </span>
-                            </button>
+                           <span class=" cursor-pointer">
+                            <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
+                            </svg>
+                                
+                           </span>
                         </td>
                        
                        </tr>
@@ -685,45 +734,19 @@
                           
                         </td>
                         <td class="px-6 py-3">
-                            <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
-
-                                <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
-
-                                    <div class="border border-border text-center text-xs">
-                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit distribution centre</a>
-                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Delete centre</a>
-                                    </div>
-                                </div>
-
-                                <span class="bg-green-400 ">
-                                    <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
-                                        15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
-                                        15.5322 1.13821 15.3618C0.967769 15.1913 0.851694 14.9742 0.804668 14.7378C0.757643 14.5014 
-                                        0.781778 14.2563 0.874022 14.0336C0.966267 13.8109 1.12248 13.6206 1.3229 13.4866C1.52332 
-                                        13.3527 1.75895 13.2812 2 13.2812C2.32323 13.2812 2.63323 13.4097 2.86179 13.6382C3.09035 
-                                        13.8668 3.21875 14.1768 3.21875 14.5ZM2 2.71875C2.24105 2.71875 2.47668 2.64727 2.6771 
-                                        2.51335C2.87752 2.37944 3.03373 2.18909 3.12598 1.9664C3.21822 1.7437 3.24236 1.49865 
-                                        3.19533 1.26223C3.14831 1.02582 3.03223 0.808659 2.86179 0.638214C2.69134 0.467769 
-                                        2.47418 0.351694 2.23777 0.304668C2.00135 0.257643 1.7563 0.281778 1.53361 0.374022C1.31091 
-                                        0.466267 1.12056 0.622477 0.986647 0.822899C0.852729 1.02332 0.781251 1.25895 0.781251 
-                                        1.5C0.781251 1.82323 0.909654 2.13323 1.13821 2.36179C1.36677 2.59035 1.67677 2.71875 
-                                        2 2.71875ZM2 6.78125C1.75895 6.78125 1.52332 6.85273 1.3229 6.98665C1.12248 7.12056 0.966267 
-                                        7.31091 0.874022 7.53361C0.781778 7.7563 0.757643 8.00135 0.804668 8.23777C0.851694 8.47418 
-                                        0.967769 8.69134 1.13821 8.86179C1.30866 9.03223 1.52582 9.14831 1.76223 9.19533C1.99865 
-                                        9.24236 2.2437 9.21822 2.4664 9.12598C2.68909 9.03373 2.87944 8.87752 3.01335 8.6771C3.14727 
-                                        8.47668 3.21875 8.24105 3.21875 8C3.21875 7.67677 3.09035 7.36677 2.86179 7.13821C2.63323 
-                                        6.90965 2.32323 6.78125 2 6.78125Z" fill="black"/>
-                                    </svg>
-                                        
-                                </span>
-                            </button>
+                            <span class=" cursor-pointer">
+                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
+                             </svg>
+                                 
+                            </span>
                         </td>
                        
                        </tr>
 
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                        <td class="px-6 py-3 border-r border-border">1</td>
+                        <td class="px-6 py-3 border-r border-border">2</td>
                         <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
                      
                        
@@ -734,44 +757,18 @@
                           
                         </td>
                         <td class="px-6 py-3">
-                            <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
-
-                                <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
-
-                                    <div class="border border-border text-center text-xs">
-                                    <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit distribution centre</a>
-                                    <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Delete centre</a>
-                                    </div>
-                                </div>
-
-                                <span class="bg-green-400 ">
-                                    <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
-                                        15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
-                                        15.5322 1.13821 15.3618C0.967769 15.1913 0.851694 14.9742 0.804668 14.7378C0.757643 14.5014 
-                                        0.781778 14.2563 0.874022 14.0336C0.966267 13.8109 1.12248 13.6206 1.3229 13.4866C1.52332 
-                                        13.3527 1.75895 13.2812 2 13.2812C2.32323 13.2812 2.63323 13.4097 2.86179 13.6382C3.09035 
-                                        13.8668 3.21875 14.1768 3.21875 14.5ZM2 2.71875C2.24105 2.71875 2.47668 2.64727 2.6771 
-                                        2.51335C2.87752 2.37944 3.03373 2.18909 3.12598 1.9664C3.21822 1.7437 3.24236 1.49865 
-                                        3.19533 1.26223C3.14831 1.02582 3.03223 0.808659 2.86179 0.638214C2.69134 0.467769 
-                                        2.47418 0.351694 2.23777 0.304668C2.00135 0.257643 1.7563 0.281778 1.53361 0.374022C1.31091 
-                                        0.466267 1.12056 0.622477 0.986647 0.822899C0.852729 1.02332 0.781251 1.25895 0.781251 
-                                        1.5C0.781251 1.82323 0.909654 2.13323 1.13821 2.36179C1.36677 2.59035 1.67677 2.71875 
-                                        2 2.71875ZM2 6.78125C1.75895 6.78125 1.52332 6.85273 1.3229 6.98665C1.12248 7.12056 0.966267 
-                                        7.31091 0.874022 7.53361C0.781778 7.7563 0.757643 8.00135 0.804668 8.23777C0.851694 8.47418 
-                                        0.967769 8.69134 1.13821 8.86179C1.30866 9.03223 1.52582 9.14831 1.76223 9.19533C1.99865 
-                                        9.24236 2.2437 9.21822 2.4664 9.12598C2.68909 9.03373 2.87944 8.87752 3.01335 8.6771C3.14727 
-                                        8.47668 3.21875 8.24105 3.21875 8C3.21875 7.67677 3.09035 7.36677 2.86179 7.13821C2.63323 
-                                        6.90965 2.32323 6.78125 2 6.78125Z" fill="black"/>
-                                    </svg>
-                                        
-                                </span>
-                            </button>
+                            <span class=" cursor-pointer">
+                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
+                             </svg>
+                                 
+                            </span>
                         </td>
                        
                        </tr>
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                        <td class="px-6 py-3 border-r border-border">1</td>
+                        <td class="px-6 py-3 border-r border-border">3</td>
                         <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
                      
                        
@@ -782,44 +779,18 @@
                           
                         </td>
                         <td class="px-6 py-3">
-                            <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
-
-                                <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
-
-                                    <div class="border border-border text-center text-xs">
-                                    <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit distribution centre</a>
-                                    <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Delete centre</a>
-                                    </div>
-                                </div>
-
-                                <span class="bg-green-400 ">
-                                    <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
-                                        15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
-                                        15.5322 1.13821 15.3618C0.967769 15.1913 0.851694 14.9742 0.804668 14.7378C0.757643 14.5014 
-                                        0.781778 14.2563 0.874022 14.0336C0.966267 13.8109 1.12248 13.6206 1.3229 13.4866C1.52332 
-                                        13.3527 1.75895 13.2812 2 13.2812C2.32323 13.2812 2.63323 13.4097 2.86179 13.6382C3.09035 
-                                        13.8668 3.21875 14.1768 3.21875 14.5ZM2 2.71875C2.24105 2.71875 2.47668 2.64727 2.6771 
-                                        2.51335C2.87752 2.37944 3.03373 2.18909 3.12598 1.9664C3.21822 1.7437 3.24236 1.49865 
-                                        3.19533 1.26223C3.14831 1.02582 3.03223 0.808659 2.86179 0.638214C2.69134 0.467769 
-                                        2.47418 0.351694 2.23777 0.304668C2.00135 0.257643 1.7563 0.281778 1.53361 0.374022C1.31091 
-                                        0.466267 1.12056 0.622477 0.986647 0.822899C0.852729 1.02332 0.781251 1.25895 0.781251 
-                                        1.5C0.781251 1.82323 0.909654 2.13323 1.13821 2.36179C1.36677 2.59035 1.67677 2.71875 
-                                        2 2.71875ZM2 6.78125C1.75895 6.78125 1.52332 6.85273 1.3229 6.98665C1.12248 7.12056 0.966267 
-                                        7.31091 0.874022 7.53361C0.781778 7.7563 0.757643 8.00135 0.804668 8.23777C0.851694 8.47418 
-                                        0.967769 8.69134 1.13821 8.86179C1.30866 9.03223 1.52582 9.14831 1.76223 9.19533C1.99865 
-                                        9.24236 2.2437 9.21822 2.4664 9.12598C2.68909 9.03373 2.87944 8.87752 3.01335 8.6771C3.14727 
-                                        8.47668 3.21875 8.24105 3.21875 8C3.21875 7.67677 3.09035 7.36677 2.86179 7.13821C2.63323 
-                                        6.90965 2.32323 6.78125 2 6.78125Z" fill="black"/>
-                                    </svg>
-                                        
-                                </span>
-                            </button>
-                        </td>
+                            <span class=" cursor-pointer">
+                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
+                             </svg>
+                                 
+                            </span>
+                         </td>
                        
                        </tr>
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                        <td class="px-6 py-3 border-r border-border">1</td>
+                        <td class="px-6 py-3 border-r border-border">4</td>
                         <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
                      
                        
@@ -830,39 +801,35 @@
                           
                         </td>
                         <td class="px-6 py-3">
-                            <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
-
-                                <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
-
-                                    <div class="border border-border text-center text-xs">
-                                    <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit distribution centre</a>
-                                    <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Delete centre</a>
-                                    </div>
-                                </div>
-
-                                <span class="bg-green-400 ">
-                                    <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
-                                        15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
-                                        15.5322 1.13821 15.3618C0.967769 15.1913 0.851694 14.9742 0.804668 14.7378C0.757643 14.5014 
-                                        0.781778 14.2563 0.874022 14.0336C0.966267 13.8109 1.12248 13.6206 1.3229 13.4866C1.52332 
-                                        13.3527 1.75895 13.2812 2 13.2812C2.32323 13.2812 2.63323 13.4097 2.86179 13.6382C3.09035 
-                                        13.8668 3.21875 14.1768 3.21875 14.5ZM2 2.71875C2.24105 2.71875 2.47668 2.64727 2.6771 
-                                        2.51335C2.87752 2.37944 3.03373 2.18909 3.12598 1.9664C3.21822 1.7437 3.24236 1.49865 
-                                        3.19533 1.26223C3.14831 1.02582 3.03223 0.808659 2.86179 0.638214C2.69134 0.467769 
-                                        2.47418 0.351694 2.23777 0.304668C2.00135 0.257643 1.7563 0.281778 1.53361 0.374022C1.31091 
-                                        0.466267 1.12056 0.622477 0.986647 0.822899C0.852729 1.02332 0.781251 1.25895 0.781251 
-                                        1.5C0.781251 1.82323 0.909654 2.13323 1.13821 2.36179C1.36677 2.59035 1.67677 2.71875 
-                                        2 2.71875ZM2 6.78125C1.75895 6.78125 1.52332 6.85273 1.3229 6.98665C1.12248 7.12056 0.966267 
-                                        7.31091 0.874022 7.53361C0.781778 7.7563 0.757643 8.00135 0.804668 8.23777C0.851694 8.47418 
-                                        0.967769 8.69134 1.13821 8.86179C1.30866 9.03223 1.52582 9.14831 1.76223 9.19533C1.99865 
-                                        9.24236 2.2437 9.21822 2.4664 9.12598C2.68909 9.03373 2.87944 8.87752 3.01335 8.6771C3.14727 
-                                        8.47668 3.21875 8.24105 3.21875 8C3.21875 7.67677 3.09035 7.36677 2.86179 7.13821C2.63323 
-                                        6.90965 2.32323 6.78125 2 6.78125Z" fill="black"/>
-                                    </svg>
-                                        
-                                </span>
-                            </button>
+                            <span class=" cursor-pointer">
+                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
+                             </svg>
+                                 
+                            </span>
+                        </td>
+                       
+                       </tr>
+                       <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
+                        <td class="px-6 py-3 border-r border-border">5</td>
+                        <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Amrick d</p></td>
+                     
+                       
+                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">3 twickenham Gardens, Ub6 london</p></td>
+                        <td class="px-6 py-3 border-r border-border"> <p class=" whitespace-nowrap">(207) 555-0119</p></td>
+                        <td class="px-6 py-3 ">
+                            Machserter City
+                          
+                        </td>
+                        <td class="px-6 py-3">
+                            <span class=" cursor-pointer">
+                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#F24E1E"/>
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49806 5.8816C9.523 5.85669 9.54279 5.82711 9.5563 5.79455C9.56981 5.76199 9.57678 5.72709 9.5768 5.69184C9.57682 5.65658 9.5699 5.62167 9.55643 5.5891C9.54296 5.55652 9.5232 5.52691 9.49829 5.50197C9.47338 5.47703 9.4438 5.45724 9.41124 5.44373C9.37868 5.43022 9.34378 5.42325 9.30852 5.42323C9.27327 5.42321 9.23836 5.43013 9.20578 5.4436C9.1732 5.45707 9.1436 5.47683 9.11866 5.50174L7.49979 7.1206L5.88139 5.50174C5.83102 5.45136 5.7627 5.42307 5.69146 5.42307C5.62022 5.42307 5.5519 5.45136 5.50152 5.50174C5.45115 5.55211 5.42285 5.62043 5.42285 5.69167C5.42285 5.76291 5.45115 5.83123 5.50152 5.8816L7.12039 7.5L5.50152 9.11841C5.47658 9.14335 5.4568 9.17296 5.4433 9.20555C5.4298 9.23814 5.42285 9.27306 5.42285 9.30834C5.42285 9.34361 5.4298 9.37854 5.4433 9.41113C5.4568 9.44372 5.47658 9.47333 5.50152 9.49827C5.5519 9.54864 5.62022 9.57694 5.69146 9.57694C5.72673 9.57694 5.76166 9.57 5.79425 9.5565C5.82684 9.543 5.85645 9.52321 5.88139 9.49827L7.49979 7.8794L9.11866 9.49827C9.16903 9.54858 9.23733 9.57682 9.30852 9.57678C9.37972 9.57674 9.44798 9.54841 9.49829 9.49804C9.5486 9.44766 9.57684 9.37937 9.5768 9.30817C9.57676 9.23698 9.54843 9.16872 9.49806 9.11841L7.87919 7.5L9.49806 5.8816Z" fill="white"/>
+                             </svg>
+                                 
+                            </span>
                         </td>
                        
                        </tr>
@@ -887,13 +854,70 @@
 
   </section>
 
-  <!-- sidebar js -->
-  <script src="assets/js/sidebar.js"></script>
-  <!-- Nice select -->
-  <script src="assets/js/niceselect.js"></script>
-  <script>
+<!-- sidebar js -->
+<script src="assets/js/sidebar.js"></script>
+<!-- Nice select -->
+<script src="assets/js/niceselect.js"></script>
+
+<!-- DATEPICKER  -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="assets/js/datepicker.js"></script>
+
+<script>
+    // get scrin size
+     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width; 
+ 
+
+    // select sidebar and loader 
+    let sidebar=document.getElementById('sidebar');
+    let sidebarLoader=document.getElementById('sidebar-loader');
+
+    if(width<992) { 
+        // hide sidebar and skeleton  for mobile device
+        sidebarLoader.style.display="none";
+        sidebar.style.display="none" 
+    }if(width>992) {
+        sidebar.style.display="none"
+        function skeletonLoading() {
+        sidebarLoader.style.display="none";
+        sidebar.style.display="flex" 
+        window.onscroll = function () { window.scrollTo(); };
+        
+    } 
+    const myTimeout = setTimeout(skeletonLoading, 3000);
+
+    }
+
+
+    // window,addEventListener("resize",function(){
+    //     if(width<992) { 
+    //     // hide sidebar and skeleton  for mobile device
+    //     sidebarLoader.style.display="none";
+    //     sidebar.style.display="none" 
+    // }if(width>992) {
+    //     sidebar.style.display="none"
+    //     function skeletonLoading() {
+    //     sidebarLoader.style.display="none";
+    //     sidebar.style.display="flex" 
+    //     window.onscroll = function () { window.scrollTo(); };
+        
+    // } 
+    // const myTimeout = setTimeout(skeletonLoading, 100);
+
+    // }
+    // })
+
+
+
+
+    
+
+    
   
-  </script>
+
+</script>
   
 </body>
 </html>

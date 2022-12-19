@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Route Generation</title>
+    <!-- TAILWIND CSS -->
     <link rel="stylesheet" href="assets/css/tailwind.css">
+    <!-- DATEPICKER -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">
     
     <!-- Alpinejs -->
     <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
-    <script src="https://unpkg.com/flowbite@1.5.5/dist/datepicker.js"></script>
+
+
 </head>
 <body>
     
@@ -500,10 +504,11 @@
                         </span>
                         <span class="text-xs font-medium text-[#4E564A] sm:text-sm">1.Choose a calender date</span>
                     </div>
-                    <input datepicker type="text"
-                        class="bg-white border border-border  text-black text-xs sm:text-sm 
-                        block w-full pl-10 p-2.5  focus:border-transparent focus:ring-border py-5  text-right pr-12 tracking-tight"
-                        placeholder="Select date">
+                    <input  type="text" 
+                    name="birthday" value="01/01/2018 "
+                    class="bg-white border border-border  text-black text-xs sm:text-sm 
+                    block w-full pl-10 p-2.5  focus:border-transparent focus:ring-border py-5  text-right pr-12 tracking-tight"
+                    placeholder="Select date">
 
                     <div class="flex absolute top-1/2 -translate-y-1/2 right-4 items-center pl-3 pointer-events-none">
                         <svg aria-hidden="true" class="w-5 h-5" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -572,6 +577,12 @@
 
   <!-- sidebar js -->
   <script src="assets/js/sidebar.js"></script>
+  <!-- DATE PICKER -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script type="text/javascript" src="assets/js/datepicker.js"></script>
+
 
   <script>
     const toggleSidebar = () => document.body.classList.toggle("open")

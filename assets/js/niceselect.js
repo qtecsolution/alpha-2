@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function(e){
      });
 
      // seachable 
-     var options = {searchable: true};
+     var options = {searchable: false};
      NiceSelect.bind(document.getElementById("seachable-select"), options); 
+     NiceSelect.bind(document.getElementById("ditribution-select"), options); 
    });
   
