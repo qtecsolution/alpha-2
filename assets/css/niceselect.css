@@ -233,3 +233,22 @@
     outline: 0 !important;
     font-size: 14px
 }
+
+
+.customselect {
+
+}
+
+.customselect.nice-select { 
+    width: 100%;
+}
+.customselect.nice-select .nice-select-dropdown {
+    bottom: auto;
+    width: 100%;
+
+}
+
+.customselect.nice-select .list { 
+    max-height: 110px;
+    
+}

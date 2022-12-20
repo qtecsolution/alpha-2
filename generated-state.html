@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">  
+    <!-- NICE SELECT CSS -->
+    <link rel="stylesheet" href="assets/css/niceselect.css">
     <!-- Alpinejs -->
-    <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script> 
+    <style>
+       
+    </style>
 </head>
 <body class="empty">
 
@@ -473,14 +478,66 @@
                     <tr>
                         <td class="border-t border-border py-3 min-[992px]:py-5 text-center bg-primary">Driver</td>
                         <td class="border-t border-border py-2 min-[992px]:py-3 text-center ">
-                            <div class="flex gap-2 items-center justify-center">
+                            <div class="flex gap-2 items-center justify-center pb-10">
                                 <span>Assign driver</span>
-                            <span class="icon bg-buttonBg2 hover:bg-gray-200 transition duration-300  w-7 h-7 md:w-9 md:h-9 rounded-full flex items-center justify-center">
-                                <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.84172 12.555L6.71313 1M12.5549 6.71321L0.999921 6.84179" stroke="black" stroke-linecap="round"/>
-                                </svg>
+                                <div x-data="{ modelOpen: true}">
+
+                                    <button @click="modelOpen =!modelOpen">
+                                        <span
+                                            class="icon bg-buttonBg2 hover:bg-gray-200 transition duration-300  w-7 h-7 md:w-9 md:h-9 rounded-full flex items-center justify-center">
+                                            <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.84172 12.555L6.71313 1M12.5549 6.71321L0.999921 6.84179" stroke="black"
+                                                    stroke-linecap="round" />
+                                            </svg>
                                     
-                            </span>
+                                        </span>
+                                    </button>
+
+                                    <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                                        <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                                            <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
+                                                x-transition:enter="transition ease-out duration-300 transform"
+                                                x-transition:enter-start="opacity-0" 
+                                                x-transition:enter-end="opacity-100"
+                                                x-transition:leave="transition ease-in duration-200 transform"
+                                                x-transition:leave-start="opacity-100" 
+                                                x-transition:leave-end="opacity-0"
+                                                class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40" aria-hidden="true"
+                                            ></div>
+                                
+                                            <div x-cloak x-show="modelOpen" 
+                                                x-transition:enter="transition ease-out duration-300 transform"
+                                                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
+                                                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                                                x-transition:leave="transition ease-in duration-200 transform"
+                                                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
+                                                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                                class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <h1 class="text-base font-normal font-roboto text-black ">Assign Driver</h1>
+                                                </div>
+                                                <div class=" flex flex-col gap-4 mt-4">
+                                                    <div class="box">
+                                                        <select id="assigndriver" class="customselect">
+                                                          <option data-display="Select">Nothing</option>
+                                                          <option value="1">Driver 1</option>
+                                                          <option value="2">Driver 2</option>
+                                                          <option value="4">Driver 3</option>
+                                                        </select>
+                                                      </div> 
+
+                                                      <div class=" flex justify-center pb-10">
+                                                        <button class="bg-secondary px-20 py-3 hover:bg-transparent
+                                                         border border-transparent hover:border-secondary transition duration-300 text-xs md:text-sm">Save Route</button>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </td>
                     </tr>
@@ -571,9 +628,25 @@
 
   <!-- sidebar js -->
   <script src="assets/js/sidebar.js"></script>
-  <script>
-  
-  </script>
+  <script src="assets/js/niceselect.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(e){
+
+// default
+var els = document.querySelectorAll(".selectize");
+els.forEach(function(select){
+  NiceSelect.bind(select);
+});
+
+// seachable 
+var options = {searchable: false};
+
+NiceSelect.bind(document.getElementById("assigndriver"), options); 
+
+});
+</script>
+
   
 </body>
 </html>

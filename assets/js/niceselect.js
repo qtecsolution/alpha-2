@@ -2,17 +2,5 @@
 
 
 
-document.addEventListener("DOMContentLoaded", function(e){
 
-     // default
-     var els = document.querySelectorAll(".selectize");
-     els.forEach(function(select){
-       NiceSelect.bind(select);
-     });
-
-     // seachable 
-     var options = {searchable: false};
-     NiceSelect.bind(document.getElementById("seachable-select"), options); 
-     NiceSelect.bind(document.getElementById("ditribution-select"), options); 
-   });
   
