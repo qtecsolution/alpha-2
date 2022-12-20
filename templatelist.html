@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">  
     <!-- NICE SELECT -->
     <link rel="stylesheet" href="assets/css/niceselect.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/daterangepicker.css" />
     <!-- Alpinejs -->
     <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
     <style>
@@ -28,6 +28,37 @@
         0%{ left: -100%}
         100%{ left: 150%}
     }
+    .drp-buttons {
+        display: flex !important;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding: 20px 10px;
+    }
+   
+    .drp-buttons .drp-selected {
+        order: 1;
+        display: flex;
+        font-size: 14px;
+       
+    }
+    .drp-buttons .cancelBtn {
+       display: inline-block;
+       background: #F6CCC3;
+       order: 2;
+       padding: 8px 20px ;
+       border-radius: 8px;
+       font-size: 14px;
+       
+       
+    }
+    .drp-buttons .applyBtn {
+        display: inline-block;
+        background-color: #F6CCC3;
+        padding: 8px 20px ;
+        border-radius: 8px;
+        font-size: 14px;
+       
+    }
     </style>
 </head>
 <body class="empty">
@@ -35,7 +66,7 @@
   <section class="flex min-h-screen relative shrink-0">
 
     <!-- ================ DESKTOP SIDEBAR START ====================== -->
-    <aside class="sidebar bg-[url('../../assets/images/home/sidebarbg.png')] min-h-screen  bg-bottom bg-contain sticky top-0 left-0
+    <aside class="sidebar content bg-[url('../../assets/images/home/sidebarbg.png')] min-h-screen  bg-bottom bg-contain sticky top-0 left-0
            transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28" id="sidebar" >
     
         <!-- SIDEBAR LOGO AND HUMBERGER ICON  -->
@@ -244,8 +275,8 @@
 
      <!-- ================ DESKTOP SIDEBAR LOADER START ====================== -->
 
-     <div class="sidebar bg-white shadow-lg min-h-screen  bg-bottom bg-contain sticky top-0 left-0
-     transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28" id="sidebar-loader">
+     <div class="sidebar loader bg-white shadow-lg min-h-screen  bg-bottom bg-contain sticky top-0 left-0
+     transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28 " id="sidebar-loader" style="display: none;">
       
      <!-- sidebar header loader-->
      <div class="header flex justify-center h-20 pt-2">
@@ -511,7 +542,7 @@
             </div>
         </header>
         <!-- STICKY HEADER END -->
-        <div class="sticky top-0 left-0 right-0 bg-white z-50 py-2 pt-6">
+        <div class="sticky top-0 left-0 right-0 bg-white  py-2 pt-6 hidden">
             <div class="dms-container">
                 <div class="flex justify-between min-[992px]:justify-end items-center">
                     <div class="min-[992px]:hidden bg-gray-200">
@@ -535,9 +566,11 @@
         <div>
             <div class="dms-container flex justify-between  py-3 gap-5">
 
-                <div class="relative w-full max-w-sm  ">
-                    <span>Choose a calender date</span>
-                    <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" class="border" />
+                <div class="relative w-full   flex items-center gap-5 flex-wrap">
+                    <span class="text-xs md:text-sm">Choose a calender date</span>
+                    <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" 
+                    class="border p-2 rounded text-xs md:text-sm outline-none" />
+                    <button class=" bg-secondary hover:bg-red-400 transition duration-300  px-10 py-2 rounded text-xs md:text-sm">submit</button>
                 </div>
                 <!-- buttons -->
                 <div class=" flex items-center gap-3">
@@ -867,47 +900,33 @@
 
 <script>
     // get scrin size
-     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width; 
+//      var width = (window.innerWidth > 0) ? window.innerWidth : screen.width; 
  
 
-    // select sidebar and loader 
-    let sidebar=document.getElementById('sidebar');
-    let sidebarLoader=document.getElementById('sidebar-loader');
+//     // select sidebar and loader 
+//     let content=document.querySelectorAll('.content');
+//     let loader=document.querySelectorAll('loader'); 
 
-    if(width<992) { 
-        // hide sidebar and skeleton  for mobile device
-        sidebarLoader.style.display="none";
-        sidebar.style.display="none" 
-    }if(width>992) {
-        sidebar.style.display="none"
-        function skeletonLoading() {
-        sidebarLoader.style.display="none";
-        sidebar.style.display="flex" 
-        window.onscroll = function () { window.scrollTo(); };
+//     for(item of content ) {
+//         if(width<992) { 
+//         // hide sidebar and skeleton  for mobile device
+//         loader.style.display="none";
+//         content.style.display="none" 
+//     }if(width>992) {
+//         content.style.display="none"
+//         function skeletonLoading() {
+//         loader.style.display="none";
+//         loader.style.display="flex" 
+//         window.onscroll = function () { window.scrollTo(); };
         
-    } 
-    const myTimeout = setTimeout(skeletonLoading, 3000);
+//     } 
+//     const myTimeout = setTimeout(skeletonLoading, 3000);
 
-    }
+//     }
+//     }
 
+//    console.log(content.length);
 
-    // window,addEventListener("resize",function(){
-    //     if(width<992) { 
-    //     // hide sidebar and skeleton  for mobile device
-    //     sidebarLoader.style.display="none";
-    //     sidebar.style.display="none" 
-    // }if(width>992) {
-    //     sidebar.style.display="none"
-    //     function skeletonLoading() {
-    //     sidebarLoader.style.display="none";
-    //     sidebar.style.display="flex" 
-    //     window.onscroll = function () { window.scrollTo(); };
-        
-    // } 
-    // const myTimeout = setTimeout(skeletonLoading, 100);
-
-    // }
-    // })
 
 
 
