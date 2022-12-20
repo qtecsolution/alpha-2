@@ -860,6 +860,10 @@ html {
   width: 2rem;
 }
 
+.w-60{
+  width: 15rem;
+}
+
 .min-w-\[300px\]{
   min-width: 300px;
 }
