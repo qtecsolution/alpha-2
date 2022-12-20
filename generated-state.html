@@ -458,31 +458,53 @@
                 </div>
             </div>
         </div>
-        
+        <!-- map and info -->
         <div class="dms-container">
-            <div class="flex flex-col min-[992px]:flex-row items-start gap-5 ">
-                <table class=" w-full min-[992px]:max-w-[492px]">
+            <div class="flex flex-col min-[992px]:flex-row  gap-5 ">
+                <table class=" w-full min-[992px]:max-w-[492px] border border-border">
                     <tr>
-                        <td class=" border py-3 min-[992px]:py-5 text-center ">Job Name</td>
-                        <td class="border py-3 min-[992px]:py-5 text-center ">Route 122</td>
+                        <td class="border-t border-border py-3 min-[992px]:py-5 text-center bg-primary ">Job Name</td>
+                        <td class="border-t border-border py-3 min-[992px]:py-5 text-center ">Route 122</td>
                     </tr>
                     <tr>
-                        <td class="border py-3 min-[992px]:py-5 text-center ">Job Name</td>
-                        <td class="border py-3 min-[992px]:py-5 text-center ">Route 122</td>
+                        <td class="border-t border-border py-3 min-[992px]:py-5 text-center bg-primary">Distribution Center</td>
+                        <td class="border-t border-border py-3 min-[992px]:py-5 text-center ">London DC</td>
                     </tr>
                     <tr>
-                        <td class="border py-3 min-[992px]:py-5 text-center ">Job Name</td>
-                        <td class="border py-3 min-[992px]:py-5 text-center ">Route 122</td>
+                        <td class="border-t border-border py-3 min-[992px]:py-5 text-center bg-primary">Driver</td>
+                        <td class="border-t border-border py-2 min-[992px]:py-3 text-center ">
+                            <div class="flex gap-2 items-center justify-center">
+                                <span>Assign driver</span>
+                            <span class="icon bg-buttonBg2 hover:bg-gray-200 transition duration-300  w-7 h-7 md:w-9 md:h-9 rounded-full flex items-center justify-center">
+                                <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.84172 12.555L6.71313 1M12.5549 6.71321L0.999921 6.84179" stroke="black" stroke-linecap="round"/>
+                                </svg>
+                                    
+                            </span>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="border py-3 min-[992px]:py-5 text-center ">Job Name</td>
-                        <td class="border py-3 min-[992px]:py-5 text-center ">Route 122</td>
+                        <td class="border-t border-b border-border py-3 min-[992px]:py-5 text-center  bg-primary">Total Distance</td>
+                        <td class="border-t border-b border-border py-3 min-[992px]:py-5 text-center ">206.10 Miles2</td>
                     </tr>
                 </table> 
-                <div class="w-full min-[992px]:w-[calc(100%-492px)]">
-                    <figure class="w-full  max-h-[262px] overflow-hidden">
+                <div class="w-full h-full min-[992px]:w-[calc(100%-492px)]">
+                    <figure class="w-full  h-[262px] overflow-hidden">
                         <img src="assets/images/map.png" alt="map image" class=" w-full h-full object-cover">
                     </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="dms-container">
+            <div class="flex justify-end py-8">
+                <div>
+                    <label class="inline-flex relative items-center cursor-pointer">
+                        
+                        <input type="checkbox" value="" class="sr-only peer">
+                        <div class="toggle-custom w-20 h-8  bg-gray-200 peer-focus:outline-none   rounded-full peer  peer-checked:after:translate-x-[170%] peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px]   after:bg-white after:shadow-inner after:border-gray-300 after:border after:rounded-full after:h-7 after:w-7 after:transition-all  peer-checked:bg-[#4AFE0B]"></div>
+                      </label>
                 </div>
             </div>
         </div>
