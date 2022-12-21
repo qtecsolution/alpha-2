@@ -904,10 +904,6 @@ html {
   max-width: 32rem;
 }
 
-.max-w-md{
-  max-width: 28rem;
-}
-
 .flex-1{
   flex: 1 1 0%;
 }
@@ -1279,11 +1275,6 @@ html {
 .bg-gray-300{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-red-900{
-  --tw-bg-opacity: 1;
-  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-40{
