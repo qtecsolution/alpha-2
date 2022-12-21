@@ -7,12 +7,32 @@
     <title>Route Generation</title>
     <!-- TAILWIND CSS -->
     <link rel="stylesheet" href="assets/css/tailwind.css">
-    <!-- DATEPICKER -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+      <!-- DATE PICKER  -->
+      <link rel="stylesheet" type="text/css" href="assets/css/daterangepicker.css" />
     <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">
     
     <!-- Alpinejs -->
     <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
+
+    <style>
+       .daterangepicker.show-calendar .drp-buttons {
+         display: flex;
+         border-top: 1px solid #ddd;
+         padding: 10px 0;
+         align-items: center;
+         justify-content: flex-end;
+         gap: 1rem;
+         font-size: .75rem;
+         padding-right: 1rem;
+        
+        
+       }
+       .daterangepicker.show-calendar .drp-buttons button  { 
+        border: 1px solid tan;
+        padding: .5rem .7rem;
+        border-radius: .2rem;
+       }
+    </style>
 
 
 </head>
@@ -477,7 +497,7 @@
                     <h1 class=" text-xl lg:text-2xl">Route Generation</h1>
                 </div>
                 <div class="">
-                    <input type="date" name="" id="" class=" outline-none  p-1 border border-border rounded text-sm lg:text-base">
+                    <input type="text" name="" id="" class=" outline-none  p-1 border border-border rounded text-sm lg:text-base">
                 </div>
             </div>
         </div>
@@ -502,7 +522,7 @@
                         <span class="text-xs font-medium text-[#4E564A] sm:text-sm">1.Choose a calender date</span>
                     </div>
                     <input  type="text" 
-                    name="birthday" value="01/01/2018 "
+                    name="selectdate" value="01/01/2018 "
                     class="bg-white border border-border  text-black text-xs sm:text-sm 
                     block w-full pl-10 p-2.5  focus:border-transparent focus:ring-border py-5  text-right pr-12 tracking-tight"
                     placeholder="Select date">

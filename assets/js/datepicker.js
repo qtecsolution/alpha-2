@@ -1,6 +1,6 @@
 $(function() {
     //   single date picker 
-    $('input[name="birthday"]').daterangepicker({
+    $('input[name="selectdate"]').daterangepicker({
     singleDatePicker: true,
     showDropdowns: true,
     minYear: 1901,
@@ -9,6 +9,8 @@ $(function() {
     var years = moment().diff(start, 'years');
     // alert("You are " + years + " years old!");
 }); 
+
+
 
 
 // DUAL DATE SELECT
