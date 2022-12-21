@@ -289,37 +289,7 @@
     </aside>
      <!-- ================ DESKTOP SIDEBAR  END====================== -->
 
-     <!-- ================ DESKTOP SIDEBAR LOADER START ====================== -->
-
-     <div class="sidebar loader bg-white shadow-lg min-h-screen  bg-bottom bg-contain sticky top-0 left-0
-     transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28 " id="sidebar-loader" style="display: none;">
-      
-     <!-- sidebar header loader-->
-     <div class="header flex justify-center h-20 pt-2">
-         <div data-placeholder class="img w-20 h-16 bg-gray-200 rounded-md relative ">
- 
-         </div>
-         <div  class="humberger absolute right-6 top-4 cursor-pointer p-2 ">
-             <div data-placeholder class="h-8 w-8 bg-gray-200 relative">
- 
-             </div>
-         </div>
-     </div>
-     <!-- sidebar menu loader  -->
-     <ul data-placeholder class=" flex flex-col gap-3 relative px-2">
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-         <li class="flex items-center   pl-7   h-12 rounded bg-gray-200"></li>
-   
-     </ul>
- 
- 
- 
-     </div>
-
-    <!-- ================ DESKTOP SIDEBAR LOADER END  ====================== -->
+    
 
     <!-- ================ MOBILE APPBAR  ====================== -->
     <div class="fixed bottom-0 left-0 bg-gray-100 px-3 py-0 w-full min-[992px]:hidden border-t z-50">
@@ -583,152 +553,12 @@
             <div class="dms-container flex justify-between  py-3 gap-5">
 
                 <div class="relative w-full   flex items-center gap-5 flex-wrap">
-                    <span class="text-xs md:text-sm">Choose a calender date</span>
+                    <span class="text-xs md:text-sm text-textgray font-medium">Choose a calender date</span>
                     <input type="text" name="daterange" value="01/01/2018  -  01/15/2018" 
                     class="border p-2 rounded text-xs md:text-sm outline-none w-60  max-w-sm" />
                     <button class=" bg-secondary hover:bg-red-400 transition duration-300  px-10 py-2 rounded text-xs md:text-sm">submit</button>
                 </div>
-                <!-- buttons -->
-                <div class=" flex items-center gap-3">
-                    <!-- add driver -->
-                    <div x-data="{ modelOpen: false}">
-                        
-                        <button  @click="modelOpen =!modelOpen" class="bg-buttonBg2 rounded py-1.5 sm:py-2 px-3 transition duration-300 hover:bg-gray-200 inline-flex items-center justify-center">
-                            <span>
-                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.71608 18.0371L9.52881 1.20741M18.0373 9.5286L1.20762 9.71588" stroke="black" stroke-linecap="round"/>
-                                </svg>
-                            </span>
-                        </button>
-                    
-                        <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-                            <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
-                                <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0" 
-                                    x-transition:enter-end="opacity-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100" 
-                                    x-transition:leave-end="opacity-0"
-                                    class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40" aria-hidden="true"
-                                ></div>
-                    
-                                <div x-cloak x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
-                                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
-                                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                                    class="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-3xl p-8 pb-24 my-20 overflow-hidden text-left transition-all transform bg-white   shadow-xl "
-                                >
-                                    <div class="flex items-center justify-between space-x-4 mb-4 lg:mb-8">
-                                        <h2 class="text-xl font-normal text-black ">Add template</h2>
-                    
-                                    
-                                    </div>
-                                    
-                                    <div class=" grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        <div class="left flex flex-col gap-3">
-                                            
-                                            <div class="inputbox errorfield">
-                                                <label for="firstName" class="inputlabel">First name</label>
-                                                <input type="text" class="inputfield" id="firstName" autocomplete="off">
-                                                <div class="error">
-                                                    <p class="error-message">First name is required</p>
-                                                </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="lastName" class="inputlabel">Last name</label>
-                                                <input type="text" class="inputfield" id="lastName" autocomplete="off">
-                                                <div class="error">
-                                                    <p class="error-message">Last name is required</p>
-                                                </div>
-                                            </div>
-                                            <div class="inputbox">
-                                                <label for="lastName" class="inputlabel">Driver</label>
-                                                <select id="seachable-select">
-                                                    <option data-display="Select">Nothing</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                </select>
-                                                
-                                            </div>
-                                            
-                                           
-                                           
-                                        </div>
-                                        <div class="right flex flex-col gap-3">
-                                            
-                                            <div class="inputbox">
-                                                <label for="postcode" class="inputlabel">Sub-postcode</label>
-                                                <input type="text" class="inputfield" id="postcode" autocomplete="off">
-                                                <div class="error">
-                                                    <p class="error-message">Postcode code is required</p>
-                                                  </div>
-                                            </div> 
-
-                                            <div class="inputbox">
-                                                <label for="lastName" class="inputlabel">Distribution center</label>
-                                                <select id="ditribution-select">
-                                                    <option data-display="Select"> Select Distribution center</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                    <option value="1">Some option</option>
-                                                    <option value="2">Another option</option>
-                                                    <option value="4">Potato</option>
-                                                </select>
-                                                
-                                            </div>
-
-                                            
-                                         
-                                        </div>
-                                    </div>
-                                    <div class="buttons  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pt-6">
-                                        <button  @click="modelOpen = false" class=" bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Cancel</button>
-                                        <button class=" text-black bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Add Template</button>
-                                    </div>
-                                    
-                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    
-                </div>
+             
 
             </div>
         </div>
@@ -736,169 +566,359 @@
         
         <div class="dms-container">
             <div class="w-full  bg-white rounded">
-                <div class="border-border w-full py-20 rounded bg-white overflow-x-auto">
-                    <table class="w-full border border-border text-sm text-center">
+
+                <!-- table  1 start-->
+                <div class="border-border w-full py-10 rounded bg-white overflow-x-auto"> 
+                    <!-- table header -->
+                    <div class="flex items-center gap-4 pb-4">
+                        <span class=" text-textgray font-medium text-xs md:text-sm">11 November 2022</span>
+                        <button class=" w-8 h-8 rounded border border-border flex items-center justify-center hover:bg-gray-100 transition duration-300">
+                            <span>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.0003 8V10H2.00033V8H0.666992V10C0.666992 10.7333 1.26699 11.3333 2.00033 11.3333H10.0003C10.7337 11.3333 11.3337 10.7333 11.3337 10V8H10.0003ZM9.33366 5.33333L8.39366 4.39333L6.66699 6.11333V0.666664H5.33366V6.11333L3.60699 4.39333L2.66699 5.33333L6.00033 8.66666L9.33366 5.33333Z" fill="black"/>
+                                </svg>
+                                    
+                            </span>
+                        </button>
+                    </div>
+                    <table class="w-full border border-border text-center text-xs md:text-sm">
                         <thead class="border-b">
                             <tr>
-                                <td scope="col" class="px-2 py-4 bg-primary border-border">Seriel No</td>
-                                <td scope="col" class="px-2 py-4 bg-primary border-border">Customer Name</td>
-                                <td scope="col" class="px-2 py-4 bg-primary border-border">Ship to</td>
-                                <td scope="col" class="px-2 py-4 bg-primary border-border">Post code </td>
-                                <td scope="col" class="px-2 py-4 bg-primary border-border">Sub postcode</td>
-                                <td scope="col" class="px-2 py-4 bg-primary border-border">Distance</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Job ID</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Job Name</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Driver</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Distribution Centre </td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Order Count</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Total Distance</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Delivery Status</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Action</td>
                     
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
-                                <td class="px-6 py-3 ">1</td>
-                                <td class="px-6 py-3 ">
-                                    <p class=" whitespace-nowrap">378099</p>
+                            <tr class="bg-white hover:bg-primary hover:bg-opacity-30 transition duration-300 font-encodesans">
+                                <td class="px-6 py-4 ">117</td>
+                                <td class="px-6 py-4 ">
+                                    <p class=" whitespace-nowrap">Route 117</p>
                                 </td>
-                                <td class="px-6 py-3 ">32 Fleet Lane Queensbury,
-                                    Bradford</td>
-                                <td class="px-6 py-3 ">BD13 2JQ</td>
-                                <td class="px-6 py-3 ">BD13 2</td>
-                                <td class="px-6 py-3 "> 263.8 miles</td>
+                                <td class="px-6 py-4 ">Amrick D (AK)</td>
+                                <td class="px-6 py-4 ">Distri 1</td>
+                                <td class="px-6 py-4 ">10</td>
+                                <td class="px-6 py-4 "> 263.8 miles</td>
+                                <td class="px-6 py-4 text-yellow-500 text-xs"> PENDING</td>
+                                <td>
+                                    <div class=" flex gap-1 justify-center">
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.333333 11.3333C0.244444 11.3333 0.166667 11.3 0.1 11.2333C0.0333334 11.1667 0 11.0889 0 11C0 10.9111 0.0333334 10.8333 0.1 10.7667C0.166667 10.7 0.244444 10.6667 0.333333 10.6667H1.33333V10.3333H1C0.911111 10.3333 0.833333 10.3 0.766667 10.2333C0.7 10.1667 0.666667 10.0889 0.666667 10C0.666667 9.91112 0.7 9.83334 0.766667 9.76667C0.833333 9.70001 0.911111 9.66667 1 9.66667H1.33333V9.33334H0.333333C0.244444 9.33334 0.166667 9.30001 0.1 9.23334C0.0333334 9.16667 0 9.08889 0 9.00001C0 8.91112 0.0333334 8.83334 0.1 8.76667C0.166667 8.70001 0.244444 8.66667 0.333333 8.66667H1.66667C1.75556 8.66667 1.83333 8.70001 1.9 8.76667C1.96667 8.83334 2 8.91112 2 9.00001V11C2 11.0889 1.96667 11.1667 1.9 11.2333C1.83333 11.3 1.75556 11.3333 1.66667 11.3333H0.333333ZM1 3.33334C0.911111 3.33334 0.833333 3.30001 0.766667 3.23334C0.7 3.16667 0.666667 3.08889 0.666667 3.00001V1.33334H0.333333C0.244444 1.33334 0.166667 1.30001 0.1 1.23334C0.0333334 1.16667 0 1.08889 0 1.00001C0 0.911116 0.0333334 0.833338 0.1 0.766672C0.166667 0.700005 0.244444 0.666672 0.333333 0.666672H1C1.08889 0.666672 1.16667 0.700005 1.23333 0.766672C1.3 0.833338 1.33333 0.911116 1.33333 1.00001V3.00001C1.33333 3.08889 1.3 3.16667 1.23333 3.23334C1.16667 3.30001 1.08889 3.33334 1 3.33334ZM0.333333 7.33334C0.244444 7.33334 0.166667 7.30001 0.1 7.23334C0.0333334 7.16667 0 7.08889 0 7.00001V6.85001C0 6.80556 0.0277778 6.73334 0.0833333 6.63334L1.2 5.33334H0.333333C0.244444 5.33334 0.166667 5.30001 0.1 5.23334C0.0333334 5.16667 0 5.08889 0 5.00001C0 4.91112 0.0333334 4.83334 0.1 4.76667C0.166667 4.7 0.244444 4.66667 0.333333 4.66667H1.66667C1.75556 4.66667 1.83333 4.7 1.9 4.76667C1.96667 4.83334 2 4.91112 2 5.00001V5.15001C2 5.19445 1.97222 5.26667 1.91667 5.36667L0.8 6.66667H1.66667C1.75556 6.66667 1.83333 6.7 1.9 6.76667C1.96667 6.83334 2 6.91112 2 7.00001C2 7.08889 1.96667 7.16667 1.9 7.23334C1.83333 7.30001 1.75556 7.33334 1.66667 7.33334H0.333333ZM4 10.6667C3.81111 10.6667 3.65289 10.6027 3.52533 10.4747C3.39733 10.3471 3.33333 10.1889 3.33333 10C3.33333 9.81112 3.39733 9.65289 3.52533 9.52534C3.65289 9.39734 3.81111 9.33334 4 9.33334H11.3333C11.5222 9.33334 11.6804 9.39734 11.808 9.52534C11.936 9.65289 12 9.81112 12 10C12 10.1889 11.936 10.3471 11.808 10.4747C11.6804 10.6027 11.5222 10.6667 11.3333 10.6667H4ZM4 6.66667C3.81111 6.66667 3.65289 6.60267 3.52533 6.47467C3.39733 6.34712 3.33333 6.18889 3.33333 6.00001C3.33333 5.81112 3.39733 5.65267 3.52533 5.52467C3.65289 5.39712 3.81111 5.33334 4 5.33334H11.3333C11.5222 5.33334 11.6804 5.39712 11.808 5.52467C11.936 5.65267 12 5.81112 12 6.00001C12 6.18889 11.936 6.34712 11.808 6.47467C11.6804 6.60267 11.5222 6.66667 11.3333 6.66667H4ZM4 2.66667C3.81111 2.66667 3.65289 2.60289 3.52533 2.47534C3.39733 2.34734 3.33333 2.18889 3.33333 2.00001C3.33333 1.81112 3.39733 1.65267 3.52533 1.52467C3.65289 1.39712 3.81111 1.33334 4 1.33334H11.3333C11.5222 1.33334 11.6804 1.39712 11.808 1.52467C11.936 1.65267 12 1.81112 12 2.00001C12 2.18889 11.936 2.34734 11.808 2.47534C11.6804 2.60289 11.5222 2.66667 11.3333 2.66667H4Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.0312 3.03126C14.1012 2.96158 14.1566 2.87879 14.1945 2.78763C14.2324 2.69646 14.2518 2.59872 14.2518 2.50001C14.2518 2.4013 14.2324 2.30356 14.1945 2.2124C14.1566 2.12123 14.1012 2.03844 14.0312 1.96876L12.5312 0.468762C12.3897 0.329066 12.1989 0.250739 12 0.250739C11.8011 0.250739 11.6103 0.329066 11.4687 0.468762C11.3988 0.53844 11.3434 0.621235 11.3055 0.712399C11.2676 0.803562 11.2482 0.901301 11.2482 1.00001C11.2482 1.09872 11.2676 1.19646 11.3055 1.28763C11.3434 1.37879 11.3988 1.46158 11.4687 1.53126L11.6875 1.75001H9.75625C9.55697 1.75045 9.36066 1.79828 9.18352 1.88957C9.00638 1.98086 8.8535 2.11297 8.7375 2.27501L4.1125 8.75001H1C0.801088 8.75001 0.610322 8.82903 0.46967 8.96968C0.329018 9.11033 0.25 9.3011 0.25 9.50001C0.25 9.69892 0.329018 9.88969 0.46967 10.0303C0.610322 10.171 0.801088 10.25 1 10.25H4.24375C4.44303 10.2496 4.63934 10.2017 4.81648 10.1105C4.99362 10.0192 5.1465 9.88705 5.2625 9.72501L9.8875 3.25001H11.6875L11.4687 3.46876C11.3279 3.60966 11.2487 3.80075 11.2487 4.00001C11.2487 4.19927 11.3279 4.39037 11.4687 4.53126C11.6096 4.67216 11.8007 4.75131 12 4.75131C12.1993 4.75131 12.3904 4.67216 12.5312 4.53126L14.0312 3.03126ZM5.9 4.46251C5.73824 4.57728 5.5376 4.6233 5.34199 4.59051C5.14639 4.55771 4.97173 4.44877 4.85625 4.28751L4.1125 3.25001H1C0.801088 3.25001 0.610322 3.17099 0.46967 3.03034C0.329018 2.88969 0.25 2.69892 0.25 2.50001C0.25 2.3011 0.329018 2.11033 0.46967 1.96968C0.610322 1.82903 0.801088 1.75001 1 1.75001H4.24375C4.44303 1.75045 4.63934 1.79828 4.81648 1.88957C4.99362 1.98086 5.1465 2.11297 5.2625 2.27501L6.075 3.41251C6.19011 3.57527 6.2363 3.77688 6.20352 3.97352C6.17075 4.17015 6.06167 4.34589 5.9 4.46251ZM8.1 7.53751C8.26176 7.42274 8.4624 7.37672 8.658 7.40952C8.85361 7.44231 9.02827 7.55126 9.14375 7.71251L9.8875 8.75001H11.6875L11.4687 8.53126C11.3988 8.46158 11.3434 8.37879 11.3055 8.28763C11.2676 8.19646 11.2482 8.09872 11.2482 8.00001C11.2482 7.9013 11.2676 7.80356 11.3055 7.7124C11.3434 7.62123 11.3988 7.53844 11.4687 7.46876C11.6103 7.32907 11.8011 7.25074 12 7.25074C12.1989 7.25074 12.3897 7.32907 12.5312 7.46876L14.0312 8.96876C14.1012 9.03844 14.1566 9.12123 14.1945 9.2124C14.2324 9.30356 14.2518 9.4013 14.2518 9.50001C14.2518 9.59872 14.2324 9.69646 14.1945 9.78763C14.1566 9.87879 14.1012 9.96158 14.0312 10.0313L12.5312 11.5313C12.3904 11.6722 12.1993 11.7513 12 11.7513C11.8007 11.7513 11.6096 11.6722 11.4687 11.5313C11.3279 11.3904 11.2487 11.1993 11.2487 11C11.2487 10.8008 11.3279 10.6097 11.4687 10.4688L11.6875 10.25H9.75625C9.55697 10.2496 9.36066 10.2017 9.18352 10.1105C9.00638 10.0192 8.8535 9.88705 8.7375 9.72501L7.925 8.58751C7.80989 8.42476 7.7637 8.22314 7.79647 8.02651C7.82925 7.82988 7.93833 7.65414 8.1 7.53751Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.33333 11.6667H2.26667L8.01667 5.91666L7.08333 4.98333L1.33333 10.7333V11.6667ZM10.8667 4.95L8.03333 2.14999L8.96667 1.21666C9.22222 0.961106 9.53622 0.833328 9.90867 0.833328C10.2807 0.833328 10.5944 0.961106 10.85 1.21666L11.7833 2.14999C12.0389 2.40555 12.1722 2.71399 12.1833 3.07533C12.1944 3.43622 12.0722 3.74444 11.8167 3.99999L10.8667 4.95ZM9.9 5.93333L2.83333 13H0V10.1667L7.06667 3.1L9.9 5.93333ZM7.55 5.45L7.08333 4.98333L8.01667 5.91666L7.55 5.45Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.0003 8.00001V10H2.00033V8.00001H0.666992V10C0.666992 10.7333 1.26699 11.3333 2.00033 11.3333H10.0003C10.7337 11.3333 11.3337 10.7333 11.3337 10V8.00001H10.0003ZM9.33366 5.33334L8.39366 4.39334L6.66699 6.11334V0.666672H5.33366V6.11334L3.60699 4.39334L2.66699 5.33334L6.00033 8.66667L9.33366 5.33334Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.999674 10.6667C0.999674 11.4 1.59967 12 2.33301 12H7.66634C8.39967 12 8.99967 11.4 8.99967 10.6667V2.66667H0.999674V10.6667ZM2.33301 4H7.66634V10.6667H2.33301V4ZM7.33301 0.666667L6.66634 0H3.33301L2.66634 0.666667H0.333008V2H9.66634V0.666667H7.33301Z" fill="black"/>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </td>
                     
                             </tr>
-                            <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-roboto">
-                                <td class="px-6 py-3 ">2</td>
-                                <td class="px-6 py-3 ">
-                                    <p class=" whitespace-nowrap">378099</p>
-                                </td>
-                                <td class="px-6 py-3 ">32 Fleet Lane Queensbury,
-                                    Bradford</td>
-                                <td class="px-6 py-3 ">BD13 2JQ</td>
-                                <td class="px-6 py-3 ">BD13 2</td>
-                                <td class="px-6 py-3 "> 263.8 miles</td>
-                            </tr>
+                           
                     
                         </tbody>
                     </table>
 
-                    <div class="">
-                    
-                        <div role="status"
-                            class="p-4 space-y-4 w-full rounded border border-gray-200 divide-y divide-gray-200 shadow animate-pulse dark:divide-gray-700 md:p-6 dark:border-gray-700">
-                       
-                       
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                                    <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                                </div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-                            </div>
-                           
-                            
-                        </div>
-
-                    </div>
+                 
                 </div>
+                <!-- table 1 end  -->
+
+
+                <!-- table  2 start -->
+                <div class="border-border w-full py-10 rounded bg-white overflow-x-auto"> 
+                    <!-- table header -->
+                    <div class="flex items-center gap-4 pb-4">
+                        <span class=" text-textgray font-medium text-xs md:text-sm">11 November 2022</span>
+                        <button class=" w-8 h-8 rounded border border-border flex items-center justify-center hover:bg-gray-100 transition duration-300">
+                            <span>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.0003 8V10H2.00033V8H0.666992V10C0.666992 10.7333 1.26699 11.3333 2.00033 11.3333H10.0003C10.7337 11.3333 11.3337 10.7333 11.3337 10V8H10.0003ZM9.33366 5.33333L8.39366 4.39333L6.66699 6.11333V0.666664H5.33366V6.11333L3.60699 4.39333L2.66699 5.33333L6.00033 8.66666L9.33366 5.33333Z" fill="black"/>
+                                </svg>
+                                    
+                            </span>
+                        </button>
+                    </div>
+                    <table class="w-full border border-border text-center text-xs md:text-sm">
+                        <thead class="border-b">
+                            <tr>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Job ID</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Job Name</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Driver</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Distribution Centre </td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Order Count</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Total Distance</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Delivery Status</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Action</td>
+                    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white hover:bg-primary hover:bg-opacity-30 transition duration-300 font-encodesans">
+                                <td class="px-6 py-4 ">117</td>
+                                <td class="px-6 py-4 ">
+                                    <p class=" whitespace-nowrap">Route 117</p>
+                                </td>
+                                <td class="px-6 py-4 ">Amrick D (AK)</td>
+                                <td class="px-6 py-4 ">Distri 1</td>
+                                <td class="px-6 py-4 ">10</td>
+                                <td class="px-6 py-4 "> 263.8 miles</td>
+                                <td class="px-6 py-4 text-green-500 text-xs"> COMPLETED </td>
+                                <td>
+                                    <div class=" flex gap-1 justify-center">
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.333333 11.3333C0.244444 11.3333 0.166667 11.3 0.1 11.2333C0.0333334 11.1667 0 11.0889 0 11C0 10.9111 0.0333334 10.8333 0.1 10.7667C0.166667 10.7 0.244444 10.6667 0.333333 10.6667H1.33333V10.3333H1C0.911111 10.3333 0.833333 10.3 0.766667 10.2333C0.7 10.1667 0.666667 10.0889 0.666667 10C0.666667 9.91112 0.7 9.83334 0.766667 9.76667C0.833333 9.70001 0.911111 9.66667 1 9.66667H1.33333V9.33334H0.333333C0.244444 9.33334 0.166667 9.30001 0.1 9.23334C0.0333334 9.16667 0 9.08889 0 9.00001C0 8.91112 0.0333334 8.83334 0.1 8.76667C0.166667 8.70001 0.244444 8.66667 0.333333 8.66667H1.66667C1.75556 8.66667 1.83333 8.70001 1.9 8.76667C1.96667 8.83334 2 8.91112 2 9.00001V11C2 11.0889 1.96667 11.1667 1.9 11.2333C1.83333 11.3 1.75556 11.3333 1.66667 11.3333H0.333333ZM1 3.33334C0.911111 3.33334 0.833333 3.30001 0.766667 3.23334C0.7 3.16667 0.666667 3.08889 0.666667 3.00001V1.33334H0.333333C0.244444 1.33334 0.166667 1.30001 0.1 1.23334C0.0333334 1.16667 0 1.08889 0 1.00001C0 0.911116 0.0333334 0.833338 0.1 0.766672C0.166667 0.700005 0.244444 0.666672 0.333333 0.666672H1C1.08889 0.666672 1.16667 0.700005 1.23333 0.766672C1.3 0.833338 1.33333 0.911116 1.33333 1.00001V3.00001C1.33333 3.08889 1.3 3.16667 1.23333 3.23334C1.16667 3.30001 1.08889 3.33334 1 3.33334ZM0.333333 7.33334C0.244444 7.33334 0.166667 7.30001 0.1 7.23334C0.0333334 7.16667 0 7.08889 0 7.00001V6.85001C0 6.80556 0.0277778 6.73334 0.0833333 6.63334L1.2 5.33334H0.333333C0.244444 5.33334 0.166667 5.30001 0.1 5.23334C0.0333334 5.16667 0 5.08889 0 5.00001C0 4.91112 0.0333334 4.83334 0.1 4.76667C0.166667 4.7 0.244444 4.66667 0.333333 4.66667H1.66667C1.75556 4.66667 1.83333 4.7 1.9 4.76667C1.96667 4.83334 2 4.91112 2 5.00001V5.15001C2 5.19445 1.97222 5.26667 1.91667 5.36667L0.8 6.66667H1.66667C1.75556 6.66667 1.83333 6.7 1.9 6.76667C1.96667 6.83334 2 6.91112 2 7.00001C2 7.08889 1.96667 7.16667 1.9 7.23334C1.83333 7.30001 1.75556 7.33334 1.66667 7.33334H0.333333ZM4 10.6667C3.81111 10.6667 3.65289 10.6027 3.52533 10.4747C3.39733 10.3471 3.33333 10.1889 3.33333 10C3.33333 9.81112 3.39733 9.65289 3.52533 9.52534C3.65289 9.39734 3.81111 9.33334 4 9.33334H11.3333C11.5222 9.33334 11.6804 9.39734 11.808 9.52534C11.936 9.65289 12 9.81112 12 10C12 10.1889 11.936 10.3471 11.808 10.4747C11.6804 10.6027 11.5222 10.6667 11.3333 10.6667H4ZM4 6.66667C3.81111 6.66667 3.65289 6.60267 3.52533 6.47467C3.39733 6.34712 3.33333 6.18889 3.33333 6.00001C3.33333 5.81112 3.39733 5.65267 3.52533 5.52467C3.65289 5.39712 3.81111 5.33334 4 5.33334H11.3333C11.5222 5.33334 11.6804 5.39712 11.808 5.52467C11.936 5.65267 12 5.81112 12 6.00001C12 6.18889 11.936 6.34712 11.808 6.47467C11.6804 6.60267 11.5222 6.66667 11.3333 6.66667H4ZM4 2.66667C3.81111 2.66667 3.65289 2.60289 3.52533 2.47534C3.39733 2.34734 3.33333 2.18889 3.33333 2.00001C3.33333 1.81112 3.39733 1.65267 3.52533 1.52467C3.65289 1.39712 3.81111 1.33334 4 1.33334H11.3333C11.5222 1.33334 11.6804 1.39712 11.808 1.52467C11.936 1.65267 12 1.81112 12 2.00001C12 2.18889 11.936 2.34734 11.808 2.47534C11.6804 2.60289 11.5222 2.66667 11.3333 2.66667H4Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.0312 3.03126C14.1012 2.96158 14.1566 2.87879 14.1945 2.78763C14.2324 2.69646 14.2518 2.59872 14.2518 2.50001C14.2518 2.4013 14.2324 2.30356 14.1945 2.2124C14.1566 2.12123 14.1012 2.03844 14.0312 1.96876L12.5312 0.468762C12.3897 0.329066 12.1989 0.250739 12 0.250739C11.8011 0.250739 11.6103 0.329066 11.4687 0.468762C11.3988 0.53844 11.3434 0.621235 11.3055 0.712399C11.2676 0.803562 11.2482 0.901301 11.2482 1.00001C11.2482 1.09872 11.2676 1.19646 11.3055 1.28763C11.3434 1.37879 11.3988 1.46158 11.4687 1.53126L11.6875 1.75001H9.75625C9.55697 1.75045 9.36066 1.79828 9.18352 1.88957C9.00638 1.98086 8.8535 2.11297 8.7375 2.27501L4.1125 8.75001H1C0.801088 8.75001 0.610322 8.82903 0.46967 8.96968C0.329018 9.11033 0.25 9.3011 0.25 9.50001C0.25 9.69892 0.329018 9.88969 0.46967 10.0303C0.610322 10.171 0.801088 10.25 1 10.25H4.24375C4.44303 10.2496 4.63934 10.2017 4.81648 10.1105C4.99362 10.0192 5.1465 9.88705 5.2625 9.72501L9.8875 3.25001H11.6875L11.4687 3.46876C11.3279 3.60966 11.2487 3.80075 11.2487 4.00001C11.2487 4.19927 11.3279 4.39037 11.4687 4.53126C11.6096 4.67216 11.8007 4.75131 12 4.75131C12.1993 4.75131 12.3904 4.67216 12.5312 4.53126L14.0312 3.03126ZM5.9 4.46251C5.73824 4.57728 5.5376 4.6233 5.34199 4.59051C5.14639 4.55771 4.97173 4.44877 4.85625 4.28751L4.1125 3.25001H1C0.801088 3.25001 0.610322 3.17099 0.46967 3.03034C0.329018 2.88969 0.25 2.69892 0.25 2.50001C0.25 2.3011 0.329018 2.11033 0.46967 1.96968C0.610322 1.82903 0.801088 1.75001 1 1.75001H4.24375C4.44303 1.75045 4.63934 1.79828 4.81648 1.88957C4.99362 1.98086 5.1465 2.11297 5.2625 2.27501L6.075 3.41251C6.19011 3.57527 6.2363 3.77688 6.20352 3.97352C6.17075 4.17015 6.06167 4.34589 5.9 4.46251ZM8.1 7.53751C8.26176 7.42274 8.4624 7.37672 8.658 7.40952C8.85361 7.44231 9.02827 7.55126 9.14375 7.71251L9.8875 8.75001H11.6875L11.4687 8.53126C11.3988 8.46158 11.3434 8.37879 11.3055 8.28763C11.2676 8.19646 11.2482 8.09872 11.2482 8.00001C11.2482 7.9013 11.2676 7.80356 11.3055 7.7124C11.3434 7.62123 11.3988 7.53844 11.4687 7.46876C11.6103 7.32907 11.8011 7.25074 12 7.25074C12.1989 7.25074 12.3897 7.32907 12.5312 7.46876L14.0312 8.96876C14.1012 9.03844 14.1566 9.12123 14.1945 9.2124C14.2324 9.30356 14.2518 9.4013 14.2518 9.50001C14.2518 9.59872 14.2324 9.69646 14.1945 9.78763C14.1566 9.87879 14.1012 9.96158 14.0312 10.0313L12.5312 11.5313C12.3904 11.6722 12.1993 11.7513 12 11.7513C11.8007 11.7513 11.6096 11.6722 11.4687 11.5313C11.3279 11.3904 11.2487 11.1993 11.2487 11C11.2487 10.8008 11.3279 10.6097 11.4687 10.4688L11.6875 10.25H9.75625C9.55697 10.2496 9.36066 10.2017 9.18352 10.1105C9.00638 10.0192 8.8535 9.88705 8.7375 9.72501L7.925 8.58751C7.80989 8.42476 7.7637 8.22314 7.79647 8.02651C7.82925 7.82988 7.93833 7.65414 8.1 7.53751Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.33333 11.6667H2.26667L8.01667 5.91666L7.08333 4.98333L1.33333 10.7333V11.6667ZM10.8667 4.95L8.03333 2.14999L8.96667 1.21666C9.22222 0.961106 9.53622 0.833328 9.90867 0.833328C10.2807 0.833328 10.5944 0.961106 10.85 1.21666L11.7833 2.14999C12.0389 2.40555 12.1722 2.71399 12.1833 3.07533C12.1944 3.43622 12.0722 3.74444 11.8167 3.99999L10.8667 4.95ZM9.9 5.93333L2.83333 13H0V10.1667L7.06667 3.1L9.9 5.93333ZM7.55 5.45L7.08333 4.98333L8.01667 5.91666L7.55 5.45Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.0003 8.00001V10H2.00033V8.00001H0.666992V10C0.666992 10.7333 1.26699 11.3333 2.00033 11.3333H10.0003C10.7337 11.3333 11.3337 10.7333 11.3337 10V8.00001H10.0003ZM9.33366 5.33334L8.39366 4.39334L6.66699 6.11334V0.666672H5.33366V6.11334L3.60699 4.39334L2.66699 5.33334L6.00033 8.66667L9.33366 5.33334Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.999674 10.6667C0.999674 11.4 1.59967 12 2.33301 12H7.66634C8.39967 12 8.99967 11.4 8.99967 10.6667V2.66667H0.999674V10.6667ZM2.33301 4H7.66634V10.6667H2.33301V4ZM7.33301 0.666667L6.66634 0H3.33301L2.66634 0.666667H0.333008V2H9.66634V0.666667H7.33301Z" fill="black"/>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </td>
+                    
+                            </tr>
+                           
+                    
+                        </tbody>
+                    </table>
+                </div>
+                <!-- table 2 end  -->
+
+                 <!-- table  3 start-->
+                 <div class="border-border w-full py-10 rounded bg-white overflow-x-auto"> 
+                    <!-- table header -->
+                    <div class="flex items-center gap-4 pb-4">
+                        <span class=" text-textgray font-medium text-xs md:text-sm">11 November 2022</span>
+                        <button class=" w-8 h-8 rounded border border-border flex items-center justify-center hover:bg-gray-100 transition duration-300">
+                            <span>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.0003 8V10H2.00033V8H0.666992V10C0.666992 10.7333 1.26699 11.3333 2.00033 11.3333H10.0003C10.7337 11.3333 11.3337 10.7333 11.3337 10V8H10.0003ZM9.33366 5.33333L8.39366 4.39333L6.66699 6.11333V0.666664H5.33366V6.11333L3.60699 4.39333L2.66699 5.33333L6.00033 8.66666L9.33366 5.33333Z" fill="black"/>
+                                </svg>
+                                    
+                            </span>
+                        </button>
+                    </div>
+                    <table class="w-full border border-border text-center text-xs md:text-sm">
+                        <thead class="border-b">
+                            <tr>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Job ID</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Job Name</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Driver</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Distribution Centre </td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Order Count</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Total Distance</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Delivery Status</td>
+                                <td scope="col" class="px-2 py-4 bg-primary border-border">Action</td>
+                    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white hover:bg-primary hover:bg-opacity-30 transition duration-300 font-encodesans">
+                                <td class="px-6 py-4 ">117</td>
+                                <td class="px-6 py-4 ">
+                                    <p class=" whitespace-nowrap">Route 117</p>
+                                </td>
+                                <td class="px-6 py-4 ">Amrick D (AK)</td>
+                                <td class="px-6 py-4 ">Distri 1</td>
+                                <td class="px-6 py-4 ">10</td>
+                                <td class="px-6 py-4 "> 263.8 miles</td>
+                                <td class="px-6 py-4 text-yellow-500 text-xs"> PENDING</td>
+                                <td>
+                                    <div class=" flex gap-1 justify-center">
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.333333 11.3333C0.244444 11.3333 0.166667 11.3 0.1 11.2333C0.0333334 11.1667 0 11.0889 0 11C0 10.9111 0.0333334 10.8333 0.1 10.7667C0.166667 10.7 0.244444 10.6667 0.333333 10.6667H1.33333V10.3333H1C0.911111 10.3333 0.833333 10.3 0.766667 10.2333C0.7 10.1667 0.666667 10.0889 0.666667 10C0.666667 9.91112 0.7 9.83334 0.766667 9.76667C0.833333 9.70001 0.911111 9.66667 1 9.66667H1.33333V9.33334H0.333333C0.244444 9.33334 0.166667 9.30001 0.1 9.23334C0.0333334 9.16667 0 9.08889 0 9.00001C0 8.91112 0.0333334 8.83334 0.1 8.76667C0.166667 8.70001 0.244444 8.66667 0.333333 8.66667H1.66667C1.75556 8.66667 1.83333 8.70001 1.9 8.76667C1.96667 8.83334 2 8.91112 2 9.00001V11C2 11.0889 1.96667 11.1667 1.9 11.2333C1.83333 11.3 1.75556 11.3333 1.66667 11.3333H0.333333ZM1 3.33334C0.911111 3.33334 0.833333 3.30001 0.766667 3.23334C0.7 3.16667 0.666667 3.08889 0.666667 3.00001V1.33334H0.333333C0.244444 1.33334 0.166667 1.30001 0.1 1.23334C0.0333334 1.16667 0 1.08889 0 1.00001C0 0.911116 0.0333334 0.833338 0.1 0.766672C0.166667 0.700005 0.244444 0.666672 0.333333 0.666672H1C1.08889 0.666672 1.16667 0.700005 1.23333 0.766672C1.3 0.833338 1.33333 0.911116 1.33333 1.00001V3.00001C1.33333 3.08889 1.3 3.16667 1.23333 3.23334C1.16667 3.30001 1.08889 3.33334 1 3.33334ZM0.333333 7.33334C0.244444 7.33334 0.166667 7.30001 0.1 7.23334C0.0333334 7.16667 0 7.08889 0 7.00001V6.85001C0 6.80556 0.0277778 6.73334 0.0833333 6.63334L1.2 5.33334H0.333333C0.244444 5.33334 0.166667 5.30001 0.1 5.23334C0.0333334 5.16667 0 5.08889 0 5.00001C0 4.91112 0.0333334 4.83334 0.1 4.76667C0.166667 4.7 0.244444 4.66667 0.333333 4.66667H1.66667C1.75556 4.66667 1.83333 4.7 1.9 4.76667C1.96667 4.83334 2 4.91112 2 5.00001V5.15001C2 5.19445 1.97222 5.26667 1.91667 5.36667L0.8 6.66667H1.66667C1.75556 6.66667 1.83333 6.7 1.9 6.76667C1.96667 6.83334 2 6.91112 2 7.00001C2 7.08889 1.96667 7.16667 1.9 7.23334C1.83333 7.30001 1.75556 7.33334 1.66667 7.33334H0.333333ZM4 10.6667C3.81111 10.6667 3.65289 10.6027 3.52533 10.4747C3.39733 10.3471 3.33333 10.1889 3.33333 10C3.33333 9.81112 3.39733 9.65289 3.52533 9.52534C3.65289 9.39734 3.81111 9.33334 4 9.33334H11.3333C11.5222 9.33334 11.6804 9.39734 11.808 9.52534C11.936 9.65289 12 9.81112 12 10C12 10.1889 11.936 10.3471 11.808 10.4747C11.6804 10.6027 11.5222 10.6667 11.3333 10.6667H4ZM4 6.66667C3.81111 6.66667 3.65289 6.60267 3.52533 6.47467C3.39733 6.34712 3.33333 6.18889 3.33333 6.00001C3.33333 5.81112 3.39733 5.65267 3.52533 5.52467C3.65289 5.39712 3.81111 5.33334 4 5.33334H11.3333C11.5222 5.33334 11.6804 5.39712 11.808 5.52467C11.936 5.65267 12 5.81112 12 6.00001C12 6.18889 11.936 6.34712 11.808 6.47467C11.6804 6.60267 11.5222 6.66667 11.3333 6.66667H4ZM4 2.66667C3.81111 2.66667 3.65289 2.60289 3.52533 2.47534C3.39733 2.34734 3.33333 2.18889 3.33333 2.00001C3.33333 1.81112 3.39733 1.65267 3.52533 1.52467C3.65289 1.39712 3.81111 1.33334 4 1.33334H11.3333C11.5222 1.33334 11.6804 1.39712 11.808 1.52467C11.936 1.65267 12 1.81112 12 2.00001C12 2.18889 11.936 2.34734 11.808 2.47534C11.6804 2.60289 11.5222 2.66667 11.3333 2.66667H4Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.0312 3.03126C14.1012 2.96158 14.1566 2.87879 14.1945 2.78763C14.2324 2.69646 14.2518 2.59872 14.2518 2.50001C14.2518 2.4013 14.2324 2.30356 14.1945 2.2124C14.1566 2.12123 14.1012 2.03844 14.0312 1.96876L12.5312 0.468762C12.3897 0.329066 12.1989 0.250739 12 0.250739C11.8011 0.250739 11.6103 0.329066 11.4687 0.468762C11.3988 0.53844 11.3434 0.621235 11.3055 0.712399C11.2676 0.803562 11.2482 0.901301 11.2482 1.00001C11.2482 1.09872 11.2676 1.19646 11.3055 1.28763C11.3434 1.37879 11.3988 1.46158 11.4687 1.53126L11.6875 1.75001H9.75625C9.55697 1.75045 9.36066 1.79828 9.18352 1.88957C9.00638 1.98086 8.8535 2.11297 8.7375 2.27501L4.1125 8.75001H1C0.801088 8.75001 0.610322 8.82903 0.46967 8.96968C0.329018 9.11033 0.25 9.3011 0.25 9.50001C0.25 9.69892 0.329018 9.88969 0.46967 10.0303C0.610322 10.171 0.801088 10.25 1 10.25H4.24375C4.44303 10.2496 4.63934 10.2017 4.81648 10.1105C4.99362 10.0192 5.1465 9.88705 5.2625 9.72501L9.8875 3.25001H11.6875L11.4687 3.46876C11.3279 3.60966 11.2487 3.80075 11.2487 4.00001C11.2487 4.19927 11.3279 4.39037 11.4687 4.53126C11.6096 4.67216 11.8007 4.75131 12 4.75131C12.1993 4.75131 12.3904 4.67216 12.5312 4.53126L14.0312 3.03126ZM5.9 4.46251C5.73824 4.57728 5.5376 4.6233 5.34199 4.59051C5.14639 4.55771 4.97173 4.44877 4.85625 4.28751L4.1125 3.25001H1C0.801088 3.25001 0.610322 3.17099 0.46967 3.03034C0.329018 2.88969 0.25 2.69892 0.25 2.50001C0.25 2.3011 0.329018 2.11033 0.46967 1.96968C0.610322 1.82903 0.801088 1.75001 1 1.75001H4.24375C4.44303 1.75045 4.63934 1.79828 4.81648 1.88957C4.99362 1.98086 5.1465 2.11297 5.2625 2.27501L6.075 3.41251C6.19011 3.57527 6.2363 3.77688 6.20352 3.97352C6.17075 4.17015 6.06167 4.34589 5.9 4.46251ZM8.1 7.53751C8.26176 7.42274 8.4624 7.37672 8.658 7.40952C8.85361 7.44231 9.02827 7.55126 9.14375 7.71251L9.8875 8.75001H11.6875L11.4687 8.53126C11.3988 8.46158 11.3434 8.37879 11.3055 8.28763C11.2676 8.19646 11.2482 8.09872 11.2482 8.00001C11.2482 7.9013 11.2676 7.80356 11.3055 7.7124C11.3434 7.62123 11.3988 7.53844 11.4687 7.46876C11.6103 7.32907 11.8011 7.25074 12 7.25074C12.1989 7.25074 12.3897 7.32907 12.5312 7.46876L14.0312 8.96876C14.1012 9.03844 14.1566 9.12123 14.1945 9.2124C14.2324 9.30356 14.2518 9.4013 14.2518 9.50001C14.2518 9.59872 14.2324 9.69646 14.1945 9.78763C14.1566 9.87879 14.1012 9.96158 14.0312 10.0313L12.5312 11.5313C12.3904 11.6722 12.1993 11.7513 12 11.7513C11.8007 11.7513 11.6096 11.6722 11.4687 11.5313C11.3279 11.3904 11.2487 11.1993 11.2487 11C11.2487 10.8008 11.3279 10.6097 11.4687 10.4688L11.6875 10.25H9.75625C9.55697 10.2496 9.36066 10.2017 9.18352 10.1105C9.00638 10.0192 8.8535 9.88705 8.7375 9.72501L7.925 8.58751C7.80989 8.42476 7.7637 8.22314 7.79647 8.02651C7.82925 7.82988 7.93833 7.65414 8.1 7.53751Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.33333 11.6667H2.26667L8.01667 5.91666L7.08333 4.98333L1.33333 10.7333V11.6667ZM10.8667 4.95L8.03333 2.14999L8.96667 1.21666C9.22222 0.961106 9.53622 0.833328 9.90867 0.833328C10.2807 0.833328 10.5944 0.961106 10.85 1.21666L11.7833 2.14999C12.0389 2.40555 12.1722 2.71399 12.1833 3.07533C12.1944 3.43622 12.0722 3.74444 11.8167 3.99999L10.8667 4.95ZM9.9 5.93333L2.83333 13H0V10.1667L7.06667 3.1L9.9 5.93333ZM7.55 5.45L7.08333 4.98333L8.01667 5.91666L7.55 5.45Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.0003 8.00001V10H2.00033V8.00001H0.666992V10C0.666992 10.7333 1.26699 11.3333 2.00033 11.3333H10.0003C10.7337 11.3333 11.3337 10.7333 11.3337 10V8.00001H10.0003ZM9.33366 5.33334L8.39366 4.39334L6.66699 6.11334V0.666672H5.33366V6.11334L3.60699 4.39334L2.66699 5.33334L6.00033 8.66667L9.33366 5.33334Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.999674 10.6667C0.999674 11.4 1.59967 12 2.33301 12H7.66634C8.39967 12 8.99967 11.4 8.99967 10.6667V2.66667H0.999674V10.6667ZM2.33301 4H7.66634V10.6667H2.33301V4ZM7.33301 0.666667L6.66634 0H3.33301L2.66634 0.666667H0.333008V2H9.66634V0.666667H7.33301Z" fill="black"/>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </td>
+                    
+                            </tr>
+                            <tr class="bg-white hover:bg-primary hover:bg-opacity-30 transition duration-300 font-encodesans">
+                                <td class="px-6 py-4 ">117</td>
+                                <td class="px-6 py-4 ">
+                                    <p class=" whitespace-nowrap">Route 117</p>
+                                </td>
+                                <td class="px-6 py-4 ">Amrick D (AK)</td>
+                                <td class="px-6 py-4 ">Distri 1</td>
+                                <td class="px-6 py-4 ">10</td>
+                                <td class="px-6 py-4 "> 263.8 miles</td>
+                                <td class="px-6 py-4 text-yellow-500 text-xs"> PENDING</td>
+                                <td>
+                                    <div class=" flex gap-1 justify-center">
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.333333 11.3333C0.244444 11.3333 0.166667 11.3 0.1 11.2333C0.0333334 11.1667 0 11.0889 0 11C0 10.9111 0.0333334 10.8333 0.1 10.7667C0.166667 10.7 0.244444 10.6667 0.333333 10.6667H1.33333V10.3333H1C0.911111 10.3333 0.833333 10.3 0.766667 10.2333C0.7 10.1667 0.666667 10.0889 0.666667 10C0.666667 9.91112 0.7 9.83334 0.766667 9.76667C0.833333 9.70001 0.911111 9.66667 1 9.66667H1.33333V9.33334H0.333333C0.244444 9.33334 0.166667 9.30001 0.1 9.23334C0.0333334 9.16667 0 9.08889 0 9.00001C0 8.91112 0.0333334 8.83334 0.1 8.76667C0.166667 8.70001 0.244444 8.66667 0.333333 8.66667H1.66667C1.75556 8.66667 1.83333 8.70001 1.9 8.76667C1.96667 8.83334 2 8.91112 2 9.00001V11C2 11.0889 1.96667 11.1667 1.9 11.2333C1.83333 11.3 1.75556 11.3333 1.66667 11.3333H0.333333ZM1 3.33334C0.911111 3.33334 0.833333 3.30001 0.766667 3.23334C0.7 3.16667 0.666667 3.08889 0.666667 3.00001V1.33334H0.333333C0.244444 1.33334 0.166667 1.30001 0.1 1.23334C0.0333334 1.16667 0 1.08889 0 1.00001C0 0.911116 0.0333334 0.833338 0.1 0.766672C0.166667 0.700005 0.244444 0.666672 0.333333 0.666672H1C1.08889 0.666672 1.16667 0.700005 1.23333 0.766672C1.3 0.833338 1.33333 0.911116 1.33333 1.00001V3.00001C1.33333 3.08889 1.3 3.16667 1.23333 3.23334C1.16667 3.30001 1.08889 3.33334 1 3.33334ZM0.333333 7.33334C0.244444 7.33334 0.166667 7.30001 0.1 7.23334C0.0333334 7.16667 0 7.08889 0 7.00001V6.85001C0 6.80556 0.0277778 6.73334 0.0833333 6.63334L1.2 5.33334H0.333333C0.244444 5.33334 0.166667 5.30001 0.1 5.23334C0.0333334 5.16667 0 5.08889 0 5.00001C0 4.91112 0.0333334 4.83334 0.1 4.76667C0.166667 4.7 0.244444 4.66667 0.333333 4.66667H1.66667C1.75556 4.66667 1.83333 4.7 1.9 4.76667C1.96667 4.83334 2 4.91112 2 5.00001V5.15001C2 5.19445 1.97222 5.26667 1.91667 5.36667L0.8 6.66667H1.66667C1.75556 6.66667 1.83333 6.7 1.9 6.76667C1.96667 6.83334 2 6.91112 2 7.00001C2 7.08889 1.96667 7.16667 1.9 7.23334C1.83333 7.30001 1.75556 7.33334 1.66667 7.33334H0.333333ZM4 10.6667C3.81111 10.6667 3.65289 10.6027 3.52533 10.4747C3.39733 10.3471 3.33333 10.1889 3.33333 10C3.33333 9.81112 3.39733 9.65289 3.52533 9.52534C3.65289 9.39734 3.81111 9.33334 4 9.33334H11.3333C11.5222 9.33334 11.6804 9.39734 11.808 9.52534C11.936 9.65289 12 9.81112 12 10C12 10.1889 11.936 10.3471 11.808 10.4747C11.6804 10.6027 11.5222 10.6667 11.3333 10.6667H4ZM4 6.66667C3.81111 6.66667 3.65289 6.60267 3.52533 6.47467C3.39733 6.34712 3.33333 6.18889 3.33333 6.00001C3.33333 5.81112 3.39733 5.65267 3.52533 5.52467C3.65289 5.39712 3.81111 5.33334 4 5.33334H11.3333C11.5222 5.33334 11.6804 5.39712 11.808 5.52467C11.936 5.65267 12 5.81112 12 6.00001C12 6.18889 11.936 6.34712 11.808 6.47467C11.6804 6.60267 11.5222 6.66667 11.3333 6.66667H4ZM4 2.66667C3.81111 2.66667 3.65289 2.60289 3.52533 2.47534C3.39733 2.34734 3.33333 2.18889 3.33333 2.00001C3.33333 1.81112 3.39733 1.65267 3.52533 1.52467C3.65289 1.39712 3.81111 1.33334 4 1.33334H11.3333C11.5222 1.33334 11.6804 1.39712 11.808 1.52467C11.936 1.65267 12 1.81112 12 2.00001C12 2.18889 11.936 2.34734 11.808 2.47534C11.6804 2.60289 11.5222 2.66667 11.3333 2.66667H4Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.0312 3.03126C14.1012 2.96158 14.1566 2.87879 14.1945 2.78763C14.2324 2.69646 14.2518 2.59872 14.2518 2.50001C14.2518 2.4013 14.2324 2.30356 14.1945 2.2124C14.1566 2.12123 14.1012 2.03844 14.0312 1.96876L12.5312 0.468762C12.3897 0.329066 12.1989 0.250739 12 0.250739C11.8011 0.250739 11.6103 0.329066 11.4687 0.468762C11.3988 0.53844 11.3434 0.621235 11.3055 0.712399C11.2676 0.803562 11.2482 0.901301 11.2482 1.00001C11.2482 1.09872 11.2676 1.19646 11.3055 1.28763C11.3434 1.37879 11.3988 1.46158 11.4687 1.53126L11.6875 1.75001H9.75625C9.55697 1.75045 9.36066 1.79828 9.18352 1.88957C9.00638 1.98086 8.8535 2.11297 8.7375 2.27501L4.1125 8.75001H1C0.801088 8.75001 0.610322 8.82903 0.46967 8.96968C0.329018 9.11033 0.25 9.3011 0.25 9.50001C0.25 9.69892 0.329018 9.88969 0.46967 10.0303C0.610322 10.171 0.801088 10.25 1 10.25H4.24375C4.44303 10.2496 4.63934 10.2017 4.81648 10.1105C4.99362 10.0192 5.1465 9.88705 5.2625 9.72501L9.8875 3.25001H11.6875L11.4687 3.46876C11.3279 3.60966 11.2487 3.80075 11.2487 4.00001C11.2487 4.19927 11.3279 4.39037 11.4687 4.53126C11.6096 4.67216 11.8007 4.75131 12 4.75131C12.1993 4.75131 12.3904 4.67216 12.5312 4.53126L14.0312 3.03126ZM5.9 4.46251C5.73824 4.57728 5.5376 4.6233 5.34199 4.59051C5.14639 4.55771 4.97173 4.44877 4.85625 4.28751L4.1125 3.25001H1C0.801088 3.25001 0.610322 3.17099 0.46967 3.03034C0.329018 2.88969 0.25 2.69892 0.25 2.50001C0.25 2.3011 0.329018 2.11033 0.46967 1.96968C0.610322 1.82903 0.801088 1.75001 1 1.75001H4.24375C4.44303 1.75045 4.63934 1.79828 4.81648 1.88957C4.99362 1.98086 5.1465 2.11297 5.2625 2.27501L6.075 3.41251C6.19011 3.57527 6.2363 3.77688 6.20352 3.97352C6.17075 4.17015 6.06167 4.34589 5.9 4.46251ZM8.1 7.53751C8.26176 7.42274 8.4624 7.37672 8.658 7.40952C8.85361 7.44231 9.02827 7.55126 9.14375 7.71251L9.8875 8.75001H11.6875L11.4687 8.53126C11.3988 8.46158 11.3434 8.37879 11.3055 8.28763C11.2676 8.19646 11.2482 8.09872 11.2482 8.00001C11.2482 7.9013 11.2676 7.80356 11.3055 7.7124C11.3434 7.62123 11.3988 7.53844 11.4687 7.46876C11.6103 7.32907 11.8011 7.25074 12 7.25074C12.1989 7.25074 12.3897 7.32907 12.5312 7.46876L14.0312 8.96876C14.1012 9.03844 14.1566 9.12123 14.1945 9.2124C14.2324 9.30356 14.2518 9.4013 14.2518 9.50001C14.2518 9.59872 14.2324 9.69646 14.1945 9.78763C14.1566 9.87879 14.1012 9.96158 14.0312 10.0313L12.5312 11.5313C12.3904 11.6722 12.1993 11.7513 12 11.7513C11.8007 11.7513 11.6096 11.6722 11.4687 11.5313C11.3279 11.3904 11.2487 11.1993 11.2487 11C11.2487 10.8008 11.3279 10.6097 11.4687 10.4688L11.6875 10.25H9.75625C9.55697 10.2496 9.36066 10.2017 9.18352 10.1105C9.00638 10.0192 8.8535 9.88705 8.7375 9.72501L7.925 8.58751C7.80989 8.42476 7.7637 8.22314 7.79647 8.02651C7.82925 7.82988 7.93833 7.65414 8.1 7.53751Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.33333 11.6667H2.26667L8.01667 5.91666L7.08333 4.98333L1.33333 10.7333V11.6667ZM10.8667 4.95L8.03333 2.14999L8.96667 1.21666C9.22222 0.961106 9.53622 0.833328 9.90867 0.833328C10.2807 0.833328 10.5944 0.961106 10.85 1.21666L11.7833 2.14999C12.0389 2.40555 12.1722 2.71399 12.1833 3.07533C12.1944 3.43622 12.0722 3.74444 11.8167 3.99999L10.8667 4.95ZM9.9 5.93333L2.83333 13H0V10.1667L7.06667 3.1L9.9 5.93333ZM7.55 5.45L7.08333 4.98333L8.01667 5.91666L7.55 5.45Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.0003 8.00001V10H2.00033V8.00001H0.666992V10C0.666992 10.7333 1.26699 11.3333 2.00033 11.3333H10.0003C10.7337 11.3333 11.3337 10.7333 11.3337 10V8.00001H10.0003ZM9.33366 5.33334L8.39366 4.39334L6.66699 6.11334V0.666672H5.33366V6.11334L3.60699 4.39334L2.66699 5.33334L6.00033 8.66667L9.33366 5.33334Z" fill="black"/>
+                                                </svg>
+                                                    
+                                                    
+                                                    
+                                            </span>
+                                        </button>
+                                        <button class=" w-7 h-7  rounded border border-border flex items-center justify-center hover:bg-[#E4A13C] transition duration-300">
+                                            <span>
+                                                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.999674 10.6667C0.999674 11.4 1.59967 12 2.33301 12H7.66634C8.39967 12 8.99967 11.4 8.99967 10.6667V2.66667H0.999674V10.6667ZM2.33301 4H7.66634V10.6667H2.33301V4ZM7.33301 0.666667L6.66634 0H3.33301L2.66634 0.666667H0.333008V2H9.66634V0.666667H7.33301Z" fill="black"/>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </td>
+                    
+                            </tr>
+                           
+                    
+                        </tbody>
+                    </table>
+
+                 
+                </div>
+                <!-- table 3 end  -->
             </div>
         
         </div> 

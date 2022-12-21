@@ -13,6 +13,7 @@ module.exports = {
        secondary:'#F6CCC3',
        border:'#DADADA',
        dark:'#333333',
+       textgray:'#4E564A'
 
       },
       fontFamily :{
