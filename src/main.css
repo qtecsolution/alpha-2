@@ -242,3 +242,20 @@ body.open  .main-content {
   width: 32px;
 }
 
+
+
+/* custom checkbox  */
+
+
+
+.cusotm-checkbox  input:checked + div {
+  border-color: white;
+}
+.cusotm-checkbox  input:checked + div svg {
+  @apply block;
+}
+.cusotm-checkbox  input:checked + div  {
+  background-color: #10B968;
+  @apply transition-all duration-300;
+  
+}
