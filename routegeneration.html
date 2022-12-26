@@ -8,7 +8,9 @@
     <!-- TAILWIND CSS -->
     <link rel="stylesheet" href="assets/css/tailwind.css">
       <!-- DATE PICKER  -->
-      <link rel="stylesheet" type="text/css" href="assets/css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/daterangepicker.css" />
+    <!-- nice select -->
+    <link rel="stylesheet" type="text/css"  href="assets/css/niceselect.css">
     <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">
     
     <!-- Alpinejs -->
@@ -1236,8 +1238,83 @@
 
                         <!-- buttons -->
                         <div class=" flex items-center justify-center gap-4 flex-wrap pt-5">
-                            <button class=" bg-secondary px-8 py-3 rounded-md hover:bg-red-400 text-xs duration-300 md:text-sm">Generate Route</button>
-                            <button class=" bg-primaryDeep px-8 py-3 rounded-md hover:bg-green-700 duration-300 text-xs md:text-sm">Generate Route</button>
+                            <button class=" bg-secondary px-8 py-3 rounded-md hover:bg-red-400 text-xs duration-300 md:text-sm">Assign Template</button>
+                            <div class=" bg-primaryDeep  rounded-md hover:bg-red-400 duration-300 text-xs md:text-sm" x-data="{ modelOpen: false }">
+                                <span class="px-8 py-3 inline-block" @click="modelOpen =!modelOpen" >
+                                    Generate Route
+                                </span>
+                                <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                                    <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                                      <div x-cloak @click="modelOpen = false" x-show="modelOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40" aria-hidden="true"></div>
+                                
+                                      <div x-cloak x-show="modelOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl">
+                                    
+
+                                        <div>
+                                            <div>
+                                          
+                                                <div class="inputbox">
+                                                    <label for="lastName" class="inputlabel">Select starting posiition</label>
+                                                    <select name="" id="" class="selectize bottom-open">
+  
+                                                        <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                         <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                      </select>
+                                                    
+                                                </div>
+                                                <div class="inputbox">
+                                                    <label for="lastName" class="inputlabel">Select end posiition</label>
+                                                    <select name="" id="" class="selectize bottom-open">
+  
+                                                        <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                         <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                      </select>
+                                                    
+                                                </div>
+                                                <div class="inputbox">
+                                                    <label for="lastName" class="inputlabel">Select distribution centre</label>
+                                                    <select name="" id="" class="selectize full-width">
+  
+                                                        <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                         <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                          <option value="">option </option>
+                                                      </select>
+                                                    
+                                                </div>
+                                    
+                                             
+                                            </div>
+                                            <div class=" flex items-center justify-between pt-5">
+                                                <button class=" bg-secondary px-8 py-3 rounded-md hover:bg-red-400 text-xs duration-300 md:text-sm w-2/5">Cancel </button>
+                                                <button class="  bg-primaryDeep  px-8 py-3 rounded-md  hover:bg-green-700 text-xs duration-300 md:text-sm  w-2/5">Generate Route</button>
+                                            </div>
+                                        </div>
+                                
+                                      </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
@@ -1256,16 +1333,36 @@
   <!-- sidebar js -->
   <script src="assets/js/sidebar.js"></script>
   <!-- DATE PICKER -->
+  <!-- CUSTOM SELECT -->
+
+  <!-- Nice select -->
+  <script src="assets/js/niceselect.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   <script type="text/javascript" src="assets/js/datepicker.js"></script>
-  <script>
+ <script>
     let wrapper = document.getElementById("wrapper")
-    const  collapseToggle= () => { 
-       
-    wrapper.classList.toggle("open");
-}
+    const collapseToggle = () => {
+
+        wrapper.classList.toggle("open");
+    }
+
+  
+document.addEventListener("DOMContentLoaded", function(e){
+
+// default
+var els = document.querySelectorAll(".selectize");
+els.forEach(function(select){
+  NiceSelect.bind(select);
+});
+
+// seachable 
+var options = {searchable: false};
+NiceSelect.bind(document.getElementById("seachable-select"), options); 
+NiceSelect.bind(document.getElementById("ditribution-select"), options); 
+
+});
 </script>
 
 
