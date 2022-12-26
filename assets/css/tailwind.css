@@ -851,6 +851,22 @@ html {
   height: 4rem;
 }
 
+.h-72{
+  height: 18rem;
+}
+
+.h-9{
+  height: 2.25rem;
+}
+
+.h-96{
+  height: 24rem;
+}
+
+.h-24{
+  height: 6rem;
+}
+
 .max-h-0{
   max-height: 0px;
 }
@@ -1342,6 +1358,16 @@ html {
 .bg-gray-200{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-red-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
+.bg-red-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-40{

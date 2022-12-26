@@ -7,7 +7,7 @@
         <title>Dashboard</title>
         <link rel="stylesheet" href="assets/css/tailwind.css">
         <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">
-        
+        <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
         <!-- Alpinejs -->
         <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
     </head>
@@ -20,8 +20,9 @@
         <aside class="sidebar bg-[url('../../assets/images/home/sidebarbg.png')] min-h-screen  bg-bottom bg-contain sticky top-0 left-0
             transition-all duration-300 ease-in-out hidden min-[992px]:flex flex-col gap-28" id="sidebar">
         
-            <!-- SIDEBAR LOGO AND HUMBERGER ICON  -->
-            <div class="sidebar-header relative flex justify-center h-20">
+           <div class="loaded-content">
+             <!-- SIDEBAR LOGO AND HUMBERGER ICON  -->
+             <div class="sidebar-header relative flex justify-center h-20">
                 <figure class="w-28" id="sidebarlogo">
                     <a href="index.html"><img src="assets/images/login/logo.png" alt="Logo" class=" w-full h-full"></a>
                 </figure>
@@ -35,9 +36,18 @@
                     </span>
                 </div>
             </div>
-        
-            <!-- SIDEBAR MENU -->
-            <ul class="sidebar-menu  flex flex-col gap-1">
+           </div>
+            <div class="ph-item">
+                <div class="ph-col-12"> 
+                    <div class="ph-row">
+                        <div class="ph-col-10 empty"></div>
+                        <div class="ph-col-2"></div>
+                    </div>
+                </div>
+            </div>
+           <div class="loaded-content">
+             <!-- SIDEBAR MENU -->
+             <ul class="sidebar-menu  flex flex-col gap-1">
                 <li class="">
                     <a href="index.html"
                         class="flex items-center  gap-8 pl-7   h-14 rounded-r-3xl hover:bg-primary transition duration-300 active">
@@ -218,7 +228,45 @@
                         </ul>
                     </div>
                 </li>
-            </ul>
+            </ul> 
+           </div>
+            <div class="ph-item">
+                <div class="ph-col-12">
+                    <div class="ph-row">
+                        <div class="ph-col-12 big"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 big"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 big"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 big"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 big"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                        <div class="ph-col-12 empty"></div>
+                    </div>
+                </div>
+            </div>
         
         </aside>
         <!-- ================ DESKTOP SIDEBAR  END====================== -->
@@ -304,7 +352,7 @@
         <!-- ================ MAIN CONTENT ====================== -->
         <main class=" flex-1 py-2 pt-0 mb-96">
             <!-- STICKY HEADER -->
-            <header class="sticky top-0 left-0 right-0 bg-white z-50 py-2 pt-6">
+            <header class="sticky top-0 left-0 right-0 bg-white z-50 py-2 pt-6 loaded-content">
                 <div class="dms-container">
             
             
@@ -447,9 +495,21 @@
                         </div>
                     </div>
                 </div>
-            </header>
+            </header> 
+
+            <div class="ph-item">
+                <div class="ph-col-10 empty">
+                </div>
+                <div class="ph-col-2 ">   
+                   <div class="ph-row">
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-4 empty"></div>
+                    <div class="ph-col-4 big"></div>
+                   </div>
+                </div>
+            </div>
             <!-- WELCOME -->
-            <div class="dms-container ">
+            <div class="dms-container loaded-content ">
                 <div class="flex justify-between items-end px-2  pt-4 lg:pt-8  pb-20">
                     <div>
                         <p class=" text-xs md:textsm lg:text-base ">This is your dashboard</p>
@@ -460,110 +520,160 @@
                     </div>
                 </div>
             </div>
+            <div class="dms-container ph-item">
+                <div class="ph-col-2">
+                  <div class="ph-row">
+                    <div class="ph-col-12 big"></div>
+                    <div class="ph-col-12"></div>
+                  </div>
+                </div>
+            
+                <div class="ph-col-8 empty">
+                    
+                </div>
+                <div class="ph-col-2">
+                    <div class="ph-row">
+                        <div class="ph-col-12 big"></div>
+                      
+                      </div>
+                </div> 
+        
+        
+            
+            </div>
 
             <!-- DASHBORD CONTENT -->
             <div class="border" style="background:linear-gradient(180deg, rgba(227, 223, 223, 0.25) 3.85%, rgba(218, 218, 218, 0.22526) 3.86%, rgba(218, 218, 218, 0) 100%);">
             <div class="dms-container">
 
-                <!--======= COUNT CARD START======== -->
+                <div class="loaded-content">
+                    <!--======= COUNT CARD START======== -->
 
-                <div class="cards grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-10 -mt-14">
-                    <!-- single card -->
-                <div class="border border-border rounded p-4 flex items-center gap-6 bg-white max-w-none" >
-                    <div>
-                        <span>
-                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="56" height="56" rx="28" fill="#CEE4DA"/>
-                                <path d="M9.72884 27.1553V39.7168L27.9918 43.148V15.7722" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M46.1557 27.4878V39.4975L27.9918 43.148" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12.7213 35.7747L16.1525 36.1398M33.5708 25.7542L49.1878 27.9055C49.4302 27.9391 49.6771 27.9073 49.903 27.8134C50.129 27.7195 50.3257 27.5668 50.4728 27.3713C50.6198 27.1758 50.712 26.9445 50.7396 26.7014C50.7672 26.4583 50.7293 26.2122 50.6298 25.9887L46.1557 15.918L27.9907 12.852L9.73 16.065L5.37833 25.417C5.27738 25.6335 5.23471 25.8727 5.25456 26.1108C5.27441 26.3488 5.35609 26.5776 5.49151 26.7744C5.62693 26.9713 5.8114 27.1293 6.02666 27.233C6.24192 27.3366 6.48052 27.3822 6.71883 27.3653L22.2798 26.2838C22.5898 26.2624 22.8881 26.1572 23.1428 25.9795C23.3976 25.8017 23.5994 25.5581 23.7265 25.2747L27.9907 15.7733L32.2525 24.7882C32.3744 25.046 32.5587 25.2694 32.7887 25.438C33.0187 25.6067 33.2871 25.7154 33.5697 25.7542H33.5708Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                            
-                        </span>
-                    </div>
-                    <div class=" flex flex-col gap-2">
-                        <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
-                        <h2 class="  text-2xl md:3xl ">141</h2>
-                        <div class=" flex justify-end mt-8">
-                            <span class=" cursor-pointer">
-                                <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
-                                    <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
-                                    <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M11 12L13 14L15 12" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M13 6V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
+                    <div class="cards grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-10 -mt-14">
+                        <!-- single card -->
+                    <div class="border border-border rounded p-4 flex items-center gap-6 bg-white max-w-none" >
+                        <div>
+                            <span>
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="56" height="56" rx="28" fill="#CEE4DA"/>
+                                    <path d="M9.72884 27.1553V39.7168L27.9918 43.148V15.7722" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M46.1557 27.4878V39.4975L27.9918 43.148" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.7213 35.7747L16.1525 36.1398M33.5708 25.7542L49.1878 27.9055C49.4302 27.9391 49.6771 27.9073 49.903 27.8134C50.129 27.7195 50.3257 27.5668 50.4728 27.3713C50.6198 27.1758 50.712 26.9445 50.7396 26.7014C50.7672 26.4583 50.7293 26.2122 50.6298 25.9887L46.1557 15.918L27.9907 12.852L9.73 16.065L5.37833 25.417C5.27738 25.6335 5.23471 25.8727 5.25456 26.1108C5.27441 26.3488 5.35609 26.5776 5.49151 26.7744C5.62693 26.9713 5.8114 27.1293 6.02666 27.233C6.24192 27.3366 6.48052 27.3822 6.71883 27.3653L22.2798 26.2838C22.5898 26.2624 22.8881 26.1572 23.1428 25.9795C23.3976 25.8017 23.5994 25.5581 23.7265 25.2747L27.9907 15.7733L32.2525 24.7882C32.3744 25.046 32.5587 25.2694 32.7887 25.438C33.0187 25.6067 33.2871 25.7154 33.5697 25.7542H33.5708Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            
                             </span>
                         </div>
-                    </div>
-                </div>
-                    <!-- single card -->
-                <div class="border border-border rounded p-4 flex items-center gap-6 bg-white max-w-none" >
-                    <div>
-                        <span>
-                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="56" height="56" rx="28" fill="#CEE4DA"/>
-                                <path d="M9.72884 27.1553V39.7168L27.9918 43.148V15.7722" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M46.1557 27.4878V39.4975L27.9918 43.148" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12.7213 35.7747L16.1525 36.1398M33.5708 25.7542L49.1878 27.9055C49.4302 27.9391 49.6771 27.9073 49.903 27.8134C50.129 27.7195 50.3257 27.5668 50.4728 27.3713C50.6198 27.1758 50.712 26.9445 50.7396 26.7014C50.7672 26.4583 50.7293 26.2122 50.6298 25.9887L46.1557 15.918L27.9907 12.852L9.73 16.065L5.37833 25.417C5.27738 25.6335 5.23471 25.8727 5.25456 26.1108C5.27441 26.3488 5.35609 26.5776 5.49151 26.7744C5.62693 26.9713 5.8114 27.1293 6.02666 27.233C6.24192 27.3366 6.48052 27.3822 6.71883 27.3653L22.2798 26.2838C22.5898 26.2624 22.8881 26.1572 23.1428 25.9795C23.3976 25.8017 23.5994 25.5581 23.7265 25.2747L27.9907 15.7733L32.2525 24.7882C32.3744 25.046 32.5587 25.2694 32.7887 25.438C33.0187 25.6067 33.2871 25.7154 33.5697 25.7542H33.5708Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                            
-                        </span>
-                    </div>
-                    <div class=" flex flex-col gap-2">
-                        <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
-                        <h2 class="  text-2xl md:3xl ">141</h2>
-                        <div class=" flex justify-end mt-8">
-                            <span class=" cursor-pointer">
-                                <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
-                                    <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M11 12L13 14L15 12" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M13 6V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
-                            </span>
+                        <div class=" flex flex-col gap-2">
+                            <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
+                            <h2 class="  text-2xl md:3xl ">141</h2>
+                            <div class=" flex justify-end mt-8">
+                                <span class=" cursor-pointer">
+                                    <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                        <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
+                                        <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11 12L13 14L15 12" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13 6V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                        
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                    <!-- single card -->
-                <div class="border border-border rounded p-4 flex items-center gap-6 bg-white max-w-none" >
-                    <div>
-                        <span>
-                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="56" height="56" rx="28" fill="#CEE4DA"/>
-                                <path d="M9.72884 27.1553V39.7168L27.9918 43.148V15.7722" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M46.1557 27.4878V39.4975L27.9918 43.148" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12.7213 35.7747L16.1525 36.1398M33.5708 25.7542L49.1878 27.9055C49.4302 27.9391 49.6771 27.9073 49.903 27.8134C50.129 27.7195 50.3257 27.5668 50.4728 27.3713C50.6198 27.1758 50.712 26.9445 50.7396 26.7014C50.7672 26.4583 50.7293 26.2122 50.6298 25.9887L46.1557 15.918L27.9907 12.852L9.73 16.065L5.37833 25.417C5.27738 25.6335 5.23471 25.8727 5.25456 26.1108C5.27441 26.3488 5.35609 26.5776 5.49151 26.7744C5.62693 26.9713 5.8114 27.1293 6.02666 27.233C6.24192 27.3366 6.48052 27.3822 6.71883 27.3653L22.2798 26.2838C22.5898 26.2624 22.8881 26.1572 23.1428 25.9795C23.3976 25.8017 23.5994 25.5581 23.7265 25.2747L27.9907 15.7733L32.2525 24.7882C32.3744 25.046 32.5587 25.2694 32.7887 25.438C33.0187 25.6067 33.2871 25.7154 33.5697 25.7542H33.5708Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                            
-                        </span>
-                    </div>
-                    <div class=" flex flex-col gap-2">
-                        <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
-                        <h2 class="  text-2xl md:3xl ">141</h2>
-                        <div class=" flex justify-end mt-8">
-                            <span class=" cursor-pointer">
-                                <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
-                                    <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M11 12L13 14L15 12" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M13 6V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
+                        <!-- single card -->
+                    <div class="border border-border rounded p-4 flex items-center gap-6 bg-white max-w-none" >
+                        <div>
+                            <span>
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="56" height="56" rx="28" fill="#CEE4DA"/>
+                                    <path d="M9.72884 27.1553V39.7168L27.9918 43.148V15.7722" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M46.1557 27.4878V39.4975L27.9918 43.148" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.7213 35.7747L16.1525 36.1398M33.5708 25.7542L49.1878 27.9055C49.4302 27.9391 49.6771 27.9073 49.903 27.8134C50.129 27.7195 50.3257 27.5668 50.4728 27.3713C50.6198 27.1758 50.712 26.9445 50.7396 26.7014C50.7672 26.4583 50.7293 26.2122 50.6298 25.9887L46.1557 15.918L27.9907 12.852L9.73 16.065L5.37833 25.417C5.27738 25.6335 5.23471 25.8727 5.25456 26.1108C5.27441 26.3488 5.35609 26.5776 5.49151 26.7744C5.62693 26.9713 5.8114 27.1293 6.02666 27.233C6.24192 27.3366 6.48052 27.3822 6.71883 27.3653L22.2798 26.2838C22.5898 26.2624 22.8881 26.1572 23.1428 25.9795C23.3976 25.8017 23.5994 25.5581 23.7265 25.2747L27.9907 15.7733L32.2525 24.7882C32.3744 25.046 32.5587 25.2694 32.7887 25.438C33.0187 25.6067 33.2871 25.7154 33.5697 25.7542H33.5708Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            
                             </span>
                         </div>
+                        <div class=" flex flex-col gap-2">
+                            <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
+                            <h2 class="  text-2xl md:3xl ">141</h2>
+                            <div class=" flex justify-end mt-8">
+                                <span class=" cursor-pointer">
+                                    <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
+                                        <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11 12L13 14L15 12" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13 6V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                        
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </div>
+                        <!-- single card -->
+                    <div class="border border-border rounded p-4 flex items-center gap-6 bg-white max-w-none" >
+                        <div>
+                            <span>
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="56" height="56" rx="28" fill="#CEE4DA"/>
+                                    <path d="M9.72884 27.1553V39.7168L27.9918 43.148V15.7722" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M46.1557 27.4878V39.4975L27.9918 43.148" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.7213 35.7747L16.1525 36.1398M33.5708 25.7542L49.1878 27.9055C49.4302 27.9391 49.6771 27.9073 49.903 27.8134C50.129 27.7195 50.3257 27.5668 50.4728 27.3713C50.6198 27.1758 50.712 26.9445 50.7396 26.7014C50.7672 26.4583 50.7293 26.2122 50.6298 25.9887L46.1557 15.918L27.9907 12.852L9.73 16.065L5.37833 25.417C5.27738 25.6335 5.23471 25.8727 5.25456 26.1108C5.27441 26.3488 5.35609 26.5776 5.49151 26.7744C5.62693 26.9713 5.8114 27.1293 6.02666 27.233C6.24192 27.3366 6.48052 27.3822 6.71883 27.3653L22.2798 26.2838C22.5898 26.2624 22.8881 26.1572 23.1428 25.9795C23.3976 25.8017 23.5994 25.5581 23.7265 25.2747L27.9907 15.7733L32.2525 24.7882C32.3744 25.046 32.5587 25.2694 32.7887 25.438C33.0187 25.6067 33.2871 25.7154 33.5697 25.7542H33.5708Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            
+                            </span>
+                        </div>
+                        <div class=" flex flex-col gap-2">
+                            <p class=" text-xs md:text-sm lg:text-base">Total number of orders</p>
+                            <h2 class="  text-2xl md:3xl ">141</h2>
+                            <div class=" flex justify-end mt-8">
+                                <span class=" cursor-pointer">
+                                    <svg width="30" height="30" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 12C0 5.37258 5.37258 0 12 0H13C19.6274 0 25 5.37258 25 12C25 18.6274 19.6274 24 13 24H12C5.37258 24 0 18.6274 0 12Z" fill="#F6CCC3"/>
+                                        <path d="M8 14V15.8C8 16.4627 8.49746 17 9.11111 17H16.8889C17.5025 17 18 16.4627 18 15.8V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11 12L13 14L15 12" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13 6V14" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                        
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
 
-                <!--======= COUNT CARD END ======== -->
+                    <!--======= COUNT CARD END ======== -->
+                </div> 
+                <!-- =============CONTENT LOADER START ========= -->
+                
+                <div class="ph-item -mt-14">
+                    <div class="ph-col-4">
+                        <div class="ph-picture"></div>
+                    </div>
+                
+                    <div class="ph-col-4">
+                        <div class="ph-picture"></div>
+                    </div>
+                    <div class="ph-col-4">
+                        <div class="ph-picture"></div>
+                    </div>
+                
+                </div>
+                <!-- =============CONTENT LOADER END ===========-->
+                <!-- loading  -->
                 <!-- FIRST GRIPH -->
-                <div class="graph py-6">
+                <div class="graph py-6 loaded-content">
                     <figure class="w-full h-auto">
                         <img src="assets/images/home/graph1.png" alt="graph" class="w-full h-full object-cover">
                     </figure>
+                </div> 
+
+                 <!-- =============CONTENT LOADER START ========= -->
+                
+                <div class="ph-item py-6">
+                    <div class="ph-col-12 h-full">
+                        <div class="ph-picture "></div>
+                    </div>
                 </div>
+                <!-- =============CONTENT LOADER END ===========-->
+
 
                 <!--======= ACTIVE DELIVERIES AND DELIVERIES START======== -->
-                <div class="graph py-6 mb-24">
+                <div class="graph py-6 mb-24 loaded-content">
                     <div class="column-wrapper grid grid-cols-1 lg:grid-cols-2 gap-9 items-start">
 
                     
@@ -607,6 +717,18 @@
                         
                     </div>
                 </div>
+
+                <!-- =============CONTENT LOADER START ========= -->
+                
+                <div class="ph-item py-6">
+                    <div class="ph-col-6 h-full">
+                        <div class="ph-picture "></div>
+                    </div>
+                    <div class="ph-col-6 h-full">
+                        <div class="ph-picture "></div>
+                    </div>
+                </div>
+                <!-- =============CONTENT LOADER END ===========-->
                 
                 
             </div>
@@ -619,6 +741,29 @@
     </section>
     <!-- sidebar js -->
     <script src="assets/js/sidebar.js"></script>
+    <script>
+             let contentLoader=document.getElementsByClassName('ph-item');
+        let loadedContent=document.getElementsByClassName('loaded-content'); 
+
+
+        setTimeout(skeletoHide, 3000);
+        for(item of loadedContent) {
+            item.style.display='none'
+        }
+
+
+     
+       
+
+        function skeletoHide () {
+            for(item of contentLoader) {
+            item.style.display='none'
+        } 
+        for(item of loadedContent) {
+            item.style.display='block'
+        }
+        }
+    </script>
     
     
     </body>
