@@ -711,6 +711,10 @@ html {
   margin-top: 1rem;
 }
 
+.mb-28{
+  margin-bottom: 7rem;
+}
+
 .mb-96{
   margin-bottom: 24rem;
 }
@@ -759,8 +763,8 @@ html {
   margin-right: 0.5rem;
 }
 
-.mb-28{
-  margin-bottom: 7rem;
+.mb-0{
+  margin-bottom: 0px;
 }
 
 .block{
@@ -855,22 +859,6 @@ html {
   height: 4rem;
 }
 
-.h-72{
-  height: 18rem;
-}
-
-.h-9{
-  height: 2.25rem;
-}
-
-.h-96{
-  height: 24rem;
-}
-
-.h-24{
-  height: 6rem;
-}
-
 .max-h-0{
   max-height: 0px;
 }
@@ -955,12 +943,12 @@ html {
   width: 2rem;
 }
 
-.w-60{
-  width: 15rem;
-}
-
 .w-2\/5{
   width: 40%;
+}
+
+.w-60{
+  width: 15rem;
 }
 
 .min-w-\[300px\]{
@@ -1364,19 +1352,14 @@ html {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-red-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-}
-
 .bg-red-100{
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
-.bg-red-400{
+.bg-red-200{
   --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-40{
@@ -1606,6 +1589,10 @@ html {
   padding-bottom: 2.5rem;
 }
 
+.pt-28{
+  padding-top: 7rem;
+}
+
 .pr-8{
   padding-right: 2rem;
 }
@@ -1640,10 +1627,6 @@ html {
 
 .pb-24{
   padding-bottom: 6rem;
-}
-
-.pt-28{
-  padding-top: 7rem;
 }
 
 .text-left{
