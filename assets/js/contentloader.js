@@ -1,6 +1,12 @@
 
 let contentLoader=document.getElementsByClassName('ph-item');
 let loadedContent=document.getElementsByClassName('loaded-content'); 
+let aside=document.getElementsByTagName('aside');
+
+for(item of aside) {
+    item.classList.add('bg-white')
+    item.classList.remove("bg-[url('../../assets/images/home/sidebarbg.png')]");
+}
 
 // Hide content loader after 3 second
 setTimeout(skeletoHide, 1500); 
@@ -21,5 +27,10 @@ function skeletoHide () {
 } 
 for(item of loadedContent) {
     item.style.display='block'
+} 
+for(item of aside) {
+    item.classList.add("bg-[url('../../assets/images/home/sidebarbg.png')]")
+    item.classList.remove("bg-white");
 }
+
 }
