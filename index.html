@@ -5,8 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard</title>
-        <link rel="stylesheet" href="assets/css/tailwind.css">
+
         <link rel="icon" type="image/x-icon" href="assets/images/login/logo.png">
+        <link rel="stylesheet" href="assets/css/tailwind.css">
+        <!-- DATE PICKER  -->
+         <link rel="stylesheet" type="text/css" href="assets/css/daterangepicker.css" />
         <!-- CONTENT LOADER -->
         <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
         <!-- Alpinejs -->
@@ -529,8 +532,13 @@
                         <p class=" text-xs md:textsm lg:text-base ">This is your dashboard</p>
                         <h1 class=" text-xl lg:text-2xl">Hello John</h1>
                     </div>
-                    <div class="">
-                        <input type="date" name="" id="" class=" outline-none  p-1 border border-border rounded text-sm lg:text-base">
+                    <div class="relative">
+                        <input type="text" name="selectdate" id="" class=" outline-none  p-1 border border-border rounded text-xs lg:text-sm">
+                      <span class="absolute right-4 top-1/2 -translate-y-1/2">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.74998 2.33333H5.24998V1.08333C5.24998 0.972828 5.29388 0.866847 5.37202 0.788707C5.45016 0.710567 5.55614 0.666668 5.66665 0.666668C5.77715 0.666668 5.88313 0.710567 5.96128 0.788707C6.03942 0.866847 6.08331 0.972828 6.08331 1.08333V2.33333H11.9166V1.08333C11.9166 0.972828 11.9605 0.866847 12.0387 0.788707C12.1168 0.710567 12.2228 0.666668 12.3333 0.666668C12.4438 0.666668 12.5498 0.710567 12.6279 0.788707C12.7061 0.866847 12.75 0.972828 12.75 1.08333V2.33333H15.25C15.8023 2.334 16.3318 2.5537 16.7224 2.94426C17.1129 3.33482 17.3327 3.86434 17.3333 4.41667V15.25C17.3327 15.8023 17.1129 16.3319 16.7224 16.7224C16.3318 17.113 15.8023 17.3327 15.25 17.3333H2.74998C2.19758 17.3329 1.66793 17.1133 1.27733 16.7227C0.886724 16.332 0.667088 15.8024 0.666647 15.25V4.41667C0.667088 3.86427 0.886724 3.33462 1.27733 2.94402C1.66793 2.55341 2.19758 2.33378 2.74998 2.33333ZM1.49998 15.25C1.49998 15.5815 1.63168 15.8995 1.8661 16.1339C2.10052 16.3683 2.41846 16.5 2.74998 16.5H15.25C15.5815 16.5 15.8994 16.3683 16.1339 16.1339C16.3683 15.8995 16.5 15.5815 16.5 15.25V8.16667H1.49998V15.25ZM1.49998 7.33333H16.5V4.41667C16.5 3.72667 15.9416 3.16667 15.25 3.16667H12.75V4.41667C12.75 4.52717 12.7061 4.63316 12.6279 4.7113C12.5498 4.78944 12.4438 4.83333 12.3333 4.83333C12.2228 4.83333 12.1168 4.78944 12.0387 4.7113C11.9605 4.63316 11.9166 4.52717 11.9166 4.41667V3.16667H6.08331V4.41667C6.08331 4.52717 6.03942 4.63316 5.96128 4.7113C5.88313 4.78944 5.77715 4.83333 5.66665 4.83333C5.55614 4.83333 5.45016 4.78944 5.37202 4.7113C5.29388 4.63316 5.24998 4.52717 5.24998 4.41667V3.16667H2.74998C2.41846 3.16667 2.10052 3.29836 1.8661 3.53278C1.63168 3.7672 1.49998 4.08515 1.49998 4.41667V7.33333Z" fill="black"/>
+                          </svg>                            
+                      </span>
                     </div>
                 </div>
             </div>
@@ -754,9 +762,15 @@
 
     </section>
     <!-- sidebar js -->
+
     <script src="assets/js/sidebar.js"></script>
     <script src="assets/js/contentloader.js"></script>
    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/datepicker.js"></script> 
     
     
     </body>
