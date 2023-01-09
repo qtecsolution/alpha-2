@@ -770,9 +770,6 @@
                     </thead>
                     <tbody>
                      
-                      
-                     
-                      
                        <tr class="hover:bg-[#E7F2EE] hover:bg-opacity-30 transition duration-300 font-encodesans">
                         <td class="px-6 py-3 border-r border-border">5</td>
                         <td class="px-6 py-3 border-r border-border"><p class=" whitespace-nowrap">Mrof Driver Hossain</p></td>
@@ -784,17 +781,9 @@
                         <td class="px-12 py-3  flex items-center justify-center font-roboto">
                             <div class="flex items-center gap-2">
                                 <button class="bg-[#10B968] text-white  rounded px-2 py-1 text-xs sm:text-sm hover:bg-green-600 transition duration-300">Active</button>
-                                <button class="p-2  relative" x-data="{ open: false }"  @click="open = ! open">
+                                <button class="p-2  relative" x-data="{ open: false }">
 
-                                    <div x-show="open" @click.away="open = false" x-transition:enter="transition-all duration-200 ease-out" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 py-0.5 text-left bg-white">
-
-                                       <div class="border border-border text-center text-xs">
-                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Edit staff</a>
-                                        <a href="#" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300">Delete staff</a>
-                                       </div>
-                                    </div>
-
-                                    <span class="bg-green-400 ">
+                                    <span  @click="open = true" class="inline-block p-2 ">
                                         <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.21875 14.5C3.21875 14.741 3.14727 14.9767 3.01335 15.1771C2.87944 15.3775 2.68909 
                                             15.5337 2.4664 15.626C2.2437 15.7182 1.99865 15.7424 1.76223 15.6953C1.52582 15.6483 1.30866 
@@ -815,7 +804,132 @@
                                             6.90965 2.32323 6.78125 2 6.78125Z" fill="black"/>
                                         </svg>
                                             
-                                    </span>
+                                    </span> 
+
+                                   <div class=" w-[150px]  origin-top-right absolute right-0 rounded top-full z-50 text-left bg-white">
+                                        <ul class="border border-border text-center text-xs" x-show="open" @click.away="open = false" >
+                                            <li x-data="{ modelOpen: false }" >
+                                              
+                                                <div  @click="modelOpen =!modelOpen" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 text-center">
+                                                    Edit stuff
+                                                </div>
+
+                                                <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                                                    <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                                                        <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
+                                                            x-transition:enter="transition ease-out duration-300 transform"
+                                                            x-transition:enter-start="opacity-0" 
+                                                            x-transition:enter-end="opacity-100"
+                                                            x-transition:leave="transition ease-in duration-200 transform"
+                                                            x-transition:leave-start="opacity-100" 
+                                                            x-transition:leave-end="opacity-0"
+                                                            class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40" aria-hidden="true"
+                                                        ></div>
+                                            
+                                                        <div x-cloak x-show="modelOpen" 
+                                                            x-transition:enter="transition ease-out duration-300 transform"
+                                                            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
+                                                            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                                                            x-transition:leave="transition ease-in duration-200 transform"
+                                                            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
+                                                            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                                            class="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-3xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white  shadow-xl "
+                                                        >
+                                                            <div class="flex items-center justify-between space-x-4 mb-4 lg:mb-8">
+                                                                <h2 class="text-xl font-normal text-black ">Add new Member</h2>
+                                            
+                                                            
+                                                            </div>
+                                                            
+                                                            <div class=" grid grid-cols-1 md:grid-cols-2 gap-8">
+                                                                <div class="left flex flex-col gap-3">
+                                                                    
+                                                                    <div class="inputbox errorfield">
+                                                                        <label for="firstName" class="inputlabel">First name</label>
+                                                                        <input type="text" class="inputfield" id="firstName" autocomplete="off">
+                                                                        <div class="error">
+                                                                            <p class="error-message">First name is required</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inputbox">
+                                                                        <label for="lastName" class="inputlabel">Last name</label>
+                                                                        <input type="text" class="inputfield" id="lastName" autocomplete="off">
+                                                                        <div class="error">
+                                                                            <p class="error-message">Last name is required</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inputbox">
+                                                                        <label for="email" class="inputlabel">Email</label>
+                                                                        <input type="email" class="inputfield" id="email" autocomplete="off">
+                                                                        <div class="error">
+                                                                            <p class="error-message">Email is required</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inputbox">
+                                                                        <label for="phone" class="inputlabel" >Phone</label>
+                                                                        <input type="number" class="inputfield" id="phone" autocomplete="off">
+                                                                        <div class="error">
+                                                                            <p class="error-message">Phone is required</p>
+                                                                        </div>
+                                                                    </div> 
+                                                                    <div class="inputbox">
+                                                                        <label for="password" class="inputlabel">Enter password</label>
+                                                                        <input type="password" class="inputfield" id="password" autocomplete="off">
+                                                                        <div class="error">
+                                                                            <p class="error-message">password is required</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inputbox">
+                                                                        <label for="confirmpass" class="inputlabel">Cofirm password</label>
+                                                                        <input type="password" class="inputfield" id="confirmpass" autocomplete="off">
+                                                                        <div class="error">
+                                                                            <p class="error-message">password is required</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                <div class="right flex flex-col gap-3">
+                                                                    <div class="inputbox">
+                                                                        <label for="address" class="inputlabel" >Address</label>
+                                                                        <input type="text" class="inputfield " id="address" autocomplete="off">
+                                                                        <div class="error">
+                                                                            <p class="error-message">Address is required</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inputbox">
+                                                                        <label for="city" class="inputlabel">City</label>
+                                                                        <input type="text" class="inputfield" id="city" autocomplete="off">
+                                                                        <div class="error">
+                                                                            <p class="error-message">City is required</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inputbox">
+                                                                        <label for="postcode" class="inputlabel">Postcode</label>
+                                                                        <input type="text" class="inputfield" id="postcode">
+                                                                        <div class="error">
+                                                                            <p class="error-message">Postcode is required</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="buttons  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pt-6">
+                                                                <div  @click="modelOpen = false" class=" bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Cancel</div>
+                                                                <div class=" text-black bg-secondary px-2 py-[10px] rounded text-sm transition duration-300 hover:bg-red-400">Add Driver</div>
+                                                            </div>
+                                                            
+                                            
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                           
+                                        
+                                        </li>
+                                        <li onclick="confirmDelete()" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 text-center"  onclick="return confirm('Are you sure?')">Delete</li>
+                                        
+                                        </ul>
+                                   </div>
                                 </button>
                             </div>
                         </td>
@@ -976,7 +1090,7 @@
                                            
                                         
                                         </li>
-                                        <a href="runs.html" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 text-center"  onclick="return confirm('Are you sure?')">Delete</a>
+                                        <li onclick="confirmDelete()" class="block border-b border-b-border py-2  hover:bg-gray-100 transition duration-300 text-center"  onclick="return confirm('Are you sure?')">Delete</li>
                                         
                                         </ul>
                                    </div>
@@ -994,9 +1108,7 @@
                 </div>
             </div>
 
-            <div>
-               
-              </div>
+            
         
         </div> 
         <!-- table end -->
@@ -1425,6 +1537,20 @@
   <script src="assets/js/sidebar.js"></script>
   <!-- content loader-->
   <script src="assets/js/contentloader.js"></script>
+
+  <script>
+      const confirmDelete = () => { 
+                const response = confirm("Are you sure you want to do that?");
+
+                if (response) {
+                    // code if ok press
+                    alert("Ok was pressed");
+                } else {
+                    // code if cancel pressed 
+                    alert("Cancel was pressed");
+                }
+            }
+  </script>
   
 
   
